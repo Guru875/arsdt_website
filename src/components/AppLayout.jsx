@@ -48,7 +48,7 @@ export default function AppLayout({ children }) {
             <Link href="/" className={styles.navLink}>{t('nav.home')}</Link>
             <a href="/#courses" className={styles.navLink}>{t('nav.courses')}</a>
             <a href="/#why-us" className={styles.navLink}>{t('nav.about')}</a>
-            <a href="/#certificate" className={styles.navLink}>{t('nav.gallery')}</a>
+            <a href="/#certificate" className={styles.navLink}>{t('nav.certification')}</a>
             <a href="/#contact" className={styles.navLink}>{t('nav.contact')}</a>
           </nav>
 
@@ -86,7 +86,7 @@ export default function AppLayout({ children }) {
           <Link href="/" className={styles.mobileNavLink} onClick={closeMobileMenu}>{t('nav.home')}</Link>
           <a href="/#courses" className={styles.mobileNavLink} onClick={closeMobileMenu}>{t('nav.courses')}</a>
           <a href="/#why-us" className={styles.mobileNavLink} onClick={closeMobileMenu}>{t('nav.about')}</a>
-          <a href="/#certificate" className={styles.mobileNavLink} onClick={closeMobileMenu}>{t('nav.gallery')}</a>
+          <a href="/#certificate" className={styles.mobileNavLink} onClick={closeMobileMenu}>{t('nav.certification')}</a>
           <a href="/#contact" className={styles.mobileNavLink} onClick={closeMobileMenu}>{t('nav.contact')}</a>
           <div className={styles.mobileActions}>
             <div className={styles.mobileSelectorRow}>
@@ -152,7 +152,7 @@ export default function AppLayout({ children }) {
                 <Link href="/" className={styles.footerLink}>{t('nav.home')}</Link>
                 <a href="/#courses" className={styles.footerLink}>{t('nav.courses')}</a>
                 <a href="/#why-us" className={styles.footerLink}>{t('nav.about')}</a>
-                <a href="/#certificate" className={styles.footerLink}>{t('nav.gallery')}</a>
+                <a href="/#certificate" className={styles.footerLink}>{t('nav.certification')}</a>
                 <a href="/#contact" className={styles.footerLink}>{t('nav.contact')}</a>
               </nav>
             </div>
