@@ -2,17 +2,18 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: var(--space-md);
 }
 
 .badgesWrapper {
-  position: absolute;
-  top: 10px;
-  right: var(--space-md);
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
   gap: var(--space-xs);
-  z-index: 2;
+  padding: 0 var(--space-md);
+  min-height: 24px;
+  margin-bottom: var(--space-sm);
 }
 
 .popularBadge {
@@ -49,14 +50,14 @@
 }
 
 .cardHeader {
-  padding: calc(var(--space-xl) + 20px) var(--space-xl) var(--space-md);
+  padding: 0 var(--space-xl) var(--space-md);
   display: flex;
   align-items: flex-start;
   gap: var(--space-md);
 }
 
 .iconWrapper {
-  background: var(--accent-color);
+  background: var(--gradient1);
   color: white;
   width: 48px;
   height: 48px;

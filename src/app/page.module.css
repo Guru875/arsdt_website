@@ -186,8 +186,9 @@
 }
 
 .coursesSlider > div {
-  min-width: 350px;
+  min-width: min(350px, 80vw);
   max-width: 400px;
+  width: 100%;
   flex: 0 0 auto;
   align-self: stretch;
   height: auto;
@@ -251,22 +252,88 @@
   border-color: var(--primaryDark);
 }
 
-/* Why Choose Us Cards */
+/* Why Choose Us Cards with Video Background */
 .whyUsSection {
-  background: var(--backgroundAlt);
+  position: relative;
+  overflow: hidden;
+  background: #090d16; /* Fallback dark background */
+  padding: var(--space-3xl) 0;
 }
 
+.videoBgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.videoBg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(8, 12, 21, 0.88) 0%, rgba(13, 20, 35, 0.78) 50%, rgba(8, 12, 21, 0.9) 100%);
+  z-index: 2;
+}
+
+.whyUsContent {
+  position: relative;
+  z-index: 3;
+}
+
+/* Ensure text is readable and white over dark video bg */
+.whyUsTitle {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.whyUsSubtitle {
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.whyUsBadge {
+  background: color-mix(in srgb, var(--primary) 20%, transparent) !important;
+  color: var(--primaryLight) !important;
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent) !important;
+}
+
+/* Premium Dark Glassmorphism Cards */
 .whyUsCard {
   padding: var(--space-xl);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgba(17, 24, 39, 0.55);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-normal);
+}
+
+.whyUsCard:hover {
+  background: rgba(17, 24, 39, 0.7);
+  border-color: color-mix(in srgb, var(--primary) 40%, transparent);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px color-mix(in srgb, var(--primary) 15%, transparent);
 }
 
 .whyUsIconWrapper {
-  background: rgba(45, 122, 58, 0.1);
-  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 15%, transparent);
+  color: var(--primaryLight);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -275,12 +342,67 @@
   justify-content: center;
   margin-bottom: var(--space-md);
   transition: all var(--transition-normal);
+  border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
 }
 
 .whyUsCard:hover .whyUsIconWrapper {
   background: var(--primary);
   color: white;
   transform: scale(1.1);
+  box-shadow: 0 0 15px color-mix(in srgb, var(--primary) 50%, transparent);
+}
+
+/* Why Choose Us Grid and Slider Behavior on Mobile */
+.whyUsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+@media (max-width: 1024px) {
+  .whyUsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .whyUsGrid {
+    display: flex;
+    align-items: stretch;
+    gap: var(--space-lg);
+    overflow-x: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide scrollbar */
+  }
+  
+  .whyUsGrid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .whyUsGrid > div {
+    min-width: min(300px, 85vw);
+    max-width: 100%;
+    width: 100%;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+}
+
+.whyUsDots {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .whyUsDots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+  }
 }
 
 /* Animated SVGs within Why Choose Us Cards */
@@ -471,14 +593,17 @@
 
 
 .whyUsCardTitle {
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
   margin-bottom: var(--space-sm);
+  color: #ffffff;
+  font-family: var(--font-heading);
 }
 
 .whyUsCardDesc {
-  font-size: 0.9rem;
-  color: var(--textSecondary);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
 }
 
 /* Demo videos */
