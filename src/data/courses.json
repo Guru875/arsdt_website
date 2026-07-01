@@ -1,0 +1,222 @@
+[
+  {
+    "id": "washing-machine-refrigerator-10d",
+    "title": { "en": "Washing Machine & Refrigerator Repair", "ta": "வாஷிங் மெஷின் & ஃப்ரிட்ஜ் ரிப்பேர்", "ml": "വാഷിംഗ് മെഷീൻ & ഫ്രിഡ്ജ് റിപ്പയർ" },
+    "shortTitle": { "en": "WM & Fridge Repair", "ta": "WM & ஃப்ரிட்ஜ் ரிப்பேர்", "ml": "WM & ഫ്രിഡ്ജ് റിപ്പയർ" },
+    "category": "10day",
+    "duration": { "en": "10 Days", "ta": "10 நாட்கள்", "ml": "10 ദിവസങ്ങൾ" },
+    "price": 15000,
+    "offerPrice": 9999,
+    "icon": "washer",
+    "color": "#0F62FE",
+    "popular": true,
+    "trainer": { "en": "Senior Appliance Expert", "ta": "மூத்த அப்ளையன்ஸ் நிபுணர்", "ml": "സീനിയർ അപ്ലയൻസ് വിദഗ്ധൻ" },
+    "description": {
+      "en": "Complete hands-on training program covering Washing Machine (Semi-Automatic, Fully Automatic, Front Load) and Refrigerator (Single Door, Double Door, Frost Free, Inverter) repair and servicing.",
+      "ta": "வாஷிங் மெஷின் (செமி-ஆட்டோமேடிக், ஃபுல்லி ஆட்டோமேடிக், ஃபிரன்ட் லோட்) மற்றும் ஃப்ரிட்ஜ் (சிங்கிள் டோர், டபுள் டோர், ஃப்ரோஸ்ட் ஃப்ரீ, இன்வெர்ட்டர்) ரிப்பேர் பயிற்சி.",
+      "ml": "വാഷിംഗ് മെഷീൻ (സെമി-ഓട്ടോമാറ്റിക്, ഫുള്ളി ഓട്ടോമാറ്റിക്, ഫ്രണ്ട് ലോഡ്), ഫ്രിഡ്ജ് (സിംഗിൾ ഡോർ, ഡബിൾ ഡോർ, ഫ്രോസ്റ്റ് ഫ്രീ, ഇൻവെർട്ടർ) റിപ്പയർ പരിശീലനം."
+    },
+    "outcomes": [
+      { "en": "Identify and repair PCB board faults", "ta": "PCB போர்டு கோளாறுகளை கண்டறிந்து சரிசெய்யுங்கள்", "ml": "PCB ബോർഡ് തകരാറുകൾ കണ്ടെത്തി നന്നാക്കുക" },
+      { "en": "Master motor winding and replacement", "ta": "மோட்டார் வைண்டிங் மற்றும் மாற்றத்தில் தேர்ச்சி", "ml": "മോട്ടോർ വൈൻഡിംഗും മാറ്റിസ്ഥാപിക്കലും" },
+      { "en": "Gas charging and leak detection for refrigerators", "ta": "ஃப்ரிட்ஜ்களுக்கான கேஸ் சார்ஜிங் மற்றும் லீக் கண்டறிதல்", "ml": "ഫ്രിഡ്ജുകൾക്കുള്ള ഗ്യാസ് ചാർജിംഗ്, ലീക്ക് കണ്ടെത്തൽ" },
+      { "en": "Diagnose electronic and mechanical faults", "ta": "எலக்ட்ரானிக் மற்றும் மெக்கானிக்கல் கோளாறுகளை கண்டறியுங்கள்", "ml": "ഇലക്ട്രോണിക്, മെക്കാനിക്കൽ തകരാറുകൾ കണ്ടെത്തുക" },
+      { "en": "Handle inverter technology appliances", "ta": "இன்வெர்ட்டர் தொழில்நுட்ப சாதனங்களை கையாளுங்கள்", "ml": "ഇൻവെർട്ടർ ടെക്നോളജി ഉപകരണങ്ങൾ കൈകാര്യം ചെയ്യുക" }
+    ],
+    "requirements": [
+      { "en": "No prior experience needed", "ta": "முன் அனுபவம் தேவையில்லை", "ml": "മുൻ അനുഭവം ആവശ്യമില്ല" },
+      { "en": "Basic understanding of electricity (taught in class)", "ta": "மின்சாரம் பற்றிய அடிப்படை புரிதல் (வகுப்பில் கற்பிக்கப்படும்)", "ml": "വൈദ്യുതിയെ കുറിച്ചുള്ള അടിസ്ഥാന ധാരണ (ക്ലാസ്സിൽ പഠിപ്പിക്കും)" }
+    ],
+    "modules": [
+      {
+        "day": 1,
+        "title": { "en": "Electrical Basics & Safety", "ta": "மின்சார அடிப்படைகள் & பாதுகாப்பு", "ml": "വൈദ്യുത അടിസ്ഥാനങ്ങൾ & സുരക്ഷ" },
+        "topics": [
+          { "en": "AC/DC fundamentals, voltage, current", "ta": "AC/DC அடிப்படைகள், மின்னழுத்தம், மின்னோட்டம்", "ml": "AC/DC അടിസ്ഥാനങ്ങൾ, വോൾട്ടേജ്, കറന്റ്" },
+          { "en": "Safety protocols and tool usage", "ta": "பாதுகாப்பு நெறிமுறைகள் மற்றும் கருவி பயன்பாடு", "ml": "സുരക്ഷാ പ്രോട്ടോക്കോളുകളും ഉപകരണ ഉപയോഗവും" },
+          { "en": "Multimeter operation and reading", "ta": "மல்ட்டிமீட்டர் செயல்பாடு மற்றும் அளவீடு", "ml": "മൾട്ടിമീറ്റർ പ്രവർത്തനവും വായനയും" }
+        ],
+        "videos": [{ "videoType": "youtube", "videoId": "", "title": { "en": "Electrical Basics Introduction", "ta": "மின்சார அடிப்படைகள் அறிமுகம்", "ml": "വൈദ്യുത അടിസ്ഥാനങ്ങൾ ആമുഖം" } }]
+      },
+      {
+        "day": 2,
+        "title": { "en": "Semi-Automatic Washing Machine", "ta": "செமி-ஆட்டோமேடிக் வாஷிங் மெஷின்", "ml": "സെമി-ഓട്ടോമാറ്റിക് വാഷിംഗ് മെഷീൻ" },
+        "topics": [
+          { "en": "Working principle and parts identification", "ta": "செயல்படும் கொள்கை மற்றும் பாகங்கள் அடையாளம்", "ml": "പ്രവർത്തന തത്വവും ഭാഗങ്ങൾ തിരിച്ചറിയലും" },
+          { "en": "Timer, buzzer, and drain motor repair", "ta": "டைமர், பஸர், மற்றும் டிரைன் மோட்டார் ரிப்பேர்", "ml": "ടൈമർ, ബസർ, ഡ്രെയിൻ മോട്ടോർ റിപ്പയർ" },
+          { "en": "Spin motor and wash motor troubleshooting", "ta": "ஸ்பின் மோட்டார் மற்றும் வாஷ் மோட்டார் சரிசெய்தல்", "ml": "സ്പിൻ മോട്ടോർ, വാഷ് മോട്ടോർ ട്രബിൾഷൂട്ടിംഗ്" }
+        ],
+        "videos": [{ "videoType": "youtube", "videoId": "", "title": { "en": "Semi-Auto WM Repair", "ta": "செமி-ஆட்டோ WM ரிப்பேர்", "ml": "സെമി-ഓട്ടോ WM റിപ്പയർ" } }]
+      },
+      {
+        "day": 3,
+        "title": { "en": "Fully Automatic Top Load WM", "ta": "ஃபுல்லி ஆட்டோமேடிக் டாப் லோட் WM", "ml": "ഫുള്ളി ഓട്ടോമാറ്റിക് ടോപ്പ് ലോഡ് WM" },
+        "topics": [
+          { "en": "PCB board analysis and fault finding", "ta": "PCB போர்டு பகுப்பாய்வு மற்றும் கோளாறு கண்டறிதல்", "ml": "PCB ബോർഡ് വിശകലനവും തകരാറ് കണ്ടെത്തലും" },
+          { "en": "Water inlet valve and pressure sensor", "ta": "வாட்டர் இன்லெட் வால்வ் மற்றும் பிரஷர் சென்சார்", "ml": "വാട്ടർ ഇൻലെറ്റ് വാൽവ്, പ്രഷർ സെൻസർ" },
+          { "en": "Error code reading and diagnosis", "ta": "எர்ரர் கோட் படிக்கும் முறை மற்றும் கண்டறிதல்", "ml": "എറർ കോഡ് വായന, ഡയഗ്നോസിസ്" }
+        ],
+        "videos": [{ "videoType": "youtube", "videoId": "", "title": { "en": "Top Load WM Repair", "ta": "டாப் லோட் WM ரிப்பேர்", "ml": "ടോപ്പ് ലോഡ് WM റിപ്പയർ" } }]
+      },
+      {
+        "day": 4,
+        "title": { "en": "Front Load Washing Machine", "ta": "ஃபிரன்ட் லோட் வாஷிங் மெஷின்", "ml": "ഫ്രണ്ട് ലോഡ് വാഷിംഗ് മെഷീൻ" },
+        "topics": [
+          { "en": "Door lock mechanism and seal replacement", "ta": "டோர் லாக் பொறிமுறை மற்றும் சீல் மாற்றம்", "ml": "ഡോർ ലോക്ക് മെക്കാനിസം, സീൽ മാറ്റൽ" },
+          { "en": "BLDC motor and inverter board repair", "ta": "BLDC மோட்டார் மற்றும் இன்வெர்ட்டர் போர்டு ரிப்பேர்", "ml": "BLDC മോട്ടോർ, ഇൻവെർട്ടർ ബോർഡ് റിപ്പയർ" },
+          { "en": "Heater, thermostat and sensor testing", "ta": "ஹீட்டர், தெர்மோஸ்டாட் மற்றும் சென்சார் சோதனை", "ml": "ഹീറ്റർ, തെർമോസ്റ്റാറ്റ്, സെൻസർ ടെസ്റ്റിംഗ്" }
+        ],
+        "videos": [{ "videoType": "youtube", "videoId": "", "title": { "en": "Front Load WM Repair", "ta": "ஃபிரன்ட் லோட் WM ரிப்பேர்", "ml": "ഫ്രണ്ട് ലോഡ് WM റിപ്പയർ" } }]
+      },
+      {
+        "day": 5,
+        "title": { "en": "WM Motor Winding & Advanced", "ta": "WM மோட்டார் வைண்டிங் & அட்வான்ஸ்ட்", "ml": "WM മോട്ടോർ വൈൻഡിംഗ് & അഡ്വാൻസ്ഡ്" },
+        "topics": [
+          { "en": "Motor winding techniques", "ta": "மோட்டார் வைண்டிங் நுட்பங்கள்", "ml": "മോട്ടോർ വൈൻഡിംഗ് ടെക്നിക്കുകൾ" },
+          { "en": "Capacitor testing and replacement", "ta": "கெப்பாசிட்டர் சோதனை மற்றும் மாற்றம்", "ml": "കപ്പാസിറ്റർ ടെസ്റ്റിംഗ്, മാറ്റിസ്ഥാപിക്കൽ" },
+          { "en": "Practical assessment - WM section", "ta": "நடைமுறை மதிப்பீடு - WM பிரிவு", "ml": "പ്രായോഗിക വിലയിരുത്തൽ - WM വിഭാഗം" }
+        ],
+        "videos": [{ "videoType": "youtube", "videoId": "", "title": { "en": "Motor Winding Guide", "ta": "மோட்டார் வைண்டிங் வழிகாட்டி", "ml": "മോട്ടോർ വൈൻഡിംഗ് ഗൈഡ്" } }]
+      },
+      {
+        "day": 6,
+        "title": { "en": "Refrigerator Basics & Single Door", "ta": "ஃப்ரிட்ஜ் அடிப்படைகள் & சிங்கிள் டோர்", "ml": "ഫ്രിഡ്ജ് അടിസ്ഥാനങ്ങൾ & സിംഗിൾ ഡോർ" },
+        "topics": [
+          { "en": "Refrigeration cycle and gas types", "ta": "குளிரூட்டல் சுழற்சி மற்றும் கேஸ் வகைகள்", "ml": "റഫ്രിജറേഷൻ സൈക്കിൾ, ഗ്യാസ് തരങ്ങൾ" },
+          { "en": "Compressor testing and replacement", "ta": "கம்ப்ரசர் சோதனை மற்றும் மாற்றம்", "ml": "കംപ്രസർ ടെസ്റ്റിംഗ്, മാറ്റിസ്ഥാപിക്കൽ" },
+          { "en": "Thermostat and relay testing", "ta": "தெர்மோஸ்டாட் மற்றும் ரிலே சோதனை", "ml": "തെർമോസ്റ്റാറ്റ്, റിലേ ടെസ്റ്റിംഗ്" }
+        ],
+        "videos": [{ "videoType": "youtube", "videoId": "", "title": { "en": "Refrigerator Basics", "ta": "ஃப்ரிட்ஜ் அடிப்படைகள்", "ml": "ഫ്രിഡ്ജ് അടിസ്ഥാനങ്ങൾ" } }]
+      },
+      {
+        "day": 7,
+        "title": { "en": "Double Door & Frost Free Fridge", "ta": "டபுள் டோர் & ஃப்ரோஸ்ட் ஃப்ரீ ஃப்ரிட்ஜ்", "ml": "ഡബിൾ ഡോർ & ഫ്രോസ്റ്റ് ഫ്രീ ഫ്രിഡ്ജ്" },
+        "topics": [
+          { "en": "Defrost system and heater testing", "ta": "டீஃப்ரோஸ்ட் சிஸ்டம் மற்றும் ஹீட்டர் சோதனை", "ml": "ഡീഫ്രോസ്റ്റ് സിസ്റ്റം, ഹീറ്റർ ടെസ്റ്റിംഗ്" },
+          { "en": "Fan motor and damper assembly", "ta": "ஃபேன் மோட்டார் மற்றும் டேம்பர் அசெம்ப்ளி", "ml": "ഫാൻ മോട്ടോർ, ഡാമ്പർ അസംബ്ലി" },
+          { "en": "PCB board fault diagnosis", "ta": "PCB போர்டு கோளாறு கண்டறிதல்", "ml": "PCB ബോർഡ് തകരാറ് ഡയഗ്നോസിസ്" }
+        ],
+        "videos": [{ "videoType": "youtube", "videoId": "", "title": { "en": "Frost Free Fridge Repair", "ta": "ஃப்ரோஸ்ட் ஃப்ரீ ஃப்ரிட்ஜ் ரிப்பேர்", "ml": "ഫ്രോസ്റ്റ് ഫ്രീ ഫ്രിഡ്ജ് റിപ്പയർ" } }]
+      },
+      {
+        "day": 8,
+        "title": { "en": "Inverter Refrigerator Technology", "ta": "இன்வெர்ட்டர் ஃப்ரிட்ஜ் தொழில்நுட்பம்", "ml": "ഇൻവെർട്ടർ ഫ്രിഡ്ജ് ടെക്നോളജി" },
+        "topics": [
+          { "en": "Inverter compressor working principle", "ta": "இன்வெர்ட்டர் கம்ப்ரசர் செயல்படும் கொள்கை", "ml": "ഇൻവെർട്ടർ കംപ്രസർ പ്രവർത്തന തത്വം" },
+          { "en": "Inverter PCB board troubleshooting", "ta": "இன்வெர்ட்டர் PCB போர்டு சரிசெய்தல்", "ml": "ഇൻവെർട്ടർ PCB ബോർഡ് ട്രബിൾഷൂട്ടിംഗ്" },
+          { "en": "VFD drive and speed control", "ta": "VFD டிரைவ் மற்றும் வேக கட்டுப்பாடு", "ml": "VFD ഡ്രൈവ്, സ്പീഡ് കൺട്രോൾ" }
+        ],
+        "videos": [{ "videoType": "youtube", "videoId": "", "title": { "en": "Inverter Fridge Technology", "ta": "இன்வெர்ட்டர் ஃப்ரிட்ஜ் தொழில்நுட்பம்", "ml": "ഇൻവെർട്ടർ ഫ്രിഡ്ജ് ടെക്നോളജി" } }]
+      },
+      {
+        "day": 9,
+        "title": { "en": "Gas Charging & Leak Testing", "ta": "கேஸ் சார்ஜிங் & லீக் டெஸ்டிங்", "ml": "ഗ്യാസ് ചാർജിംഗ് & ലീക്ക് ടെസ്റ്റിംഗ്" },
+        "topics": [
+          { "en": "Gas charging procedure (R134a, R600a)", "ta": "கேஸ் சார்ஜிங் நடைமுறை (R134a, R600a)", "ml": "ഗ്യാസ് ചാർജിംഗ് നടപടിക്രമം (R134a, R600a)" },
+          { "en": "Leak detection methods", "ta": "லீக் கண்டறிதல் முறைகள்", "ml": "ലീക്ക് കണ്ടെത്തൽ മാർഗ്ഗങ്ങൾ" },
+          { "en": "Welding and brazing for refrigerant lines", "ta": "குளிரூட்டி குழாய்களுக்கான வெல்டிங் மற்றும் பிரேசிங்", "ml": "റഫ്രിജറന്റ് ലൈനുകൾക്കുള്ള വെൽഡിംഗ്, ബ്രേസിംഗ്" }
+        ],
+        "videos": [{ "videoType": "youtube", "videoId": "", "title": { "en": "Gas Charging Procedure", "ta": "கேஸ் சார்ஜிங் நடைமுறை", "ml": "ഗ്യാസ് ചാർജിംഗ് നടപടിക്രമം" } }]
+      },
+      {
+        "day": 10,
+        "title": { "en": "Final Assessment & Certification", "ta": "இறுதி மதிப்பீடு & சான்றிதழ்", "ml": "അന്തിമ വിലയിരുത്തൽ & സർട്ടിഫിക്കേഷൻ" },
+        "topics": [
+          { "en": "Complete appliance diagnosis challenge", "ta": "முழுமையான சாதன கண்டறிதல் சவால்", "ml": "സമ്പൂർണ്ണ അപ്ലയൻസ് ഡയഗ്നോസിസ് ചലഞ്ച്" },
+          { "en": "Business setup and pricing guidance", "ta": "தொழில் அமைப்பு மற்றும் விலை நிர்ணய வழிகாட்டுதல்", "ml": "ബിസിനസ് സെറ്റപ്പ്, വിലനിർണ്ണയ മാർഗ്ഗനിർദ്ദേശം" },
+          { "en": "Certificate distribution and placement briefing", "ta": "சான்றிதழ் வழங்குதல் மற்றும் வேலைவாய்ப்பு விளக்கம்", "ml": "സർട്ടിഫിക്കറ്റ് വിതരണം, പ്ലേസ്മെന്റ് ബ്രീഫിംഗ്" }
+        ],
+        "videos": [{ "videoType": "youtube", "videoId": "", "title": { "en": "Course Summary & Next Steps", "ta": "கோர்ஸ் சுருக்கம் & அடுத்த படிகள்", "ml": "കോഴ്സ് സംഗ്രഹം & അടുത്ത ഘട്ടങ്ങൾ" } }]
+      }
+    ]
+  },
+  {
+    "id": "ac-repair-10d",
+    "title": { "en": "AC Repair & Service Training", "ta": "ஏசி ரிப்பேர் & சர்வீஸ் பயிற்சி", "ml": "എസി റിപ്പയർ & സർവീസ് ട്രെയിനിംഗ്" },
+    "shortTitle": { "en": "AC Repair", "ta": "ஏசி ரிப்பேர்", "ml": "എസി റിപ്പയർ" },
+    "category": "10day",
+    "duration": { "en": "10 Days", "ta": "10 நாட்கள்", "ml": "10 ദിവസങ്ങൾ" },
+    "price": 15000,
+    "offerPrice": 9999,
+    "icon": "snowflake",
+    "color": "#06B6D4",
+    "popular": true,
+    "trainer": { "en": "Senior AC Consultant", "ta": "மூத்த ஏசி ஆலோசகர்", "ml": "സീനിയർ എസി കൺസൾട്ടന്റ്" },
+    "description": {
+      "en": "Comprehensive AC repair training covering Window AC, Split AC, Inverter AC, and Cassette AC. Learn installation, gas charging, PCB repair, and complete servicing.",
+      "ta": "வின்டோ AC, ஸ்பிளிட் AC, இன்வெர்ட்டர் AC, கேசட் AC ஆகியவற்றை உள்ளடக்கிய முழுமையான ஏசி ரிப்பேர் பயிற்சி. நிறுவுதல், கேஸ் சார்ஜிங், PCB ரிப்பேர் கற்றுக்கொள்ளுங்கள்.",
+      "ml": "വിൻഡോ AC, സ്പ്ലിറ്റ് AC, ഇൻവെർട്ടർ AC, കാസറ്റ് AC എന്നിവ ഉൾക്കൊള്ളുന്ന സമഗ്ര AC റിപ്പയർ പരിശീലനം. ഇൻസ്റ്റലേഷൻ, ഗ്യാസ് ചാർജിംഗ്, PCB റിപ്പയർ പഠിക്കൂ."
+    },
+    "outcomes": [
+      { "en": "Install and commission Split & Window ACs", "ta": "ஸ்பிளிட் & வின்டோ AC-களை நிறுவி இயக்குங்கள்", "ml": "സ്പ്ലിറ്റ് & വിൻഡോ AC ഇൻസ്റ്റാൾ ചെയ്ത് കമ്മീഷൻ ചെയ്യുക" },
+      { "en": "Gas charging with R22, R32, R410a", "ta": "R22, R32, R410a கேஸ் சார்ஜிங்", "ml": "R22, R32, R410a ഗ്യാസ് ചാർജിംഗ്" },
+      { "en": "PCB board-level repair", "ta": "PCB போர்டு-நிலை ரிப்பேர்", "ml": "PCB ബോർഡ്-ലെവൽ റിപ്പയർ" },
+      { "en": "Inverter AC technology and troubleshooting", "ta": "இன்வெர்ட்டர் AC தொழில்நுட்பம் மற்றும் சரிசெய்தல்", "ml": "ഇൻവെർട്ടർ AC ടെക്നോളജിയും ട്രബിൾഷൂട്ടിംഗും" },
+      { "en": "Complete AC servicing and maintenance", "ta": "முழுமையான ஏசி சர்வீஸிங் மற்றும் பராமரிப்பு", "ml": "പൂർണ്ണ AC സർവ്വീസിംഗും മെയിന്റനൻസും" }
+    ],
+    "requirements": [
+      { "en": "No prior experience needed", "ta": "முன் அனுபவம் தேவையில்லை", "ml": "മുൻ അനുഭവം ആവശ്യമില്ല" },
+      { "en": "Physical fitness for installation work", "ta": "நிறுவுதல் வேலைக்கான உடல் தகுதி", "ml": "ഇൻസ്റ്റലേഷൻ ജോലിക്ക് ശാരീരിക ക്ഷമത" }
+    ],
+    "modules": [
+      { "day": 1, "title": { "en": "Electrical Basics & Safety", "ta": "மின்சார அடிப்படைகள் & பாதுகாப்பு", "ml": "വൈദ്യുത അടിസ്ഥാനങ്ങൾ & സുരക്ഷ" }, "topics": [{ "en": "AC/DC basics, multimeter, safety", "ta": "AC/DC அடிப்படைகள், மல்ட்டிமீட்டர், பாதுகாப்பு", "ml": "AC/DC അടിസ്ഥാനങ്ങൾ, മൾട്ടിമീറ്റർ, സുരക്ഷ" }], "videos": [] },
+      { "day": 2, "title": { "en": "Window AC Fundamentals", "ta": "வின்டோ AC அடிப்படைகள்", "ml": "വിൻഡോ AC അടിസ്ഥാനങ്ങൾ" }, "topics": [{ "en": "Parts identification, cooling cycle, compressor testing", "ta": "பாகங்கள் அடையாளம், குளிரூட்டல் சுழற்சி, கம்ப்ரசர் சோதனை", "ml": "ഭാഗങ്ങൾ തിരിച്ചറിയൽ, കൂളിംഗ് സൈക്കിൾ, കംപ്രസർ ടെസ്റ്റിംഗ്" }], "videos": [] },
+      { "day": 3, "title": { "en": "Split AC Installation", "ta": "ஸ்பிளிட் AC நிறுவுதல்", "ml": "സ്പ്ലിറ്റ് AC ഇൻസ്റ്റലേഷൻ" }, "topics": [{ "en": "Wall mounting, pipe flaring, vacuum pump, installation", "ta": "சுவர் பொருத்துதல், பைப் ஃப்ளேரிங், வேக்கூம் பம்ப், நிறுவுதல்", "ml": "വാൾ മൗണ്ടിംഗ്, പൈപ്പ് ഫ്ലെയറിംഗ്, വാക്വം പമ്പ്, ഇൻസ്റ്റലേഷൻ" }], "videos": [] },
+      { "day": 4, "title": { "en": "Split AC Repair & Servicing", "ta": "ஸ்பிளிட் AC ரிப்பேர் & சர்வீஸிங்", "ml": "സ്പ്ലിറ്റ് AC റിപ്പയർ & സർവ്വീസിംഗ്" }, "topics": [{ "en": "Gas charging, leak testing, deep cleaning", "ta": "கேஸ் சார்ஜிங், லீக் டெஸ்டிங், டீப் கிளீனிங்", "ml": "ഗ്യാസ് ചാർജിംഗ്, ലീക്ക് ടെസ്റ്റിംഗ്, ഡീപ്പ് ക്ലീനിംഗ്" }], "videos": [] },
+      { "day": 5, "title": { "en": "AC PCB Board Repair", "ta": "ஏசி PCB போர்டு ரிப்பேர்", "ml": "AC PCB ബോർഡ് റിപ്പയർ" }, "topics": [{ "en": "PCB component identification, soldering, relay/capacitor replacement", "ta": "PCB கூறு அடையாளம், சாலிடரிங், ரிலே/கெப்பாசிட்டர் மாற்றம்", "ml": "PCB ഘടക തിരിച്ചറിയൽ, സോൾഡറിംഗ്, റിലേ/കപ്പാസിറ്റർ മാറ്റൽ" }], "videos": [] },
+      { "day": 6, "title": { "en": "Inverter AC Technology", "ta": "இன்வெர்ட்டர் AC தொழில்நுட்பம்", "ml": "ഇൻവെർട്ടർ AC ടെക്നോളജി" }, "topics": [{ "en": "Inverter compressor, IPM module, BLDC motor", "ta": "இன்வெர்ட்டர் கம்ப்ரசர், IPM மாட்யூல், BLDC மோட்டார்", "ml": "ഇൻവെർട്ടർ കംപ്രസർ, IPM മൊഡ്യൂൾ, BLDC മോട്ടോർ" }], "videos": [] },
+      { "day": 7, "title": { "en": "Inverter AC Troubleshooting", "ta": "இன்வெர்ட்டர் AC சரிசெய்தல்", "ml": "ഇൻവെർട്ടർ AC ട്രബിൾഷൂട്ടിംഗ്" }, "topics": [{ "en": "Error codes, sensor testing, outdoor unit diagnosis", "ta": "எர்ரர் கோட்கள், சென்சார் சோதனை, அவுட்டோர் யூனிட் கண்டறிதல்", "ml": "എറർ കോഡുകൾ, സെൻസർ ടെസ്റ്റിംഗ്, ഔട്ട്ഡോർ യൂണിറ്റ് ഡയഗ്നോസിസ്" }], "videos": [] },
+      { "day": 8, "title": { "en": "Cassette & Ductable AC", "ta": "கேசட் & டக்ட்டபிள் AC", "ml": "കാസറ്റ് & ഡക്ടബിൾ AC" }, "topics": [{ "en": "Commercial AC types, installation, servicing", "ta": "வணிக AC வகைகள், நிறுவுதல், சர்வீஸிங்", "ml": "കൊമേഴ്സ്യൽ AC തരങ്ങൾ, ഇൻസ്റ്റലേഷൻ, സർവ്വീസിംഗ്" }], "videos": [] },
+      { "day": 9, "title": { "en": "AC Gas Charging Mastery", "ta": "ஏசி கேஸ் சார்ஜிங் தேர்ச்சி", "ml": "AC ഗ്യാസ് ചാർജിംഗ് മാസ്റ്ററി" }, "topics": [{ "en": "R22, R32, R410a charging, recovery, recycling", "ta": "R22, R32, R410a சார்ஜிங், ரிகவரி, ரீசைக்கிளிங்", "ml": "R22, R32, R410a ചാർജിംഗ്, റിക്കവറി, റീസൈക്ലിംഗ്" }], "videos": [] },
+      { "day": 10, "title": { "en": "Final Assessment & Certification", "ta": "இறுதி மதிப்பீடு & சான்றிதழ்", "ml": "അന്തിമ വിലയിരുത്തൽ & സർട്ടിഫിക്കേഷൻ" }, "topics": [{ "en": "Practical exam, business guidance, certificate distribution", "ta": "நடைமுறை தேர்வு, தொழில் வழிகாட்டுதல், சான்றிதழ் வழங்குதல்", "ml": "പ്രായോഗിക പരീക്ഷ, ബിസിനസ് മാർഗ്ഗനിർദ്ദേശം, സർട്ടിഫിക്കറ്റ് വിതരണം" }], "videos": [] }
+    ]
+  },
+  {
+    "id": "home-appliances-2d",
+    "title": { "en": "Home Appliances Repair & Service", "ta": "ஹோம் அப்ளையன்ஸ் ரிப்பேர் & சர்வீஸ்", "ml": "ഹോം അപ്ലയൻസ് റിപ്പയർ & സർവീസ്" },
+    "shortTitle": { "en": "Home Appliances", "ta": "ஹோம் அப்ளையன்ஸ்", "ml": "ഹോം അപ്ലയൻസ്" },
+    "category": "2day",
+    "duration": { "en": "2 Days", "ta": "2 நாட்கள்", "ml": "2 ദിവസങ്ങൾ" },
+    "price": 5000,
+    "offerPrice": 2999,
+    "icon": "zap",
+    "color": "#F97316",
+    "popular": false,
+    "trainer": { "en": "Home Appliances Specialist", "ta": "ஹோம் அப்ளையன்ஸ் நிபுணர்", "ml": "ഹോം അപ്ലയൻസ് വിദഗ്ധൻ" },
+    "description": {
+      "en": "Intensive 2-day practical program covering Microwave Oven, Electric Geyser, RO Water Purifier, Kitchen Chimney, and Air Cooler repair and servicing.",
+      "ta": "மைக்ரோவேவ் ஓவன், எலக்ட்ரிக் கீசர், RO வாட்டர் ப்யூரிஃபையர், கிச்சன் சிம்னி, ஏர் கூலர் ரிப்பேர் உள்ளடக்கிய 2 நாள் தீவிர நடைமுறை பயிற்சி.",
+      "ml": "മൈക്രോവേവ് ഓവൻ, ഇലക്ട്രിക് ഗീസർ, RO വാട്ടർ പ്യൂരിഫയർ, കിച്ചൺ ചിമ്നി, എയർ കൂളർ റിപ്പയർ ഉൾക്കൊള്ളുന്ന 2 ദിവസ പ്രായോഗിക പരിശീലനം."
+    },
+    "outcomes": [
+      { "en": "Repair microwave oven magnetron and control circuits", "ta": "மைக்ரோவேவ் ஓவன் மேக்னட்ரான் மற்றும் கட்டுப்பாட்டு சர்க்யூட்களை சரிசெய்யுங்கள்", "ml": "മൈക്രോവേവ് ഓവൻ മാഗ്നെട്രോൺ, കൺട്രോൾ സർക്യൂട്ടുകൾ റിപ്പയർ ചെയ്യുക" },
+      { "en": "Service and repair electric geysers", "ta": "எலக்ட்ரிக் கீசர்களை சர்வீஸ் மற்றும் ரிப்பேர் செய்யுங்கள்", "ml": "ഇലക്ട്രിക് ഗീസറുകൾ സർവ്വീസ് ചെയ്ത് റിപ്പയർ ചെയ്യുക" },
+      { "en": "Install and maintain RO water purifiers", "ta": "RO வாட்டர் ப்யூரிஃபையர்களை நிறுவி பராமரியுங்கள்", "ml": "RO വാട്ടർ പ്യൂരിഫയർ ഇൻസ്റ്റാൾ ചെയ്ത് മെയിന്റെയിൻ ചെയ്യുക" },
+      { "en": "Kitchen chimney motor and filter service", "ta": "கிச்சன் சிம்னி மோட்டார் மற்றும் ஃபில்ட்டர் சர்வீஸ்", "ml": "കിച്ചൺ ചിമ്നി മോട്ടോർ, ഫിൽട്ടർ സർവ്വീസ്" }
+    ],
+    "requirements": [
+      { "en": "No prior experience needed", "ta": "முன் அனுபவம் தேவையில்லை", "ml": "മുൻ അനുഭവം ആവശ്യമില്ല" }
+    ],
+    "modules": [
+      {
+        "day": 1,
+        "title": { "en": "Microwave Oven & Geyser", "ta": "மைக்ரோவேவ் ஓவன் & கீசர்", "ml": "മൈക്രോവേവ് ഓവൻ & ഗീസർ" },
+        "topics": [
+          { "en": "Microwave oven working principle, magnetron, transformer, capacitor", "ta": "மைக்ரோவேவ் ஓவன் செயல்படும் கொள்கை, மேக்னட்ரான், டிரான்ஸ்ஃபார்மர், கெப்பாசிட்டர்", "ml": "മൈക്രോവേവ് ഓവൻ പ്രവർത്തന തത്വം, മാഗ്നെട്രോൺ, ട്രാൻസ്ഫോർമർ, കപ്പാസിറ്റർ" },
+          { "en": "Geyser thermostat, heating element, safety valve repair", "ta": "கீசர் தெர்மோஸ்டாட், ஹீட்டிங் எலிமென்ட், சேப்டி வால்வ் ரிப்பேர்", "ml": "ഗീസർ തെർമോസ്റ്റാറ്റ്, ഹീറ്റിംഗ് എലമെന്റ്, സേഫ്റ്റി വാൽവ് റിപ്പയർ" }
+        ],
+        "videos": []
+      },
+      {
+        "day": 2,
+        "title": { "en": "RO Purifier, Chimney & Air Cooler", "ta": "RO ப்யூரிஃபையர், சிம்னி & ஏர் கூலர்", "ml": "RO പ്യൂരിഫയർ, ചിമ്നി & എയർ കൂളർ" },
+        "topics": [
+          { "en": "RO membrane, pump motor, UV lamp, filter replacement", "ta": "RO மெம்பிரேன், பம்ப் மோட்டார், UV லேம்ப், ஃபில்ட்டர் மாற்றம்", "ml": "RO മെമ്പ്രേൻ, പമ്പ് മോട്ടോർ, UV ലാമ്പ്, ഫിൽട്ടർ മാറ്റൽ" },
+          { "en": "Kitchen chimney motor, control panel, filter cleaning", "ta": "கிச்சன் சிம்னி மோட்டார், கட்டுப்பாட்டு பேனல், ஃபில்ட்டர் கிளீனிங்", "ml": "കിച്ചൺ ചിമ്നി മോട്ടോർ, കൺട്രോൾ പാനൽ, ഫിൽട്ടർ ക്ലീനിംഗ്" },
+          { "en": "Air cooler pump, motor, and honeycomb pad service", "ta": "ஏர் கூலர் பம்ப், மோட்டார், ஹனிகாம்ப் பேட் சர்வீஸ்", "ml": "എയർ കൂളർ പമ്പ്, മോട്ടോർ, ഹണികോംബ് പാഡ് സർവ്വീസ്" }
+        ],
+        "videos": []
+      }
+    ]
+  }
+]
