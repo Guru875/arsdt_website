@@ -1,0 +1,204 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 24px;
+}
+
+/* Vertical Timeline Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 31px; /* Centered with dot */
+  width: 2px;
+  background: var(--border);
+  z-index: 1;
+}
+
+.dayNode {
+  display: flex;
+  position: relative;
+  margin-bottom: var(--space-lg);
+  z-index: 2;
+}
+
+.dayNode:last-child {
+  margin-bottom: 0;
+}
+
+.timelineBar {
+  position: absolute;
+  left: -24px;
+  top: 0;
+  bottom: 0;
+  width: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.timelineDot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--backgroundAlt);
+  border: 2px solid var(--border);
+  color: var(--textSecondary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: all var(--transition-normal);
+  font-family: var(--font-heading);
+}
+
+.dotActive {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 10px rgba(45, 122, 58, 0.25);
+}
+
+.dayCard {
+  width: 100%;
+  margin-left: 20px;
+  padding: 0;
+  transition: all var(--transition-normal);
+}
+
+.dayNode.active .dayCard {
+  border-color: var(--primary);
+  box-shadow: 0 4px 15px rgba(45, 122, 58, 0.1);
+}
+
+.headerButton {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+  font-family: inherit;
+}
+
+.titleArea {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.dayLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary);
+  letter-spacing: 0.5px;
+}
+
+.dayTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.chevron {
+  color: var(--textSecondary);
+  transition: transform var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.chevronRotated {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+.bodyContent {
+  padding: 0 var(--space-lg) var(--space-lg);
+  border-top: 1px solid var(--borderLight);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.sectionHeader {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--textSecondary);
+  margin: var(--space-md) 0 var(--space-sm);
+  font-family: var(--font-heading);
+}
+
+.topicList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.topicItem {
+  font-size: 0.9rem;
+  color: var(--textSecondary);
+  position: relative;
+  padding-left: var(--space-md);
+}
+
+.topicItem::before {
+  content: '•';
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  font-weight: 900;
+}
+
+.classroomActions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--border);
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .dayCard {
+    margin-left: 10px;
+  }
+  
+  .headerButton {
+    padding: var(--space-md);
+  }
+  
+  .bodyContent {
+    padding: 0 var(--space-md) var(--space-md);
+  }
+  
+  .timeline::before {
+    left: 21px;
+  }
+  
+  .timelineDot {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+  
+  .timelineBar {
+    left: -28px;
+  }
+}

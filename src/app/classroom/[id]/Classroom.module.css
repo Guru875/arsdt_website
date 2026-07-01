@@ -1,0 +1,235 @@
+.classroomWrapper {
+  background: var(--background);
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subheader path styling */
+.subheader {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-md) 0;
+}
+
+.dark-theme .subheader {
+  background: rgba(11, 15, 25, 0.85);
+  border-color: rgba(255,255,255,0.06);
+}
+
+.subHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.backLink {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.backLink:hover {
+  color: var(--primaryDark);
+}
+
+.subHeaderTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.demoBadge {
+  background: var(--secondaryLight);
+  color: var(--secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Split workspace layout grid */
+.workspaceGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: var(--space-lg);
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-3xl);
+  flex-grow: 1;
+}
+
+.contentViewer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.playerWrapper {
+  width: 100%;
+}
+
+/* Metadata card underneath player */
+.metaCard {
+  padding: var(--space-xl);
+}
+
+.metaHeader {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.dayBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.lessonTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text);
+  font-family: var(--font-heading);
+}
+
+.lessonNotesContent {
+  font-size: 0.95rem;
+  color: var(--textSecondary);
+  line-height: 1.6;
+}
+
+.notesTextHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: var(--space-sm);
+}
+
+.notesTextHeader h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.pdfDownloadBtn {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.pdfDownloadBtn:hover {
+  color: var(--accentLight);
+}
+
+.notesParagraph {
+  white-space: pre-line;
+}
+
+.videoIntro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.switchNotesBtn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.lockedNotesMessage {
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--backgroundAlt);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.lockedNotesMessage h4 {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.lockedNotesMessage p {
+  font-size: 0.85rem;
+  max-width: 80%;
+  margin-bottom: var(--space-sm);
+}
+
+/* Sidebar curriculum layout */
+.sidebarCurriculum {
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-lg) + 60px);
+  height: fit-content;
+}
+
+.curriculumCard {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 75vh;
+}
+
+.curriculumHeader {
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.curriculumHeader h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.curriculumHeader p {
+  font-size: 0.75rem;
+  color: var(--textMuted);
+}
+
+.curriculumBody {
+  overflow-y: auto;
+  padding: var(--space-md) var(--space-lg);
+}
+
+/* Responsive workspaces */
+@media (max-width: 1024px) {
+  .workspaceGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebarCurriculum {
+    position: static;
+  }
+  
+  .curriculumCard {
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .metaCard {
+    padding: var(--space-lg);
+  }
+  
+  .notesTextHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+}
