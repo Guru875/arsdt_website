@@ -378,11 +378,66 @@
     padding: var(--space-md);
   }
   .certPreviewFrame {
-    padding: 12px;
+    padding: 12px 8px;
     border-width: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .certInstName {
+    font-size: 0.95rem;
+  }
+  .certSubHeader {
+    font-size: 0.52rem;
+    letter-spacing: 0.5px;
+  }
+  .certBody {
+    margin: var(--space-xs) 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .certTitle {
+    font-size: 0.7rem;
+    margin-bottom: 2px;
   }
   .studentName {
+    font-size: 1.15rem;
     min-width: 100px;
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+  }
+  .certText {
+    font-size: 0.58rem;
+    max-width: 95%;
+    line-height: 1.35;
+  }
+  .certFooter {
+    margin-top: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    gap: 4px;
+  }
+  .certSignBlock {
+    flex: 1;
+  }
+  .certSignLine {
+    width: 65px;
+    margin-top: 4px;
+  }
+  .certSignLabel {
+    font-size: 0.45rem;
+  }
+  .certSeal {
+    width: 45px;
+    height: 45px;
+    font-size: 0.48rem;
+    border-width: 1.5px;
   }
 }
 

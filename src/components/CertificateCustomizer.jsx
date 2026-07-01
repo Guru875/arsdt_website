@@ -31,7 +31,7 @@ export default function CertificateCustomizer() {
         {/* Certificate Header */}
         <div className={styles.certHeader}>
           <h4 className={styles.certInstName}>ARSDT INSTITUTE</h4>
-          <span className={styles.certSubHeader}>APPLIANCE REPAIR SERVICE & DIAGNOSTICS TRAINING</span>
+          <span className={styles.certSubHeader}>APPLIANCE REPAIR SKILL DEVELOPMENT TRAINING</span>
         </div>
 
         {/* Certificate Body */}

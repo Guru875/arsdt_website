@@ -44,6 +44,9 @@ export default function Home() {
     const url = `https://wa.me/${siteConfig.whatsapp}?text=${formattedText}`;
     window.open(url, '_blank');
   };
+  // Why Choose Us Mobile Slider state
+  const whyUsSliderRef = useRef(null);
+  const [activeWhyUsIdx, setActiveWhyUsIdx] = useState(0);
 
   // Filter courses based on category
   const filteredCourses = activeCategory === 'all' 
@@ -92,6 +95,71 @@ export default function Home() {
   };
 
 
+  const scrollToWhyUs = (index) => {
+    const slider = whyUsSliderRef.current;
+    if (slider) {
+      const children = Array.from(slider.children);
+      if (children[index]) {
+        slider.scrollTo({
+          left: children[index].offsetLeft - slider.offsetLeft,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
+  // Effect for Why Choose Us mobile slider scroll & auto-slide
+  useEffect(() => {
+    const slider = whyUsSliderRef.current;
+    if (!slider) return;
+
+    const handleScroll = () => {
+      const scrollLeft = slider.scrollLeft;
+      const children = Array.from(slider.children);
+      if (children.length === 0) return;
+      
+      let closestIdx = 0;
+      let minDiff = Infinity;
+      
+      children.forEach((child, idx) => {
+        const childLeft = child.offsetLeft - slider.offsetLeft;
+        const diff = Math.abs(childLeft - scrollLeft);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closestIdx = idx;
+        }
+      });
+      
+      setActiveWhyUsIdx(closestIdx);
+    };
+
+    slider.addEventListener('scroll', handleScroll);
+
+    // Auto-slide every 4 seconds on mobile
+    const interval = setInterval(() => {
+      if (window.innerWidth <= 768) {
+        const children = Array.from(slider.children);
+        if (children.length === 0) return;
+        
+        const nextIdx = (activeWhyUsIdx + 1) % children.length;
+        const nextCard = children[nextIdx];
+        if (nextCard) {
+          slider.scrollTo({
+            left: nextCard.offsetLeft - slider.offsetLeft,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }, 4000);
+
+    return () => {
+      slider.removeEventListener('scroll', handleScroll);
+      clearInterval(interval);
+    };
+  }, [activeWhyUsIdx]);
+
+  const whatsappMsg = encodeURIComponent("Hi! I am interested in joining a course at ARSDT. Please guide me.");
+  const contactWhatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${whatsappMsg}`;
 
   return (
     <div className={styles.homeWrapper}>
@@ -202,16 +270,30 @@ export default function Home() {
 
       {/* 4. WHY CHOOSE US */}
       <section id="why-us" className={`${styles.whyUsSection} section`}>
-        <div className="container">
+        {/* Cinematic Video Background */}
+        <div className={styles.videoBgContainer}>
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className={styles.videoBg}
+          >
+            <source src="/arsdt.mp4" type="video/mp4" />
+          </video>
+          <div className={styles.videoOverlay}></div>
+        </div>
+
+        <div className={`container ${styles.whyUsContent}`}>
           <div className="section-header">
-            <span className="section-badge">{t('whyUs.sectionTitle')}</span>
-            <h2 className="section-title">{t('whyUs.sectionTitle')}</h2>
-            <p className="section-subtitle">{t('whyUs.sectionSubtitle')}</p>
+            <span className={`section-badge ${styles.whyUsBadge}`}>{t('whyUs.sectionTitle')}</span>
+            <h2 className={`section-title ${styles.whyUsTitle}`}>{t('whyUs.sectionTitle')}</h2>
+            <p className={`section-subtitle ${styles.whyUsSubtitle}`}>{t('whyUs.sectionSubtitle')}</p>
           </div>
 
-          <div className="grid grid-3">
+          <div className={styles.whyUsGrid} ref={whyUsSliderRef}>
             {[1, 2, 3, 4, 5, 6].map((num) => (
-              <div key={num} className={`glass-card ${styles.whyUsCard}`}>
+              <div key={num} className={`${styles.whyUsCard}`}>
                 <div className={styles.whyUsIconWrapper}>
                   {num === 1 && <PracticalIcon size={32} />}
                   {num === 2 && <ExpertTrainersIcon size={32} />}
@@ -225,8 +307,21 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          {/* Dots Navigation for Mobile Slider */}
+          <div className={styles.whyUsDots}>
+            {[1, 2, 3, 4, 5, 6].map((_, idx) => (
+              <button 
+                key={idx} 
+                className={`${styles.dot} ${activeWhyUsIdx === idx ? styles.activeDot : ''}`}
+                onClick={() => scrollToWhyUs(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </section>
+
 
       {/* 5. DEMO VIDEOS */}
       <section id="demo" className="section">
