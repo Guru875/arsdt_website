@@ -186,8 +186,9 @@
 }
 
 .coursesSlider > div {
-  min-width: 350px;
+  min-width: min(350px, 80vw);
   max-width: 400px;
+  width: 100%;
   flex: 0 0 auto;
   align-self: stretch;
   height: auto;
