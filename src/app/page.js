@@ -6,7 +6,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import siteConfig from '@/data/site.json';
 import coursesData from '@/data/courses.json';
 import CourseCard from '@/components/CourseCard';
-import BeforeAfterSlider from '@/components/BeforeAfterSlider';
+import InteractiveTransformation from '@/components/InteractiveTransformation';
 import CertificateCustomizer from '@/components/CertificateCustomizer';
 import { ChevronDownIcon } from '@/components/Icons';
 import styles from './page.module.css';
@@ -87,8 +87,7 @@ export default function Home() {
 
           <div className={styles.heroVisual}>
             <div className={styles.visualCard}>
-              <BeforeAfterSlider />
-              <div className={styles.sliderTag}>Drag slider to compare before & after repair</div>
+              <InteractiveTransformation />
             </div>
           </div>
         </div>
@@ -190,8 +189,8 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Demo</span>
-            <h2 className="section-title">See Us in Action</h2>
-            <p className="section-subtitle">Watch our classroom sessions, lab practice, and student feedback videos.</p>
+            <h2 className="section-title">{t('demo.sectionTitle')}</h2>
+            <p className="section-subtitle">{t('demo.sectionSubtitle')}</p>
           </div>
 
           <div className="grid grid-2">
@@ -204,7 +203,7 @@ export default function Home() {
                 allowFullScreen
                 className={styles.demoIframe}
               ></iframe>
-              <h4 className={styles.demoVideoTitle}>Interactive AC Installation Practice Lab</h4>
+              <h4 className={styles.demoVideoTitle}>{t('demo.vid1Title')}</h4>
             </div>
             <div className={styles.demoVideoWrapper}>
               <iframe
@@ -215,7 +214,7 @@ export default function Home() {
                 allowFullScreen
                 className={styles.demoIframe}
               ></iframe>
-              <h4 className={styles.demoVideoTitle}>Washing Machine Diagnostics Workshop Review</h4>
+              <h4 className={styles.demoVideoTitle}>{t('demo.vid2Title')}</h4>
             </div>
           </div>
         </div>
@@ -226,20 +225,20 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <span className="section-badge">{t('courses.certificate')}</span>
-            <h2 className="section-title">Professional Certification</h2>
-            <p className="section-subtitle">Boost your employment or business credibility with our recognized training credentials.</p>
+            <h2 className="section-title">{t('certificateBlock.sectionTitle')}</h2>
+            <p className="section-subtitle">{t('certificateBlock.sectionSubtitle')}</p>
           </div>
 
           <div className={styles.certFlexGrid}>
             <div className={styles.certContentBox}>
-              <h3 className={styles.certHeading}>Recognized Certificate</h3>
+              <h3 className={styles.certHeading}>{t('certificateBlock.recognizedCert')}</h3>
               <p className={styles.certDesc}>
-                Upon successfully completing any of our training packages (10-Day or 2-Day), students undergo practical testing evaluations. Graduating candidates are instantly awarded our industry certification, validating your repair diagnostics skills.
+                {t('certificateBlock.certDesc')}
               </p>
               <ul className={styles.certList}>
-                <li>🏆 Serialized unique registration number</li>
-                <li>🏢 Globally recognized by private service centers</li>
-                <li>🎯 Direct verification support</li>
+                <li>{t('certificateBlock.certList1')}</li>
+                <li>{t('certificateBlock.certList2')}</li>
+                <li>{t('certificateBlock.certList3')}</li>
               </ul>
             </div>
             <div className={styles.certInteractiveBox}>
@@ -249,32 +248,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. STUDENT REVIEWS */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-badge">Success Stories</span>
-            <h2 className="section-title">{t('testimonials.sectionTitle')}</h2>
-            <p className="section-subtitle">{t('testimonials.sectionSubtitle')}</p>
-          </div>
 
-          <div className="grid grid-3">
-            {siteConfig.testimonials.map((test) => (
-              <div key={test.id} className={`glass-card ${styles.testCard}`}>
-                <div className={styles.stars}>⭐⭐⭐⭐⭐</div>
-                <p className={styles.testText}>&quot;{t(test.text)}&quot;</p>
-                <div className={styles.testProfile}>
-                  <div className={styles.avatar}>{test.avatar}</div>
-                  <div>
-                    <h4 className={styles.testName}>{t(test.name)}</h4>
-                    <span className={styles.testRole}>{t(test.role)}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 8. FAQ SECTION */}
       <section id="faq" className={`${styles.faqSection} section`}>
@@ -320,8 +294,8 @@ export default function Home() {
 
           <div className={styles.contactContainer}>
             <div className={styles.contactSidebar}>
-              <h3 className={styles.sidebarHeading}>ARSDT Training Center</h3>
-              <p className={styles.sidebarDesc}>Drop us a line or connect directly via phone or WhatsApp. We reply within minutes during working hours.</p>
+              <h3 className={styles.sidebarHeading}>{t('contact.trainingCenter')}</h3>
+              <p className={styles.sidebarDesc}>{t('contact.sidebarDesc')}</p>
               
               <div className={styles.infoList}>
                 <div className={styles.infoNode}>
@@ -359,15 +333,15 @@ export default function Home() {
               <form onSubmit={(e) => { e.preventDefault(); alert("Thank you! Our trainers will contact you shortly."); }} className={styles.contactForm}>
                 <div className={styles.formGroup}>
                   <label htmlFor="formName" className={styles.formLabel}>{t('contact.name')}</label>
-                  <input id="formName" type="text" className={styles.formInput} required placeholder="Your full name" />
+                  <input id="formName" type="text" className={styles.formInput} required placeholder={t('contact.namePlaceholder')} />
                 </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="formEmail" className={styles.formLabel}>{t('contact.emailField')}</label>
-                  <input id="formEmail" type="email" className={styles.formInput} required placeholder="Your email address" />
+                  <input id="formEmail" type="email" className={styles.formInput} required placeholder={t('contact.emailPlaceholder')} />
                 </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="formMessage" className={styles.formLabel}>{t('contact.message')}</label>
-                  <textarea id="formMessage" className={styles.formTextarea} rows="4" required placeholder="Write details about the course you want to join..."></textarea>
+                  <textarea id="formMessage" className={styles.formTextarea} rows={4} required placeholder={t('contact.messagePlaceholder')}></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary w-full">
                   ✉️ {t('contact.sendMessage')}

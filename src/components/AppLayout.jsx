@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
 import LanguageSelector from './LanguageSelector';
 import ThemeToggle from './ThemeToggle';
+import ScrollToTop from './ScrollToTop';
 import siteConfig from '@/data/site.json';
 import styles from './AppLayout.module.css';
 
@@ -176,6 +177,8 @@ export default function AppLayout({ children }) {
           </div>
         </div>
       </footer>
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </div>
   );
 }

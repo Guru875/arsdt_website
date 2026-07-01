@@ -12,7 +12,7 @@ export default function CertificateCustomizer() {
     <div className={styles.certCustomizerCard}>
       <div className={styles.certInputWrapper}>
         <label htmlFor="studentNameInput" className={styles.certInputLabel}>
-          {t('courses.certificate')} Preview: Type your name
+          {t('certificateBlock.previewLabel')}
         </label>
         <input
           id="studentNameInput"
@@ -21,7 +21,7 @@ export default function CertificateCustomizer() {
           onChange={(e) => setStudentName(e.target.value || 'Your Name')}
           className={styles.certInput}
           maxLength={30}
-          placeholder="Enter your name here"
+          placeholder={t('certificateBlock.enterName')}
         />
       </div>
 

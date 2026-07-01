@@ -17,7 +17,18 @@
       "stat1Label": "Students Trained",
       "stat2Label": "Google Rating",
       "stat3Label": "Placement Rate",
-      "stat4Label": "Courses Available"
+      "stat4Label": "Courses Available",
+      "visual": {
+        "step1Tab": "1. Problem",
+        "step1Title": "1. The Problem",
+        "step1Desc": "Confused & struggling with complex PCB circuits & dead AC units.",
+        "step2Tab": "2. Training",
+        "step2Title": "2. Hands-on Training",
+        "step2Desc": "Learn diagnostic testing & troubleshooting under expert guidance.",
+        "step3Tab": "3. Success",
+        "step3Title": "3. The Professional",
+        "step3Desc": "Confident, certified expert technician repairing appliances with ease!"
+      }
     },
     "courses": {
       "sectionTitle": "Our Professional Courses",
@@ -76,6 +87,23 @@
       "sectionTitle": "Frequently Asked Questions",
       "sectionSubtitle": "Got questions? We have answers."
     },
+    "demo": {
+      "sectionTitle": "See Us in Action",
+      "sectionSubtitle": "Watch our classroom sessions, lab practice, and student feedback videos.",
+      "vid1Title": "Interactive AC Installation Practice Lab",
+      "vid2Title": "Washing Machine Diagnostics Workshop Review"
+    },
+    "certificateBlock": {
+      "sectionTitle": "Professional Certification",
+      "sectionSubtitle": "Boost your employment or business credibility with our recognized training credentials.",
+      "recognizedCert": "Recognized Certificate",
+      "certDesc": "Upon successfully completing any of our training packages (10-Day or 2-Day), students undergo practical testing evaluations. Graduating candidates are instantly awarded our industry certification, validating your repair diagnostics skills.",
+      "certList1": "🏆 Serialized unique registration number",
+      "certList2": "🏢 Globally recognized by private service centers",
+      "certList3": "🎯 Direct verification support",
+      "previewLabel": "Preview: Type your name",
+      "enterName": "Enter your name here"
+    },
     "contact": {
       "sectionTitle": "Get In Touch",
       "sectionSubtitle": "Ready to start your journey? Contact us today.",
@@ -87,7 +115,12 @@
       "sendMessage": "Send Message",
       "name": "Your Name",
       "emailField": "Your Email",
-      "message": "Your Message"
+      "message": "Your Message",
+      "trainingCenter": "ARSDT Training Center",
+      "sidebarDesc": "Drop us a line or connect directly via phone or WhatsApp. We reply within minutes during working hours.",
+      "namePlaceholder": "Your full name",
+      "emailPlaceholder": "Your email address",
+      "messagePlaceholder": "Write details about the course you want to join..."
     },
     "footer": {
       "description": "ARSDT - Appliance Repair Service & Diagnostics Training. India's leading hands-on appliance repair training institute.",
@@ -134,7 +167,18 @@
       "stat1Label": "பயிற்சி பெற்ற மாணவர்கள்",
       "stat2Label": "கூகுள் ரேட்டிங்",
       "stat3Label": "வேலைவாய்ப்பு விகிதம்",
-      "stat4Label": "கோர்ஸ்கள் உள்ளன"
+      "stat4Label": "கோர்ஸ்கள் உள்ளன",
+      "visual": {
+        "step1Tab": "1. பிரச்சனை",
+        "step1Title": "1. பிரச்சனை",
+        "step1Desc": "சிக்கலான PCB சர்க்யூட்டுகள் & வேலை செய்யாத AC-யால் குழப்பம் மற்றும் தடுமாற்றம்.",
+        "step2Tab": "2. பயிற்சி",
+        "step2Title": "2. நேரடி பயிற்சி",
+        "step2Desc": "நிபுணர் வழிகாட்டுதலுடன் தவறுகளைக் கண்டறிந்து சரிசெய்யும் பயிற்சி.",
+        "step3Tab": "3. தீர்வு",
+        "step3Title": "3. சான்றிதழ் பெற்ற வல்லுநர்",
+        "step3Desc": "எளிதாக பழுதுபார்க்கும் நம்பிக்கை கொண்ட சான்றிதழ் பெற்ற வல்லுநர்!"
+      }
     },
     "courses": {
       "sectionTitle": "எங்கள் தொழில்முறை பாடநெறிகள்",
@@ -193,6 +237,23 @@
       "sectionTitle": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
       "sectionSubtitle": "கேள்விகள் உள்ளதா? எங்களிடம் பதில்கள் உள்ளன."
     },
+    "demo": {
+      "sectionTitle": "எங்களை செயலில் காணுங்கள்",
+      "sectionSubtitle": "எங்கள் வகுப்பறை அமர்வுகள், ஆய்வக பயிற்சி மற்றும் மாணவர் கருத்து வீடியோக்களைப் பாருங்கள்.",
+      "vid1Title": "ஊடாடும் ஏசி நிறுவல் பயிற்சி ஆய்வகம்",
+      "vid2Title": "வாஷிங் மெஷின் டயக்னாஸ்டிக்ஸ் பயிற்சி விமர்சனம்"
+    },
+    "certificateBlock": {
+      "sectionTitle": "தொழில்முறை சான்றிதழ்",
+      "sectionSubtitle": "எங்கள் அங்கீகரிக்கப்பட்ட பயிற்சி சான்றிதழ்கள் மூலம் உங்கள் வேலைவாய்ப்பு அல்லது வணிக நம்பகத்தன்மையை அதிகரிக்கவும்.",
+      "recognizedCert": "அங்கீகரிக்கப்பட்ட சான்றிதழ்",
+      "certDesc": "எங்கள் பயிற்சித் தொகுப்புகளில் (10-நாள் அல்லது 2-நாள்) ஏதேனும் ஒன்றை வெற்றிகரமாக முடித்தவுடன், மாணவர்கள் நடைமுறை சோதனை மதிப்பீடுகளுக்கு உட்படுத்தப்படுவார்கள். தேர்ச்சி பெறும் மாணவர்களுக்கு உடனடியாக எங்கள் தொழில்துறை சான்றிதழ் வழங்கப்படுகிறது, இது உங்கள் பழுதுபார்க்கும் திறன்களை உறுதிப்படுத்துகிறது.",
+      "certList1": "🏆 வரிசைப்படுத்தப்பட்ட தனித்துவ பதிவு எண்",
+      "certList2": "🏢 தனியார் சேவை மையங்களால் உலகளவில் அங்கீகரிக்கப்பட்டது",
+      "certList3": "🎯 நேரடி சரிபார்ப்பு ஆதரவு",
+      "previewLabel": "முன்னோட்டம்: உங்கள் பெயரை உள்ளிடவும்",
+      "enterName": "உங்கள் பெயரை இங்கே உள்ளிடவும்"
+    },
     "contact": {
       "sectionTitle": "தொடர்பு கொள்ளுங்கள்",
       "sectionSubtitle": "உங்கள் பயணத்தைத் தொடங்க தயாரா? இன்றே தொடர்பு கொள்ளுங்கள்.",
@@ -204,7 +265,12 @@
       "sendMessage": "செய்தி அனுப்பு",
       "name": "உங்கள் பெயர்",
       "emailField": "உங்கள் மின்னஞ்சல்",
-      "message": "உங்கள் செய்தி"
+      "message": "உங்கள் செய்தி",
+      "trainingCenter": "ARSDT பயிற்சி மையம்",
+      "sidebarDesc": "தொலைபேசி அல்லது வாட்ஸ்அப் வழியாக நேரடியாக தொடர்புகொள்ளவும். வேலை நேரங்களில் சில நிமிடங்களில் பதிலளிப்போம்.",
+      "namePlaceholder": "உங்கள் முழு பெயர்",
+      "emailPlaceholder": "உங்கள் மின்னஞ்சல் முகவரி",
+      "messagePlaceholder": "நீங்கள் சேர விரும்பும் பாடநெறியைப் பற்றிய விவரங்களை எழுதவும்..."
     },
     "footer": {
       "description": "ARSDT - அப்ளையன்ஸ் ரிப்பேர் சர்வீஸ் & டையக்னோஸ்டிக்ஸ் பயிற்சி. இந்தியாவின் முன்னணி நடைமுறை அப்ளையன்ஸ் ரிப்பேர் பயிற்சி நிறுவனம்.",
@@ -251,7 +317,18 @@
       "stat1Label": "പരിശീലനം ലഭിച്ച വിദ്യാർത്ഥികൾ",
       "stat2Label": "ഗൂഗിൾ റേറ്റിംഗ്",
       "stat3Label": "പ്ലേസ്മെന്റ് നിരക്ക്",
-      "stat4Label": "കോഴ്സുകൾ ലഭ്യം"
+      "stat4Label": "കോഴ്സുകൾ ലഭ്യം",
+      "visual": {
+        "step1Tab": "1. പ്രശ്നം",
+        "step1Title": "1. പ്രശ്നം",
+        "step1Desc": "കേടായ എസിയും സങ്കീർണ്ണണ്ണമായ പിസിബി സർക്യൂട്ടുകളും കണ്ട് വിഷമിക്കുന്ന അവസ്ഥ.",
+        "step2Tab": "2. പരിശീലനം",
+        "step2Title": "2. പ്രായോഗിക പരിശീലനം",
+        "step2Desc": "വിദഗ്ദ്ധരുടെ മേൽനോട്ടത്തിൽ തകരാറുകൾ നേരിട്ട് കണ്ടെത്തി പരിഹരിക്കുന്നു.",
+        "step3Tab": "3. വിജയം",
+        "step3Title": "3. പ്രൊഫഷണൽ",
+        "step3Desc": "ആത്മവിശ്വാസത്തോടെയും അംഗീകൃത സർട്ടിഫിക്കറ്റോടെയും ജോലി ചെയ്യാൻ സജ്ജൻ!"
+      }
     },
     "courses": {
       "sectionTitle": "ഞങ്ങളുടെ പ്രൊഫഷണൽ കോഴ്സുകൾ",
@@ -310,6 +387,23 @@
       "sectionTitle": "പതിവ് ചോദ്യങ്ങൾ",
       "sectionSubtitle": "ചോദ്യങ്ങളുണ്ടോ? ഞങ്ങൾക്ക് ഉത്തരങ്ങളുണ്ട്."
     },
+    "demo": {
+      "sectionTitle": "ഞങ്ങളുടെ പ്രവർത്തനങ്ങൾ കാണുക",
+      "sectionSubtitle": "ഞങ്ങളുടെ ക്ലാസ്റൂം സെഷനുകൾ, ലാബ് പ്രാക്ടീസ്, വിദ്യാർത്ഥികളുടെ പ്രതികരണ വീഡിയോകൾ എന്നിവ കാണുക.",
+      "vid1Title": "ഇന്ററാക്ടീവ് എസി ഇൻസ്റ്റാളേഷൻ പ്രാക്ടീസ് ലാബ്",
+      "vid2Title": "വാഷിംഗ് മെഷീൻ ഡയഗ്നോസ്റ്റിക്സ് വർക്ക്ഷോപ്പ് അവലോകനം"
+    },
+    "certificateBlock": {
+      "sectionTitle": "പ്രൊഫഷണൽ സർട്ടിഫിക്കേഷൻ",
+      "sectionSubtitle": "ഞങ്ങളുടെ അംഗീകൃത പരിശീലന സർട്ടിഫിക്കറ്റുകൾ ഉപയോഗിച്ച് നിങ്ങളുടെ തൊഴിൽ അല്ലെങ്കിൽ ബിസിനസ്സ് വിശ്വാസ്യത വർദ്ധിപ്പിക്കുക.",
+      "recognizedCert": "അംഗീകൃത സർട്ടിഫിക്കറ്റ്",
+      "certDesc": "ഞങ്ങളുടെ ഏതെങ്കിലും പരിശീലന പാക്കേജുകൾ (10-ദിവസം അല്ലെങ്കിൽ 2-ദിവസം) വിജയകരമായി പൂർത്തിയാക്കുമ്പോൾ, വിദ്യാർത്ഥികൾ പ്രായോഗിക പരിശോധനയ്ക്ക് വിധേയരാകുന്നു. വിജയിക്കുന്ന സ്ഥാനാർത്ഥികൾക്ക് തൽക്ഷണം ഞങ്ങളുടെ ഇൻഡസ്ട്രി സർട്ടിഫിക്കേഷൻ നൽകുന്നു, ഇത് നിങ്ങളുടെ റിപ്പയർ ഡയഗ്നോസ്റ്റിക്സ് കഴിവുകളെ സാധൂകരിക്കുന്നു.",
+      "certList1": "🏆 സീരിയലൈസ് ചെയ്ത സവിശേഷ രജിസ്ട്രേഷൻ നമ്പർ",
+      "certList2": "🏢 സ്വകാര്യ സേവന കേന്ദ്രങ്ങൾ ആഗോളതലത്തിൽ അംഗീകരിച്ചു",
+      "certList3": "🎯 നേരിട്ടുള്ള പരിശോധനാ പിന്തുണ",
+      "previewLabel": "പ്രിവ്യൂ: നിങ്ങളുടെ പേര് ടൈപ്പ് ചെയ്യുക",
+      "enterName": "നിങ്ങളുടെ പേര് ഇവിടെ നൽകുക"
+    },
     "contact": {
       "sectionTitle": "ബന്ധപ്പെടുക",
       "sectionSubtitle": "നിങ്ങളുടെ യാത്ര ആരംഭിക്കാൻ തയ്യാറാണോ? ഇന്ന് തന്നെ ബന്ധപ്പെടൂ.",
@@ -321,7 +415,12 @@
       "sendMessage": "സന്ദേശം അയയ്ക്കൂ",
       "name": "നിങ്ങളുടെ പേര്",
       "emailField": "നിങ്ങളുടെ ഇമെയിൽ",
-      "message": "നിങ്ങളുടെ സന്ദേശം"
+      "message": "നിങ്ങളുടെ സന്ദേശം",
+      "trainingCenter": "ARSDT പരിശീലന കേന്ദ്രം",
+      "sidebarDesc": "ഫോൺ അല്ലെങ്കിൽ വാട്ട്‌സ്ആപ്പ് വഴി നേരിട്ട് ബന്ധപ്പെടുക. പ്രവൃത്തി സമയങ്ങളിൽ മിനിറ്റുകൾക്കകം ഞങ്ങൾ മറുപടി നൽകും.",
+      "namePlaceholder": "നിങ്ങളുടെ മുഴുവൻ പേര്",
+      "emailPlaceholder": "നിങ്ങളുടെ ഇമെയിൽ വിലാസം",
+      "messagePlaceholder": "നിങ്ങൾ ചേരാൻ ആഗ്രഹിക്കുന്ന കോഴ്‌സിനെക്കുറിച്ചുള്ള വിശദാംശങ്ങൾ എഴുതുക..."
     },
     "footer": {
       "description": "ARSDT - അപ്ലയൻസ് റിപ്പയർ സർവ്വീസ് & ഡയഗ്നോസ്റ്റിക്സ് ട്രെയിനിംഗ്. ഇന്ത്യയിലെ മുൻനിര പ്രായോഗിക അപ്ലയൻസ് റിപ്പയർ ട്രെയിനിംഗ് സ്ഥാപനം.",

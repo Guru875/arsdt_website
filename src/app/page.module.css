@@ -66,12 +66,17 @@
 
 .heroActions {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-md);
   margin-bottom: var(--space-lg);
+  width: 100%;
 }
 
 .batchUrgency {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: var(--space-sm);
   background: rgba(0, 0, 0, 0.35);
@@ -80,6 +85,8 @@
   font-size: 0.85rem;
   color: #f1f5f9;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  max-width: 100%;
+  text-align: center;
 }
 
 .pulseDot {
@@ -179,6 +186,12 @@
   border-color: var(--primary);
   color: white;
   box-shadow: 0 4px 12px rgba(45, 122, 58, 0.25);
+}
+
+.tabActive:hover {
+  color: white;
+  background: var(--primaryDark);
+  border-color: var(--primaryDark);
 }
 
 /* Why Choose Us Cards */
