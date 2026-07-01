@@ -55,6 +55,9 @@
   font-family: var(--font-heading);
   font-weight: 800;
   line-height: 1.15;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .heroSubtitle {
@@ -62,6 +65,8 @@
   font-size: 1.15rem;
   margin-bottom: var(--space-xl);
   line-height: 1.6;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .heroActions {
@@ -577,6 +582,18 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: calc(var(--space-2xl) + 10px) 0 var(--space-2xl);
+  }
+
+  .heroTitle {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+
   .statsGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
@@ -589,5 +606,29 @@
   .tabBtn {
     padding: 8px 18px;
     font-size: 0.85rem;
+  }
+
+  .batchUrgency {
+    font-size: 0.78rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: calc(var(--space-xl) + 8px) 0 var(--space-xl);
+  }
+
+  .heroTitle {
+    font-size: clamp(1.3rem, 5.5vw, 1.8rem);
+  }
+
+  .heroSubtitle {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .heroActions {
+    gap: var(--space-sm);
   }
 }
