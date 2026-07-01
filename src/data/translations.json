@@ -1,0 +1,353 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "courses": "Courses",
+      "about": "About Us",
+      "gallery": "Gallery",
+      "contact": "Contact",
+      "enroll": "Enroll Now"
+    },
+    "hero": {
+      "badge": "🎓 #1 Appliance Repair Training in South India",
+      "title": "Master Appliance Repair & Start Your Own Business",
+      "subtitle": "Learn TV, AC, Washing Machine, Refrigerator & more repairs with hands-on practical training. Get certified and launch your career in just 10 days.",
+      "cta1": "Explore Courses",
+      "cta2": "Watch Demo",
+      "stat1Label": "Students Trained",
+      "stat2Label": "Google Rating",
+      "stat3Label": "Placement Rate",
+      "stat4Label": "Courses Available"
+    },
+    "courses": {
+      "sectionTitle": "Our Professional Courses",
+      "sectionSubtitle": "Choose from our industry-leading appliance repair courses designed to make you job-ready",
+      "duration": "Duration",
+      "price": "Price",
+      "offerPrice": "Offer Price",
+      "viewDetails": "View Details",
+      "enrollNow": "Enroll Now",
+      "day": "Day",
+      "topics": "Topics Covered",
+      "practicalWork": "Practical Work",
+      "modules": "Course Modules",
+      "outcomes": "What You'll Learn",
+      "requirements": "Requirements",
+      "includes": "Course Includes",
+      "certificate": "Certificate",
+      "allCourses": "All Courses",
+      "popular": "Popular",
+      "new": "New",
+      "limitedSeats": "Limited Seats!"
+    },
+    "whyUs": {
+      "sectionTitle": "Why Choose ARSDT?",
+      "sectionSubtitle": "We provide industry-best training with real-world practical experience",
+      "feature1Title": "100% Practical Training",
+      "feature1Desc": "Hands-on training with real appliances from day one. No boring theory-only classes.",
+      "feature2Title": "Expert Trainers",
+      "feature2Desc": "Learn from industry professionals with 15+ years of field experience.",
+      "feature3Title": "Certification",
+      "feature3Desc": "Get a professional certificate recognized by service centers across India.",
+      "feature4Title": "Placement Support",
+      "feature4Desc": "Job placement assistance and business startup guidance after course completion.",
+      "feature5Title": "Lifetime Access",
+      "feature5Desc": "Access to course videos, notes, and materials even after completing the course.",
+      "feature6Title": "Small Batches",
+      "feature6Desc": "Limited seats per batch ensuring personal attention and better learning."
+    },
+    "process": {
+      "sectionTitle": "How It Works",
+      "sectionSubtitle": "Your journey from beginner to certified professional in 4 simple steps",
+      "step1Title": "Choose Your Course",
+      "step1Desc": "Select from our range of professional appliance repair courses.",
+      "step2Title": "Learn & Practice",
+      "step2Desc": "Attend live classes with real appliances and expert guidance.",
+      "step3Title": "Get Certified",
+      "step3Desc": "Complete the course and receive your professional certificate.",
+      "step4Title": "Start Earning",
+      "step4Desc": "Begin your career with our placement support or start your own business."
+    },
+    "testimonials": {
+      "sectionTitle": "What Our Students Say",
+      "sectionSubtitle": "Real stories from our successful graduates"
+    },
+    "faq": {
+      "sectionTitle": "Frequently Asked Questions",
+      "sectionSubtitle": "Got questions? We have answers."
+    },
+    "contact": {
+      "sectionTitle": "Get In Touch",
+      "sectionSubtitle": "Ready to start your journey? Contact us today.",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "whatsapp": "WhatsApp Us",
+      "callNow": "Call Now",
+      "sendMessage": "Send Message",
+      "name": "Your Name",
+      "emailField": "Your Email",
+      "message": "Your Message"
+    },
+    "footer": {
+      "description": "ARSDT - Appliance Repair Service & Diagnostics Training. India's leading hands-on appliance repair training institute.",
+      "quickLinks": "Quick Links",
+      "courses": "Our Courses",
+      "followUs": "Follow Us",
+      "rights": "All Rights Reserved",
+      "madeWith": "Made with ❤️ in India"
+    },
+    "cta": {
+      "nextBatch": "Next Batch Starting Soon!",
+      "seatsLeft": "seats left",
+      "limitedOffer": "Limited Time Offer",
+      "enrollBefore": "Enroll before the seats fill up",
+      "bookSeat": "Book Your Seat"
+    },
+    "common": {
+      "learnMore": "Learn More",
+      "viewAll": "View All",
+      "close": "Close",
+      "back": "Back",
+      "next": "Next",
+      "previous": "Previous",
+      "loading": "Loading...",
+      "free": "Free",
+      "off": "OFF"
+    }
+  },
+  "ta": {
+    "nav": {
+      "home": "முகப்பு",
+      "courses": "பாடநெறிகள்",
+      "about": "எங்களைப் பற்றி",
+      "gallery": "கேலரி",
+      "contact": "தொடர்பு",
+      "enroll": "இப்போது சேரவும்"
+    },
+    "hero": {
+      "badge": "🎓 தென் இந்தியாவின் #1 அப்ளையன்ஸ் ரிப்பேர் பயிற்சி",
+      "title": "அப்ளையன்ஸ் ரிப்பேர் கற்றுக்கொள்ளுங்கள் & சொந்த தொழில் தொடங்குங்கள்",
+      "subtitle": "TV, AC, வாஷிங் மெஷின், ஃப்ரிட்ஜ் மற்றும் பல ரிப்பேர் பயிற்சிகளை நடைமுறை பயிற்சியுடன் கற்றுக்கொள்ளுங்கள். 10 நாட்களில் சான்றிதழ் பெறுங்கள்.",
+      "cta1": "பாடநெறிகளை காணுங்கள்",
+      "cta2": "டெமோ பாருங்கள்",
+      "stat1Label": "பயிற்சி பெற்ற மாணவர்கள்",
+      "stat2Label": "கூகுள் ரேட்டிங்",
+      "stat3Label": "வேலைவாய்ப்பு விகிதம்",
+      "stat4Label": "கோர்ஸ்கள் உள்ளன"
+    },
+    "courses": {
+      "sectionTitle": "எங்கள் தொழில்முறை பாடநெறிகள்",
+      "sectionSubtitle": "வேலைக்கு தயாராக உங்களை மாற்ற வடிவமைக்கப்பட்ட தொழில்துறை முன்னணி பாடநெறிகளிலிருந்து தேர்வு செய்யுங்கள்",
+      "duration": "காலம்",
+      "price": "விலை",
+      "offerPrice": "சலுகை விலை",
+      "viewDetails": "விவரங்கள் பார்க்கவும்",
+      "enrollNow": "இப்போது சேரவும்",
+      "day": "நாள்",
+      "topics": "உள்ளடக்கங்கள்",
+      "practicalWork": "நடைமுறை வேலை",
+      "modules": "பாடத்திட்ட தொகுதிகள்",
+      "outcomes": "நீங்கள் கற்றுக்கொள்வது",
+      "requirements": "தேவைகள்",
+      "includes": "பாடநெறியில் உள்ளவை",
+      "certificate": "சான்றிதழ்",
+      "allCourses": "அனைத்து கோர்ஸ்கள்",
+      "popular": "பிரபலமான",
+      "new": "புதியது",
+      "limitedSeats": "குறைந்த இடங்கள்!"
+    },
+    "whyUs": {
+      "sectionTitle": "ஏன் ARSDT-ஐ தேர்வு செய்ய வேண்டும்?",
+      "sectionSubtitle": "நிஜ உலக நடைமுறை அனுபவத்துடன் தொழில்துறையின் சிறந்த பயிற்சியை வழங்குகிறோம்",
+      "feature1Title": "100% நடைமுறை பயிற்சி",
+      "feature1Desc": "முதல் நாளிலிருந்தே உண்மையான சாதனங்களுடன் நடைமுறை பயிற்சி.",
+      "feature2Title": "நிபுணர் பயிற்சியாளர்கள்",
+      "feature2Desc": "15+ ஆண்டுகள் அனுபவமுள்ள தொழில்துறை நிபுணர்களிடம் கற்றுக்கொள்ளுங்கள்.",
+      "feature3Title": "சான்றிதழ்",
+      "feature3Desc": "இந்தியா முழுவதும் அங்கீகரிக்கப்பட்ட தொழில்முறை சான்றிதழ் பெறுங்கள்.",
+      "feature4Title": "வேலைவாய்ப்பு ஆதரவு",
+      "feature4Desc": "பாடநெறி முடிந்ததும் வேலை வாய்ப்பு உதவி மற்றும் தொழில் வழிகாட்டுதல்.",
+      "feature5Title": "வாழ்நாள் அணுகல்",
+      "feature5Desc": "பாடநெறி முடிந்த பிறகும் வீடியோக்கள், குறிப்புகள் அணுகல்.",
+      "feature6Title": "சிறிய தொகுதிகள்",
+      "feature6Desc": "ஒவ்வொரு தொகுதியிலும் குறைந்த இடங்கள் - தனிப்பட்ட கவனம் உறுதி."
+    },
+    "process": {
+      "sectionTitle": "எப்படி செயல்படுகிறது",
+      "sectionSubtitle": "4 எளிய படிகளில் ஆரம்ப நிலையிலிருந்து சான்றிதழ் பெற்ற நிபுணராக மாறுங்கள்",
+      "step1Title": "பாடநெறியைத் தேர்ந்தெடுங்கள்",
+      "step1Desc": "எங்கள் தொழில்முறை பாடநெறிகளிலிருந்து தேர்வு செய்யுங்கள்.",
+      "step2Title": "கற்றுக்கொள்ளுங்கள் & பயிற்சி செய்யுங்கள்",
+      "step2Desc": "உண்மையான சாதனங்கள் மற்றும் நிபுணர் வழிகாட்டுதலுடன் நேரடி வகுப்புகளில் கலந்துகொள்ளுங்கள்.",
+      "step3Title": "சான்றிதழ் பெறுங்கள்",
+      "step3Desc": "பாடநெறியை முடித்து உங்கள் தொழில்முறை சான்றிதழைப் பெறுங்கள்.",
+      "step4Title": "சம்பாதிக்கத் தொடங்குங்கள்",
+      "step4Desc": "எங்கள் வேலைவாய்ப்பு ஆதரவுடன் உங்கள் தொழிலைத் தொடங்குங்கள்."
+    },
+    "testimonials": {
+      "sectionTitle": "எங்கள் மாணவர்கள் என்ன சொல்கிறார்கள்",
+      "sectionSubtitle": "எங்கள் வெற்றிகரமான பட்டதாரிகளின் உண்மையான கதைகள்"
+    },
+    "faq": {
+      "sectionTitle": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
+      "sectionSubtitle": "கேள்விகள் உள்ளதா? எங்களிடம் பதில்கள் உள்ளன."
+    },
+    "contact": {
+      "sectionTitle": "தொடர்பு கொள்ளுங்கள்",
+      "sectionSubtitle": "உங்கள் பயணத்தைத் தொடங்க தயாரா? இன்றே தொடர்பு கொள்ளுங்கள்.",
+      "phone": "தொலைபேசி",
+      "email": "மின்னஞ்சல்",
+      "address": "முகவரி",
+      "whatsapp": "WhatsApp",
+      "callNow": "இப்போது அழைக்கவும்",
+      "sendMessage": "செய்தி அனுப்பு",
+      "name": "உங்கள் பெயர்",
+      "emailField": "உங்கள் மின்னஞ்சல்",
+      "message": "உங்கள் செய்தி"
+    },
+    "footer": {
+      "description": "ARSDT - அப்ளையன்ஸ் ரிப்பேர் சர்வீஸ் & டையக்னோஸ்டிக்ஸ் பயிற்சி. இந்தியாவின் முன்னணி நடைமுறை அப்ளையன்ஸ் ரிப்பேர் பயிற்சி நிறுவனம்.",
+      "quickLinks": "விரைவு இணைப்புகள்",
+      "courses": "எங்கள் கோர்ஸ்கள்",
+      "followUs": "எங்களை பின்தொடருங்கள்",
+      "rights": "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை",
+      "madeWith": "இந்தியாவில் ❤️ உடன் உருவாக்கப்பட்டது"
+    },
+    "cta": {
+      "nextBatch": "அடுத்த தொகுதி விரைவில் தொடங்குகிறது!",
+      "seatsLeft": "இடங்கள் மீதமுள்ளன",
+      "limitedOffer": "வரையறுக்கப்பட்ட நேர சலுகை",
+      "enrollBefore": "இடங்கள் நிரம்புவதற்கு முன் சேருங்கள்",
+      "bookSeat": "உங்கள் இடத்தை முன்பதிவு செய்யுங்கள்"
+    },
+    "common": {
+      "learnMore": "மேலும் அறிய",
+      "viewAll": "அனைத்தும் பார்க்கவும்",
+      "close": "மூடு",
+      "back": "பின்னால்",
+      "next": "அடுத்து",
+      "previous": "முந்தையது",
+      "loading": "ஏற்றுகிறது...",
+      "free": "இலவசம்",
+      "off": "தள்ளுபடி"
+    }
+  },
+  "ml": {
+    "nav": {
+      "home": "ഹോം",
+      "courses": "കോഴ്സുകൾ",
+      "about": "ഞങ്ങളെ കുറിച്ച്",
+      "gallery": "ഗാലറി",
+      "contact": "ബന്ധപ്പെടുക",
+      "enroll": "ഇപ്പോൾ ചേരുക"
+    },
+    "hero": {
+      "badge": "🎓 ദക്ഷിണേന്ത്യയിലെ #1 അപ്ലയൻസ് റിപ്പയർ ട്രെയിനിംഗ്",
+      "title": "അപ്ലയൻസ് റിപ്പയർ പഠിക്കൂ & സ്വന്തം ബിസിനസ് തുടങ്ങൂ",
+      "subtitle": "TV, AC, വാഷിംഗ് മെഷീൻ, ഫ്രിഡ്ജ് എന്നിവയുടെ റിപ്പയർ പ്രായോഗിക പരിശീലനത്തോടെ പഠിക്കൂ. 10 ദിവസത്തിനുള്ളിൽ സർട്ടിഫിക്കറ്റ് നേടൂ.",
+      "cta1": "കോഴ്സുകൾ കാണുക",
+      "cta2": "ഡെമോ കാണുക",
+      "stat1Label": "പരിശീലനം ലഭിച്ച വിദ്യാർത്ഥികൾ",
+      "stat2Label": "ഗൂഗിൾ റേറ്റിംഗ്",
+      "stat3Label": "പ്ലേസ്മെന്റ് നിരക്ക്",
+      "stat4Label": "കോഴ്സുകൾ ലഭ്യം"
+    },
+    "courses": {
+      "sectionTitle": "ഞങ്ങളുടെ പ്രൊഫഷണൽ കോഴ്സുകൾ",
+      "sectionSubtitle": "ജോലിക്ക് തയ്യാറാക്കാൻ രൂപകൽപ്പന ചെയ്ത വ്യവസായ മുൻനിര കോഴ്സുകളിൽ നിന്ന് തിരഞ്ഞെടുക്കൂ",
+      "duration": "കാലാവധി",
+      "price": "വില",
+      "offerPrice": "ഓഫർ വില",
+      "viewDetails": "വിശദാംശങ്ങൾ കാണുക",
+      "enrollNow": "ഇപ്പോൾ ചേരുക",
+      "day": "ദിവസം",
+      "topics": "ഉൾക്കൊള്ളുന്ന വിഷയങ്ങൾ",
+      "practicalWork": "പ്രായോഗിക പ്രവർത്തനം",
+      "modules": "കോഴ്സ് മൊഡ്യൂളുകൾ",
+      "outcomes": "നിങ്ങൾ പഠിക്കുന്നത്",
+      "requirements": "ആവശ്യകതകൾ",
+      "includes": "കോഴ്സിൽ ഉൾപ്പെടുന്നവ",
+      "certificate": "സർട്ടിഫിക്കറ്റ്",
+      "allCourses": "എല്ലാ കോഴ്സുകളും",
+      "popular": "ജനപ്രിയം",
+      "new": "പുതിയത്",
+      "limitedSeats": "പരിമിതമായ സീറ്റുകൾ!"
+    },
+    "whyUs": {
+      "sectionTitle": "എന്തുകൊണ്ട് ARSDT തിരഞ്ഞെടുക്കണം?",
+      "sectionSubtitle": "യഥാർത്ഥ ലോക പ്രായോഗിക അനുഭവത്തോടെ വ്യവസായ മികച്ച പരിശീലനം നൽകുന്നു",
+      "feature1Title": "100% പ്രായോഗിക പരിശീലനം",
+      "feature1Desc": "ആദ്യ ദിവസം മുതൽ യഥാർത്ഥ ഉപകരണങ്ങൾ ഉപയോഗിച്ച് പ്രായോഗിക പരിശീലനം.",
+      "feature2Title": "വിദഗ്ധ പരിശീലകർ",
+      "feature2Desc": "15+ വർഷത്തെ അനുഭവമുള്ള വ്യവസായ പ്രൊഫഷണലുകളിൽ നിന്ന് പഠിക്കൂ.",
+      "feature3Title": "സർട്ടിഫിക്കേഷൻ",
+      "feature3Desc": "ഇന്ത്യയിലെ സർവ്വീസ് സെന്ററുകൾ അംഗീകരിച്ച പ്രൊഫഷണൽ സർട്ടിഫിക്കറ്റ് നേടൂ.",
+      "feature4Title": "പ്ലേസ്മെന്റ് സപ്പോർട്ട്",
+      "feature4Desc": "കോഴ്സ് കഴിഞ്ഞ് ജോലി സഹായവും ബിസിനസ് മാർഗ്ഗനിർദ്ദേശവും.",
+      "feature5Title": "ആജീവനാന്ത ആക്സസ്",
+      "feature5Desc": "കോഴ്സ് കഴിഞ്ഞാലും വീഡിയോകൾ, നോട്ടുകൾ ആക്സസ് ചെയ്യാം.",
+      "feature6Title": "ചെറിയ ബാച്ചുകൾ",
+      "feature6Desc": "ഓരോ ബാച്ചിലും പരിമിതമായ സീറ്റുകൾ - വ്യക്തിഗത ശ്രദ്ധ ഉറപ്പ്."
+    },
+    "process": {
+      "sectionTitle": "ഇത് എങ്ങനെ പ്രവർത്തിക്കുന്നു",
+      "sectionSubtitle": "4 ലളിതമായ ഘട്ടങ്ങളിലൂടെ തുടക്കക്കാരനിൽ നിന്ന് സർട്ടിഫൈഡ് പ്രൊഫഷണലാകൂ",
+      "step1Title": "കോഴ്സ് തിരഞ്ഞെടുക്കൂ",
+      "step1Desc": "ഞങ്ങളുടെ പ്രൊഫഷണൽ കോഴ്സുകളിൽ നിന്ന് തിരഞ്ഞെടുക്കൂ.",
+      "step2Title": "പഠിക്കൂ & പ്രാക്ടീസ് ചെയ്യൂ",
+      "step2Desc": "യഥാർത്ഥ ഉപകരണങ്ങളും വിദഗ്ധ മാർഗ്ഗനിർദ്ദേശവുമുള്ള ലൈവ് ക്ലാസ്സുകളിൽ പങ്കെടുക്കൂ.",
+      "step3Title": "സർട്ടിഫൈഡ് ആകൂ",
+      "step3Desc": "കോഴ്സ് പൂർത്തിയാക്കി പ്രൊഫഷണൽ സർട്ടിഫിക്കറ്റ് നേടൂ.",
+      "step4Title": "സമ്പാദിക്കാൻ തുടങ്ങൂ",
+      "step4Desc": "ഞങ്ങളുടെ പ്ലേസ്മെന്റ് സപ്പോർട്ടോടെ നിങ്ങളുടെ കരിയർ ആരംഭിക്കൂ."
+    },
+    "testimonials": {
+      "sectionTitle": "ഞങ്ങളുടെ വിദ്യാർത്ഥികൾ എന്ത് പറയുന്നു",
+      "sectionSubtitle": "ഞങ്ങളുടെ വിജയകരമായ ബിരുദധാരികളുടെ യഥാർത്ഥ കഥകൾ"
+    },
+    "faq": {
+      "sectionTitle": "പതിവ് ചോദ്യങ്ങൾ",
+      "sectionSubtitle": "ചോദ്യങ്ങളുണ്ടോ? ഞങ്ങൾക്ക് ഉത്തരങ്ങളുണ്ട്."
+    },
+    "contact": {
+      "sectionTitle": "ബന്ധപ്പെടുക",
+      "sectionSubtitle": "നിങ്ങളുടെ യാത്ര ആരംഭിക്കാൻ തയ്യാറാണോ? ഇന്ന് തന്നെ ബന്ധപ്പെടൂ.",
+      "phone": "ഫോൺ",
+      "email": "ഇമെയിൽ",
+      "address": "വിലാസം",
+      "whatsapp": "WhatsApp",
+      "callNow": "ഇപ്പോൾ വിളിക്കൂ",
+      "sendMessage": "സന്ദേശം അയയ്ക്കൂ",
+      "name": "നിങ്ങളുടെ പേര്",
+      "emailField": "നിങ്ങളുടെ ഇമെയിൽ",
+      "message": "നിങ്ങളുടെ സന്ദേശം"
+    },
+    "footer": {
+      "description": "ARSDT - അപ്ലയൻസ് റിപ്പയർ സർവ്വീസ് & ഡയഗ്നോസ്റ്റിക്സ് ട്രെയിനിംഗ്. ഇന്ത്യയിലെ മുൻനിര പ്രായോഗിക അപ്ലയൻസ് റിപ്പയർ ട്രെയിനിംഗ് സ്ഥാപനം.",
+      "quickLinks": "ക്വിക്ക് ലിങ്കുകൾ",
+      "courses": "ഞങ്ങളുടെ കോഴ്സുകൾ",
+      "followUs": "ഞങ്ങളെ ഫോളോ ചെയ്യൂ",
+      "rights": "എല്ലാ അവകാശങ്ങളും സംരക്ഷിച്ചിരിക്കുന്നു",
+      "madeWith": "ഇന്ത്യയിൽ ❤️ ഉപയോഗിച്ച് നിർമ്മിച്ചത്"
+    },
+    "cta": {
+      "nextBatch": "അടുത്ത ബാച്ച് ഉടൻ ആരംഭിക്കുന്നു!",
+      "seatsLeft": "സീറ്റുകൾ ബാക്കി",
+      "limitedOffer": "പരിമിത സമയ ഓഫർ",
+      "enrollBefore": "സീറ്റുകൾ നിറയുന്നതിന് മുമ്പ് ചേരൂ",
+      "bookSeat": "നിങ്ങളുടെ സീറ്റ് ബുക്ക് ചെയ്യൂ"
+    },
+    "common": {
+      "learnMore": "കൂടുതലറിയുക",
+      "viewAll": "എല്ലാം കാണുക",
+      "close": "അടയ്ക്കുക",
+      "back": "പിന്നിലേക്ക്",
+      "next": "അടുത്തത്",
+      "previous": "മുമ്പത്തേത്",
+      "loading": "ലോഡ് ചെയ്യുന്നു...",
+      "free": "സൗജന്യം",
+      "off": "കിഴിവ്"
+    }
+  }
+}
