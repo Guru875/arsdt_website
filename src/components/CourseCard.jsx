@@ -6,14 +6,22 @@ import { CourseIcon, ClockIcon, CheckIcon } from './Icons';
 import styles from './CourseCard.module.css';
 
 export default function CourseCard({ course }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const discount = Math.round(((course.price - course.offerPrice) / course.price) * 100);
 
   return (
     <div className={`glass-card ${styles.card}`}>
-      {course.popular && (
-        <span className={styles.popularBadge}>{t('courses.popular')}</span>
-      )}
+      <div className={styles.badgesWrapper}>
+        {course.pcbTraining && (
+          <span className={styles.pcbBadge}>
+            <span className={styles.pcbIcon}>🔧</span>
+            {t('courses.pcbIncluded')}
+          </span>
+        )}
+        {course.popular && (
+          <span className={styles.popularBadge}>{t('courses.popular')}</span>
+        )}
+      </div>
       
       <div className={styles.cardHeader} style={{ '--accent-color': course.color }}>
         <div className={styles.iconWrapper}>
@@ -27,11 +35,11 @@ export default function CourseCard({ course }) {
         
         <div className={styles.metaRow}>
           <div className={styles.metaItem}>
-            <ClockIcon size={16} className={styles.metaIcon} />
-            <span>{t('courses.duration')}: <strong>{t(course.duration)}</strong></span>
+            <span className={styles.metaIcon}>⏱️</span>
+            <span>{t('courses.duration')}: <strong>{course.duration[language] || course.duration.en}</strong></span>
           </div>
         </div>
-
+        
         <div className={styles.outcomesList}>
           {course.outcomes.slice(0, 3).map((outcome, idx) => (
             <div key={idx} className={styles.outcomeItem}>

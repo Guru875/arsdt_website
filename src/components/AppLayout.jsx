@@ -8,6 +8,7 @@ import { useTheme } from '@/contexts/ThemeContext';
 import LanguageSelector from './LanguageSelector';
 import ThemeToggle from './ThemeToggle';
 import ScrollToTop from './ScrollToTop';
+import AnimatedBrand from './AnimatedBrand';
 import siteConfig from '@/data/site.json';
 import styles from './AppLayout.module.css';
 
@@ -37,7 +38,7 @@ export default function AppLayout({ children }) {
               className={styles.logoImg}
             />
             <div className={styles.brandText}>
-              <span className={styles.brandName}>{siteConfig.siteName}</span>
+              <AnimatedBrand />
               <span className={styles.brandTagline}>{t(siteConfig.siteTagline)}</span>
             </div>
           </Link>
