@@ -21,8 +21,7 @@ export default function Home() {
   // FAQ accordion state
   const [activeFaqIdx, setActiveFaqIdx] = useState(null);
 
-  // Stats Counters state
-  const [counters, setCounters] = useState({ students: 0, rating: 0.0, placement: 0 });
+
 
   useEffect(() => {
     // Filter courses
@@ -33,24 +32,7 @@ export default function Home() {
     }
   }, [activeCategory]);
 
-  useEffect(() => {
-    // Simple incremental load animation for counts
-    const interval = setInterval(() => {
-      setCounters((prev) => {
-        const nextStudents = prev.students < siteConfig.stats.studentsCount ? prev.students + 100 : siteConfig.stats.studentsCount;
-        const nextRating = prev.rating < siteConfig.stats.googleRating ? parseFloat((prev.rating + 0.1).toFixed(1)) : siteConfig.stats.googleRating;
-        const nextPlacement = prev.placement < siteConfig.stats.placementRate ? prev.placement + 2 : siteConfig.stats.placementRate;
 
-        if (nextStudents === siteConfig.stats.studentsCount && nextRating === siteConfig.stats.googleRating && nextPlacement === siteConfig.stats.placementRate) {
-          clearInterval(interval);
-        }
-
-        return { students: nextStudents, rating: nextRating, placement: nextPlacement };
-      });
-    }, 20);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const whatsappMsg = encodeURIComponent("Hi! I am interested in joining a course at ARSDT. Please guide me.");
   const contactWhatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${whatsappMsg}`;
@@ -93,29 +75,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. STATS BAR */}
-      <section className={styles.statsBar}>
-        <div className="container">
-          <div className={styles.statsGrid}>
-            <div className={styles.statNode}>
-              <h3 className={styles.statVal}>{counters.students}+</h3>
-              <p className={styles.statLabel}>{t('hero.stat1Label')}</p>
-            </div>
-            <div className={styles.statNode}>
-              <h3 className={styles.statVal}>⭐ {counters.rating} / 5</h3>
-              <p className={styles.statLabel}>{t('hero.stat2Label')}</p>
-            </div>
-            <div className={styles.statNode}>
-              <h3 className={styles.statVal}>{counters.placement}%</h3>
-              <p className={styles.statLabel}>{t('hero.stat3Label')}</p>
-            </div>
-            <div className={styles.statNode}>
-              <h3 className={styles.statVal}>{siteConfig.stats.coursesCount}</h3>
-              <p className={styles.statLabel}>{t('hero.stat4Label')}</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* 3. COURSES SECTION */}
       <section id="courses" className="section">
