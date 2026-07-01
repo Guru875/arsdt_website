@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import siteConfig from '@/data/site.json';
@@ -8,7 +8,15 @@ import coursesData from '@/data/courses.json';
 import CourseCard from '@/components/CourseCard';
 import InteractiveTransformation from '@/components/InteractiveTransformation';
 import CertificateCustomizer from '@/components/CertificateCustomizer';
-import { ChevronDownIcon } from '@/components/Icons';
+import { 
+  ChevronDownIcon,
+  PracticalIcon,
+  ExpertTrainersIcon,
+  CertificationIcon,
+  PlacementIcon,
+  LifetimeAccessIcon,
+  SmallBatchesIcon
+} from '@/components/Icons';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -16,23 +24,59 @@ export default function Home() {
   
   // Category tabs filtering
   const [activeCategory, setActiveCategory] = useState('all');
-  const [filteredCourses, setFilteredCourses] = useState(coursesData);
   
   // FAQ accordion state
   const [activeFaqIdx, setActiveFaqIdx] = useState(null);
+  
+  // Slider state
+  const sliderRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
+  // Filter courses based on category
+  const filteredCourses = activeCategory === 'all' 
+    ? coursesData 
+    : coursesData.filter(course => course.category === activeCategory);
 
-
+  // Auto-sliding and scroll listener
   useEffect(() => {
-    // Filter courses
-    if (activeCategory === 'all') {
-      setFilteredCourses(coursesData);
-    } else {
-      setFilteredCourses(coursesData.filter(c => c.category === activeCategory));
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    // Update active dot on scroll
+    const handleScroll = () => {
+      const index = Math.round(slider.scrollLeft / slider.offsetWidth);
+      setActiveIndex(index);
+    };
+
+    slider.addEventListener('scroll', handleScroll);
+
+    // Auto-slide every 3 seconds
+    const interval = setInterval(() => {
+      if (slider) {
+        const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+        const nextScrollLeft = slider.scrollLeft + slider.offsetWidth;
+        
+        if (slider.scrollLeft >= maxScrollLeft - 10) {
+          // Loop back to start
+          slider.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          slider.scrollTo({ left: nextScrollLeft, behavior: 'smooth' });
+        }
+      }
+    }, 4000); // 4 seconds
+
+    return () => {
+      slider.removeEventListener('scroll', handleScroll);
+      clearInterval(interval);
+    };
+  }, [filteredCourses]); // Re-run if courses change
+
+  const scrollToCourse = (index) => {
+    const slider = sliderRef.current;
+    if (slider) {
+      slider.scrollTo({ left: index * slider.offsetWidth, behavior: 'smooth' });
     }
-  }, [activeCategory]);
-
-
+  };
 
   const whatsappMsg = encodeURIComponent("Hi! I am interested in joining a course at ARSDT. Please guide me.");
   const contactWhatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${whatsappMsg}`;
@@ -95,6 +139,12 @@ export default function Home() {
               {t('courses.allCourses')}
             </button>
             <button
+              onClick={() => setActiveCategory('30day')}
+              className={`${styles.tabBtn} ${activeCategory === '30day' ? styles.tabActive : ''}`}
+            >
+              🔧 30-{t('courses.day')} PCB Pro
+            </button>
+            <button
               onClick={() => setActiveCategory('10day')}
               className={`${styles.tabBtn} ${activeCategory === '10day' ? styles.tabActive : ''}`}
             >
@@ -108,9 +158,20 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="grid grid-3">
+          <div className={styles.coursesSlider} ref={sliderRef}>
             {filteredCourses.map((course) => (
               <CourseCard key={course.id} course={course} />
+            ))}
+          </div>
+          
+          <div className={styles.sliderDots}>
+            {filteredCourses.map((_, idx) => (
+              <button 
+                key={idx} 
+                className={`${styles.dot} ${activeIndex === idx ? styles.activeDot : ''}`}
+                onClick={() => scrollToCourse(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
             ))}
           </div>
         </div>
@@ -129,12 +190,12 @@ export default function Home() {
             {[1, 2, 3, 4, 5, 6].map((num) => (
               <div key={num} className={`glass-card ${styles.whyUsCard}`}>
                 <div className={styles.whyUsIconWrapper}>
-                  {num === 1 && '🛠️'}
-                  {num === 2 && '👨‍🏫'}
-                  {num === 3 && '📜'}
-                  {num === 4 && '💼'}
-                  {num === 5 && '📺'}
-                  {num === 6 && '👥'}
+                  {num === 1 && <PracticalIcon size={32} />}
+                  {num === 2 && <ExpertTrainersIcon size={32} />}
+                  {num === 3 && <CertificationIcon size={32} />}
+                  {num === 4 && <PlacementIcon size={32} />}
+                  {num === 5 && <LifetimeAccessIcon size={32} />}
+                  {num === 6 && <SmallBatchesIcon size={32} />}
                 </div>
                 <h3 className={styles.whyUsCardTitle}>{t(`whyUs.feature${num}Title`)}</h3>
                 <p className={styles.whyUsCardDesc}>{t(`whyUs.feature${num}Desc`)}</p>
