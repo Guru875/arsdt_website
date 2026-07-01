@@ -1,0 +1,146 @@
+{
+  "green": {
+    "name": "Emerald Green",
+    "color": "#2D7A3A",
+    "light": {
+      "primary": "#2D7A3A",
+      "primaryDark": "#1B5E28",
+      "primaryLight": "#4CAF50",
+      "gradient1": "linear-gradient(135deg, #2D7A3A 0%, #1B5E28 100%)",
+      "heroGradient": "linear-gradient(135deg, #0B1A0F 0%, #1B3A21 30%, #2D7A3A 100%)"
+    },
+    "dark": {
+      "primary": "#4CAF50",
+      "primaryDark": "#2D7A3A",
+      "primaryLight": "#81C784",
+      "gradient1": "linear-gradient(135deg, #4CAF50 0%, #2D7A3A 100%)",
+      "heroGradient": "linear-gradient(135deg, #020617 0%, #0B1A0F 30%, #1B3A21 100%)"
+    }
+  },
+  "blue": {
+    "name": "Ocean Blue",
+    "color": "#0F62FE",
+    "light": {
+      "primary": "#0F62FE",
+      "primaryDark": "#002D9C",
+      "primaryLight": "#4589FF",
+      "gradient1": "linear-gradient(135deg, #0F62FE 0%, #002D9C 100%)",
+      "heroGradient": "linear-gradient(135deg, #020D26 0%, #001C5C 30%, #0F62FE 100%)"
+    },
+    "dark": {
+      "primary": "#4589FF",
+      "primaryDark": "#0F62FE",
+      "primaryLight": "#82CFFF",
+      "gradient1": "linear-gradient(135deg, #4589FF 0%, #0F62FE 100%)",
+      "heroGradient": "linear-gradient(135deg, #020617 0%, #020D26 30%, #001C5C 100%)"
+    }
+  },
+  "purple": {
+    "name": "Royal Amethyst",
+    "color": "#7C3AED",
+    "light": {
+      "primary": "#7C3AED",
+      "primaryDark": "#5B21B6",
+      "primaryLight": "#A78BFA",
+      "gradient1": "linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)",
+      "heroGradient": "linear-gradient(135deg, #180B2B 0%, #2E1065 30%, #7C3AED 100%)"
+    },
+    "dark": {
+      "primary": "#A78BFA",
+      "primaryDark": "#7C3AED",
+      "primaryLight": "#C4B5FD",
+      "gradient1": "linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%)",
+      "heroGradient": "linear-gradient(135deg, #020617 0%, #180B2B 30%, #2E1065 100%)"
+    }
+  },
+  "orange": {
+    "name": "Sunset Amber",
+    "color": "#EA580C",
+    "light": {
+      "primary": "#EA580C",
+      "primaryDark": "#9A3412",
+      "primaryLight": "#FB923C",
+      "gradient1": "linear-gradient(135deg, #EA580C 0%, #9A3412 100%)",
+      "heroGradient": "linear-gradient(135deg, #240E05 0%, #431407 30%, #EA580C 100%)"
+    },
+    "dark": {
+      "primary": "#FB923C",
+      "primaryDark": "#EA580C",
+      "primaryLight": "#FDBA74",
+      "gradient1": "linear-gradient(135deg, #FB923C 0%, #EA580C 100%)",
+      "heroGradient": "linear-gradient(135deg, #020617 0%, #240E05 30%, #431407 100%)"
+    }
+  },
+  "teal": {
+    "name": "Teal Turquoise",
+    "color": "#0D9488",
+    "light": {
+      "primary": "#0D9488",
+      "primaryDark": "#115E59",
+      "primaryLight": "#2DD4BF",
+      "gradient1": "linear-gradient(135deg, #0D9488 0%, #115E59 100%)",
+      "heroGradient": "linear-gradient(135deg, #001B17 0%, #004D40 30%, #0D9488 100%)"
+    },
+    "dark": {
+      "primary": "#2DD4BF",
+      "primaryDark": "#0D9488",
+      "primaryLight": "#99F6E4",
+      "gradient1": "linear-gradient(135deg, #2DD4BF 0%, #0D9488 100%)",
+      "heroGradient": "linear-gradient(135deg, #020617 0%, #001B17 30%, #004D40 100%)"
+    }
+  },
+  "rose": {
+    "name": "Ruby Rose",
+    "color": "#E11D48",
+    "light": {
+      "primary": "#E11D48",
+      "primaryDark": "#BE123C",
+      "primaryLight": "#FDA4AF",
+      "gradient1": "linear-gradient(135deg, #E11D48 0%, #BE123C 100%)",
+      "heroGradient": "linear-gradient(135deg, #1F080C 0%, #4C0519 30%, #E11D48 100%)"
+    },
+    "dark": {
+      "primary": "#FB7185",
+      "primaryDark": "#E11D48",
+      "primaryLight": "#FECDD3",
+      "gradient1": "linear-gradient(135deg, #FB7185 0%, #E11D48 100%)",
+      "heroGradient": "linear-gradient(135deg, #020617 0%, #1F080C 30%, #4C0519 100%)"
+    }
+  },
+  "indigo": {
+    "name": "Midnight Indigo",
+    "color": "#4F46E5",
+    "light": {
+      "primary": "#4F46E5",
+      "primaryDark": "#3730A3",
+      "primaryLight": "#A5B4FC",
+      "gradient1": "linear-gradient(135deg, #4F46E5 0%, #3730A3 100%)",
+      "heroGradient": "linear-gradient(135deg, #0F0D29 0%, #1E1B4B 30%, #4F46E5 100%)"
+    },
+    "dark": {
+      "primary": "#818CF8",
+      "primaryDark": "#4F46E5",
+      "primaryLight": "#C7D2FE",
+      "gradient1": "linear-gradient(135deg, #818CF8 0%, #4F46E5 100%)",
+      "heroGradient": "linear-gradient(135deg, #020617 0%, #0F0D29 30%, #1E1B4B 100%)"
+    }
+  },
+  "pink": {
+    "name": "Cyber Pink",
+    "color": "#DB2777",
+    "light": {
+      "primary": "#DB2777",
+      "primaryDark": "#9D174D",
+      "primaryLight": "#F9A8D4",
+      "gradient1": "linear-gradient(135deg, #DB2777 0%, #9D174D 100%)",
+      "heroGradient": "linear-gradient(135deg, #2A0818 0%, #50072B 30%, #DB2777 100%)"
+    },
+    "dark": {
+      "primary": "#F472B6",
+      "primaryDark": "#DB2777",
+      "primaryLight": "#FBCFE8",
+      "gradient1": "linear-gradient(135deg, #F472B6 0%, #DB2777 100%)",
+      "heroGradient": "linear-gradient(135deg, #020617 0%, #2A0818 30%, #50072B 100%)"
+    }
+  }
+}

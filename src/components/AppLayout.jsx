@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
 import LanguageSelector from './LanguageSelector';
 import ThemeToggle from './ThemeToggle';
+import PalettePicker from './PalettePicker';
 import ScrollToTop from './ScrollToTop';
 import siteConfig from '@/data/site.json';
 import styles from './AppLayout.module.css';
@@ -53,6 +54,7 @@ export default function AppLayout({ children }) {
 
           {/* Action Tools */}
           <div className={styles.actions}>
+            <PalettePicker />
             <LanguageSelector />
             <ThemeToggle />
             <a
@@ -89,6 +91,10 @@ export default function AppLayout({ children }) {
           <a href="/#contact" className={styles.mobileNavLink} onClick={closeMobileMenu}>{t('nav.contact')}</a>
           <div className={styles.mobileActions}>
             <div className={styles.mobileSelectorRow}>
+              <span>Color:</span>
+              <PalettePicker />
+            </div>
+            <div className={styles.mobileSelectorRow}>
               <span>Theme:</span>
               <ThemeToggle />
             </div>
@@ -96,6 +102,7 @@ export default function AppLayout({ children }) {
               <span>Language:</span>
               <LanguageSelector />
             </div>
+
             <a
               href={whatsappUrl}
               target="_blank"
