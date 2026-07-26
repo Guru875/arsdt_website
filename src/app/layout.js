@@ -12,7 +12,8 @@ export const metadata = {
   title: "ARSDT - Appliance Repair Skill Development Training",
   description: "Learn professional appliance repair training (TV, Washing Machine, Refrigerator, AC, Microwave, RO filter) with hands-on practice. Multi-language support (English, Tamil, Malayalam).",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
+    apple: "/logo.png",
   }
 };
 
