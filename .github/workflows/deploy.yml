@@ -95,21 +95,26 @@ jobs:
           # --- Add Hostinger's host key to known_hosts (prevents interactive prompt) ---
           ssh-keyscan -p "$PORT" "$HOST" >> ~/.ssh/known_hosts 2>/dev/null
 
-          # --- Deploy using rsync ---
+          # SSH shorthand for reuse
+          SSH_CMD="ssh -i ~/.ssh/deploy_key -p $PORT $USERNAME@$HOST"
+
+          # --- Resolve the real path of public_html (it's a symlink on Hostinger) ---
+          DEPLOY_PATH=$($SSH_CMD "readlink -f ~/public_html")
+          echo "📂 Resolved deploy path: $DEPLOY_PATH"
+
+          # --- Clean old files from public_html (preserve .htaccess & .well-known) ---
+          $SSH_CMD "cd $DEPLOY_PATH && find . -maxdepth 1 ! -name '.' ! -name '.htaccess' ! -name '.well-known' -exec rm -rf {} +"
+          echo "🧹 Cleaned old files from server."
+
+          # --- Upload new files via rsync ---
           # Flags:
-          #   -a           : Archive mode (preserves permissions, timestamps, symlinks)
-          #   -v           : Verbose output for debugging
-          #   -z           : Compress during transfer
-          #   --delete     : Remove files on server that aren't in `out/`
-          #   --exclude     : Skip hidden files like .htaccess, .well-known, etc.
-          #   --chmod      : Set correct permissions (dirs: 755, files: 644)
-          rsync -avz --delete \
-            --exclude='.htaccess' \
-            --exclude='.well-known' \
-            --chmod=D755,F644 \
-            -e "ssh -i ~/.ssh/deploy_key -p $PORT -o StrictHostKeyChecking=yes" \
+          #   -rltvz  : Recursive, preserve links/times, verbose, compress
+          #   --no-perms, --no-owner, --no-group : Don't try to set permissions
+          #     (Hostinger's shared hosting handles permissions automatically)
+          rsync -rltvz \
+            -e "ssh -i ~/.ssh/deploy_key -p $PORT" \
             out/ \
-            "$USERNAME@$HOST:~/public_html/"
+            "$USERNAME@$HOST:$DEPLOY_PATH/"
 
           echo "✅ Deployment complete!"
 
@@ -122,9 +127,10 @@ jobs:
           PORT: ${{ secrets.PORT }}
           USERNAME: ${{ secrets.USERNAME }}
         run: |
+          DEPLOY_PATH=$(ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" "readlink -f ~/public_html")
           FILE_COUNT=$(ssh -i ~/.ssh/deploy_key -p "$PORT" \
             "$USERNAME@$HOST" \
-            "find ~/public_html -type f | wc -l")
+            "find $DEPLOY_PATH -type f | wc -l")
           echo "✅ Deployment verified — $FILE_COUNT files on server."
 
       # -----------------------------------------------------------------------
