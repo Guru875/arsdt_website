@@ -1,0 +1,135 @@
+# =============================================================================
+# ARSDT Website — CI/CD Deployment Pipeline
+# =============================================================================
+# Builds a static Next.js site and deploys it to Hostinger Shared Hosting
+# via SSH + rsync on every push to the `main` branch.
+#
+# Required GitHub Secrets:
+#   HOST         — Hostinger SSH hostname (e.g., ssh.example.hostinger.com)
+#   PORT         — SSH port (e.g., 65002)
+#   USERNAME     — Hostinger SSH username
+#   SSH_PRIVATE_KEY  — Contents of the private SSH key (ed25519 or RSA)
+# =============================================================================
+
+name: 🚀 Build & Deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+
+  # Allow manual trigger from GitHub UI
+  workflow_dispatch:
+
+# Cancel any in-progress deployment when a new push arrives
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+# Fail the entire workflow immediately if any step fails
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # -----------------------------------------------------------------------
+      # 1. Checkout the repository
+      # -----------------------------------------------------------------------
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      # -----------------------------------------------------------------------
+      # 2. Set up Node.js with dependency caching
+      # -----------------------------------------------------------------------
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'  # Caches ~/.npm to speed up installs
+
+      # -----------------------------------------------------------------------
+      # 3. Install dependencies (clean install for reproducible builds)
+      # -----------------------------------------------------------------------
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      # -----------------------------------------------------------------------
+      # 4. Build the static site → generates `out/` folder
+      # -----------------------------------------------------------------------
+      - name: 🏗️ Build static site
+        run: npm run build
+
+      # -----------------------------------------------------------------------
+      # 5. Verify the `out/` directory exists and is non-empty
+      # -----------------------------------------------------------------------
+      - name: ✅ Verify build output
+        run: |
+          if [ ! -d "out" ] || [ -z "$(ls -A out)" ]; then
+            echo "❌ ERROR: 'out/' directory is missing or empty. Build may have failed."
+            exit 1
+          fi
+          echo "✅ Build output verified — $(find out -type f | wc -l) files ready for deployment."
+
+      # -----------------------------------------------------------------------
+      # 6. Deploy to Hostinger via SSH + rsync
+      # -----------------------------------------------------------------------
+      - name: 🚀 Deploy to Hostinger
+        env:
+          HOST: ${{ secrets.HOST }}
+          PORT: ${{ secrets.PORT }}
+          USERNAME: ${{ secrets.USERNAME }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+
+          # --- Setup SSH key ---
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+
+          # --- Add Hostinger's host key to known_hosts (prevents interactive prompt) ---
+          ssh-keyscan -p "$PORT" "$HOST" >> ~/.ssh/known_hosts 2>/dev/null
+
+          # --- Deploy using rsync ---
+          # Flags:
+          #   -a           : Archive mode (preserves permissions, timestamps, symlinks)
+          #   -v           : Verbose output for debugging
+          #   -z           : Compress during transfer
+          #   --delete     : Remove files on server that aren't in `out/`
+          #   --exclude     : Skip hidden files like .htaccess, .well-known, etc.
+          #   --chmod      : Set correct permissions (dirs: 755, files: 644)
+          rsync -avz --delete \
+            --exclude='.htaccess' \
+            --exclude='.well-known' \
+            --chmod=D755,F644 \
+            -e "ssh -i ~/.ssh/deploy_key -p $PORT -o StrictHostKeyChecking=yes" \
+            out/ \
+            "$USERNAME@$HOST:~/public_html/"
+
+          echo "✅ Deployment complete!"
+
+      # -----------------------------------------------------------------------
+      # 7. Verify deployment (optional smoke test)
+      # -----------------------------------------------------------------------
+      - name: 🔍 Post-deploy verification
+        env:
+          HOST: ${{ secrets.HOST }}
+          PORT: ${{ secrets.PORT }}
+          USERNAME: ${{ secrets.USERNAME }}
+        run: |
+          FILE_COUNT=$(ssh -i ~/.ssh/deploy_key -p "$PORT" \
+            "$USERNAME@$HOST" \
+            "find ~/public_html -type f | wc -l")
+          echo "✅ Deployment verified — $FILE_COUNT files on server."
+
+      # -----------------------------------------------------------------------
+      # 8. Cleanup SSH key
+      # -----------------------------------------------------------------------
+      - name: 🧹 Cleanup SSH key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
