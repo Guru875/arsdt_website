@@ -4,11 +4,15 @@
 # Builds a static Next.js site and deploys it to Hostinger Shared Hosting
 # via SSH + rsync on every push to the `main` branch.
 #
+# IMPORTANT: ~/public_html is a symlink to ANOTHER domain on Hostinger.
+# The correct document root for arsdt.in is:
+#   /home/u916301514/domains/arsdt.in/public_html
+#
 # Required GitHub Secrets:
-#   HOST         — Hostinger SSH hostname (e.g., ssh.example.hostinger.com)
-#   PORT         — SSH port (e.g., 65002)
-#   USERNAME     — Hostinger SSH username
-#   SSH_PRIVATE_KEY  — Contents of the private SSH key (ed25519 or RSA)
+#   HOST            — Hostinger SSH hostname
+#   PORT            — SSH port
+#   USERNAME        — Hostinger SSH username
+#   SSH_PRIVATE_KEY — Contents of the private SSH key (ed25519 or RSA)
 # =============================================================================
 
 name: 🚀 Build & Deploy to Hostinger
@@ -16,19 +20,22 @@ name: 🚀 Build & Deploy to Hostinger
 on:
   push:
     branches: [main]
-
-  # Allow manual trigger from GitHub UI
   workflow_dispatch:
 
-# Cancel any in-progress deployment when a new push arrives
 concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: true
 
-# Fail the entire workflow immediately if any step fails
 defaults:
   run:
     shell: bash
+
+# ──────────────────────────────────────────────────────────────────────────────
+# The DEPLOY_PATH is the absolute path to arsdt.in's document root.
+# Using an env var here so it's defined in ONE place, not scattered everywhere.
+# ──────────────────────────────────────────────────────────────────────────────
+env:
+  DEPLOY_PATH: /home/u916301514/domains/arsdt.in/public_html
 
 jobs:
   build-and-deploy:
@@ -38,42 +45,42 @@ jobs:
 
     steps:
       # -----------------------------------------------------------------------
-      # 1. Checkout the repository
+      # 1. Checkout repository
       # -----------------------------------------------------------------------
       - name: 📥 Checkout code
         uses: actions/checkout@v4
 
       # -----------------------------------------------------------------------
-      # 2. Set up Node.js with dependency caching
+      # 2. Setup Node.js with npm cache
       # -----------------------------------------------------------------------
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'  # Caches ~/.npm to speed up installs
+          cache: 'npm'
 
       # -----------------------------------------------------------------------
-      # 3. Install dependencies (clean install for reproducible builds)
+      # 3. Install dependencies
       # -----------------------------------------------------------------------
       - name: 📦 Install dependencies
         run: npm ci
 
       # -----------------------------------------------------------------------
-      # 4. Build the static site → generates `out/` folder
+      # 4. Build static site → out/
       # -----------------------------------------------------------------------
       - name: 🏗️ Build static site
         run: npm run build
 
       # -----------------------------------------------------------------------
-      # 5. Verify the `out/` directory exists and is non-empty
+      # 5. Verify build output exists
       # -----------------------------------------------------------------------
       - name: ✅ Verify build output
         run: |
           if [ ! -d "out" ] || [ -z "$(ls -A out)" ]; then
-            echo "❌ ERROR: 'out/' directory is missing or empty. Build may have failed."
+            echo "❌ ERROR: 'out/' directory is missing or empty."
             exit 1
           fi
-          echo "✅ Build output verified — $(find out -type f | wc -l) files ready for deployment."
+          echo "✅ Build verified — $(find out -type f | wc -l) files ready."
 
       # -----------------------------------------------------------------------
       # 6. Setup SSH connection
@@ -87,24 +94,51 @@ jobs:
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
 
-          # Write the private key
+          # Write private key
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
 
-          # Debug: verify secrets are set (prints length, not the value)
-          echo "HOST length: ${#HOST}"
-          echo "PORT value: $PORT"
-          echo "Key file size: $(wc -c < ~/.ssh/deploy_key) bytes"
+          # Debug: verify secrets are populated
+          echo "HOST length: ${#HOST} chars"
+          echo "PORT: $PORT"
+          echo "Key size: $(wc -c < ~/.ssh/deploy_key) bytes"
 
-          # Add host key to known_hosts (|| true prevents failure if keyscan times out)
+          # Add host to known_hosts (|| true so it doesn't fail the step)
           ssh-keyscan -p "$PORT" "$HOST" >> ~/.ssh/known_hosts 2>&1 || true
 
-          # Fallback: disable strict host checking for this deploy
-          echo -e "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile ~/.ssh/known_hosts" > ~/.ssh/config
+          # Fallback: skip host key check in CI
+          cat > ~/.ssh/config <<EOF
+          Host *
+            StrictHostKeyChecking no
+            UserKnownHostsFile ~/.ssh/known_hosts
+          EOF
           chmod 600 ~/.ssh/config
 
       # -----------------------------------------------------------------------
-      # 7. Clean old files on server
+      # 7. Debug: verify server environment and paths
+      # -----------------------------------------------------------------------
+      - name: 🔍 Debug server environment
+        env:
+          HOST: ${{ secrets.HOST }}
+          PORT: ${{ secrets.PORT }}
+          USERNAME: ${{ secrets.USERNAME }}
+        run: |
+          echo "── Server Debug Info ──"
+          ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" bash <<'REMOTE'
+            echo "whoami: $(whoami)"
+            echo "pwd:    $(pwd)"
+            echo ""
+            echo "── Deploy target: $HOME/domains/arsdt.in/public_html ──"
+            echo "Exists?  $([ -d $HOME/domains/arsdt.in/public_html ] && echo YES || echo NO)"
+            echo "Type:    $(file $HOME/domains/arsdt.in/public_html)"
+            ls -la $HOME/domains/arsdt.in/public_html/ | head -15
+            echo ""
+            echo "── WARNING: ~/public_html is a symlink (DO NOT deploy here) ──"
+            ls -la ~/public_html 2>/dev/null || echo "~/public_html does not exist"
+          REMOTE
+
+      # -----------------------------------------------------------------------
+      # 8. Clean old files from the CORRECT document root
       # -----------------------------------------------------------------------
       - name: 🧹 Clean old files on server
         env:
@@ -112,13 +146,13 @@ jobs:
           PORT: ${{ secrets.PORT }}
           USERNAME: ${{ secrets.USERNAME }}
         run: |
-          # rm -rf ~/public_html/* removes contents but NOT the symlink itself
-          # It also preserves hidden files like .htaccess automatically
+          echo "Cleaning: $DEPLOY_PATH"
           ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" \
-            "rm -rf ~/public_html/*"
+            "cd $DEPLOY_PATH && rm -rf ./*"
+          echo "✅ Old files removed (hidden files like .htaccess preserved)."
 
       # -----------------------------------------------------------------------
-      # 8. Upload new files via rsync
+      # 9. Upload out/ contents to the CORRECT document root via rsync
       # -----------------------------------------------------------------------
       - name: 🚀 Deploy to Hostinger
         env:
@@ -126,14 +160,15 @@ jobs:
           PORT: ${{ secrets.PORT }}
           USERNAME: ${{ secrets.USERNAME }}
         run: |
+          echo "Deploying to: $DEPLOY_PATH"
           rsync -rltvz \
             -e "ssh -i ~/.ssh/deploy_key -p $PORT" \
             out/ \
-            "$USERNAME@$HOST:public_html/"
+            "$USERNAME@$HOST:$DEPLOY_PATH/"
           echo "✅ Deployment complete!"
 
       # -----------------------------------------------------------------------
-      # 9. Verify deployment
+      # 10. Verify deployment
       # -----------------------------------------------------------------------
       - name: 🔍 Post-deploy verification
         continue-on-error: true
@@ -142,13 +177,16 @@ jobs:
           PORT: ${{ secrets.PORT }}
           USERNAME: ${{ secrets.USERNAME }}
         run: |
+          echo "Listing deployed files at: $DEPLOY_PATH"
           ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" \
-            "ls ~/public_html/ | head -20"
-          echo "✅ Deployment verified!"
+            "ls -la $DEPLOY_PATH/ | head -25"
+          FILE_COUNT=$(ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" \
+            "find $DEPLOY_PATH -type f | wc -l")
+          echo "✅ Verified: $FILE_COUNT files deployed to arsdt.in"
 
       # -----------------------------------------------------------------------
-      # 10. Cleanup SSH key
+      # 11. Cleanup SSH key from runner
       # -----------------------------------------------------------------------
       - name: 🧹 Cleanup SSH key
         if: always()
-        run: rm -f ~/.ssh/deploy_key
+        run: rm -f ~/.ssh/deploy_key ~/.ssh/config
