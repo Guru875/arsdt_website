@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import siteConfig from '@/data/site.json';
 import coursesData from '@/data/courses.json';
