@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  output: 'export', // Generates static HTML files
+  reactCompiler: true, // Enables the React Compiler for better performance
 };
 
 export default nextConfig;
