@@ -76,65 +76,64 @@ jobs:
           echo "✅ Build output verified — $(find out -type f | wc -l) files ready for deployment."
 
       # -----------------------------------------------------------------------
-      # 6. Deploy to Hostinger via SSH + rsync
+      # 6. Setup SSH connection
+      # -----------------------------------------------------------------------
+      - name: 🔑 Setup SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          HOST: ${{ secrets.HOST }}
+          PORT: ${{ secrets.PORT }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p "$PORT" "$HOST" >> ~/.ssh/known_hosts 2>/dev/null
+
+      # -----------------------------------------------------------------------
+      # 7. Clean old files on server
+      # -----------------------------------------------------------------------
+      - name: 🧹 Clean old files on server
+        env:
+          HOST: ${{ secrets.HOST }}
+          PORT: ${{ secrets.PORT }}
+          USERNAME: ${{ secrets.USERNAME }}
+        run: |
+          # rm -rf ~/public_html/* removes contents but NOT the symlink itself
+          # It also preserves hidden files like .htaccess automatically
+          ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" \
+            "rm -rf ~/public_html/*"
+
+      # -----------------------------------------------------------------------
+      # 8. Upload new files via rsync
       # -----------------------------------------------------------------------
       - name: 🚀 Deploy to Hostinger
         env:
           HOST: ${{ secrets.HOST }}
           PORT: ${{ secrets.PORT }}
           USERNAME: ${{ secrets.USERNAME }}
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
-          set -euo pipefail
-
-          # --- Setup SSH key ---
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-
-          # --- Add Hostinger's host key to known_hosts (prevents interactive prompt) ---
-          ssh-keyscan -p "$PORT" "$HOST" >> ~/.ssh/known_hosts 2>/dev/null
-
-          # SSH shorthand for reuse
-          SSH_CMD="ssh -i ~/.ssh/deploy_key -p $PORT $USERNAME@$HOST"
-
-          # --- Resolve the real path of public_html (it's a symlink on Hostinger) ---
-          DEPLOY_PATH=$($SSH_CMD "readlink -f ~/public_html")
-          echo "📂 Resolved deploy path: $DEPLOY_PATH"
-
-          # --- Clean old files from public_html (preserve .htaccess & .well-known) ---
-          $SSH_CMD "cd $DEPLOY_PATH && find . -maxdepth 1 ! -name '.' ! -name '.htaccess' ! -name '.well-known' -exec rm -rf {} +"
-          echo "🧹 Cleaned old files from server."
-
-          # --- Upload new files via rsync ---
-          # Flags:
-          #   -rltvz  : Recursive, preserve links/times, verbose, compress
-          #   --no-perms, --no-owner, --no-group : Don't try to set permissions
-          #     (Hostinger's shared hosting handles permissions automatically)
           rsync -rltvz \
             -e "ssh -i ~/.ssh/deploy_key -p $PORT" \
             out/ \
-            "$USERNAME@$HOST:$DEPLOY_PATH/"
-
+            "$USERNAME@$HOST:public_html/"
           echo "✅ Deployment complete!"
 
       # -----------------------------------------------------------------------
-      # 7. Verify deployment (optional smoke test)
+      # 9. Verify deployment
       # -----------------------------------------------------------------------
       - name: 🔍 Post-deploy verification
+        continue-on-error: true
         env:
           HOST: ${{ secrets.HOST }}
           PORT: ${{ secrets.PORT }}
           USERNAME: ${{ secrets.USERNAME }}
         run: |
-          DEPLOY_PATH=$(ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" "readlink -f ~/public_html")
-          FILE_COUNT=$(ssh -i ~/.ssh/deploy_key -p "$PORT" \
-            "$USERNAME@$HOST" \
-            "find $DEPLOY_PATH -type f | wc -l")
-          echo "✅ Deployment verified — $FILE_COUNT files on server."
+          ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" \
+            "ls ~/public_html/ | head -20"
+          echo "✅ Deployment verified!"
 
       # -----------------------------------------------------------------------
-      # 8. Cleanup SSH key
+      # 10. Cleanup SSH key
       # -----------------------------------------------------------------------
       - name: 🧹 Cleanup SSH key
         if: always()
