@@ -15,69 +15,51 @@ name: 🚀 Build & Deploy to Hostinger
 
 on:
   push:
-    branches: [main]
-
-  # Allow manual trigger from GitHub UI
+    branches:
+      - main
   workflow_dispatch:
 
-# Cancel any in-progress deployment when a new push arrives
 concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: true
 
-# Fail the entire workflow immediately if any step fails
 defaults:
   run:
     shell: bash
 
 jobs:
   build-and-deploy:
-    name: Build & Deploy
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
     steps:
-      # -----------------------------------------------------------------------
-      # 1. Checkout the repository
-      # -----------------------------------------------------------------------
-      - name: 📥 Checkout code
+      # Checkout
+      - name: 📥 Checkout repository
         uses: actions/checkout@v4
 
-      # -----------------------------------------------------------------------
-      # 2. Set up Node.js with dependency caching
-      # -----------------------------------------------------------------------
+      # Node
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'  # Caches ~/.npm to speed up installs
+          cache: npm
 
-      # -----------------------------------------------------------------------
-      # 3. Install dependencies (clean install for reproducible builds)
-      # -----------------------------------------------------------------------
+      # Install
       - name: 📦 Install dependencies
         run: npm ci
 
-      # -----------------------------------------------------------------------
-      # 4. Build the static site → generates `out/` folder
-      # -----------------------------------------------------------------------
-      - name: 🏗️ Build static site
+      # Build
+      - name: 🏗️ Build site
         run: npm run build
 
-      # -----------------------------------------------------------------------
-      # 5. Verify the `out/` directory exists and is non-empty
-      # -----------------------------------------------------------------------
+      # Verify build
       - name: ✅ Verify build output
         run: |
-          if [ ! -d "out" ] || [ -z "$(ls -A out)" ]; then
-            echo "❌ ERROR: 'out/' directory is missing or empty. Build may have failed."
-            exit 1
-          fi
-          echo "✅ Build output verified — $(find out -type f | wc -l) files ready for deployment."
+          test -d out
+          test "$(find out -type f | wc -l)" -gt 0
+          echo "Build successful."
 
-      # -----------------------------------------------------------------------
-      # 6. Setup SSH connection
-      # -----------------------------------------------------------------------
+      # SSH
       - name: 🔑 Setup SSH
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -87,54 +69,56 @@ jobs:
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -p "$PORT" "$HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          ssh-keyscan -p "$PORT" "$HOST" >> ~/.ssh/known_hosts
 
-      # -----------------------------------------------------------------------
-      # 7. Clean old files on server
-      # -----------------------------------------------------------------------
-      - name: 🧹 Clean old files on server
+      # Debug (helps if deployment fails)
+      - name: 🔍 Verify remote directory
         env:
           HOST: ${{ secrets.HOST }}
           PORT: ${{ secrets.PORT }}
           USERNAME: ${{ secrets.USERNAME }}
         run: |
-          # rm -rf ~/public_html/* removes contents but NOT the symlink itself
-          # It also preserves hidden files like .htaccess automatically
+          ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" << 'EOF'
+            echo "HOME=$HOME"
+            pwd
+            ls -ld "$HOME"
+            ls -ld "$HOME/public_html"
+            readlink -f "$HOME/public_html" || true
+          EOF
+
+      # Clean existing files
+      - name: 🧹 Clean existing files
+        env:
+          HOST: ${{ secrets.HOST }}
+          PORT: ${{ secrets.PORT }}
+          USERNAME: ${{ secrets.USERNAME }}
+        run: |
           ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" \
-            "rm -rf ~/public_html/*"
+            "find \$HOME/public_html -mindepth 1 -maxdepth 1 ! -name '.htaccess' -exec rm -rf {} +"
 
-      # -----------------------------------------------------------------------
-      # 8. Upload new files via rsync
-      # -----------------------------------------------------------------------
-      - name: 🚀 Deploy to Hostinger
+      # Deploy
+      - name: 🚀 Deploy with rsync
         env:
           HOST: ${{ secrets.HOST }}
           PORT: ${{ secrets.PORT }}
           USERNAME: ${{ secrets.USERNAME }}
         run: |
-          rsync -rltvz \
+          rsync -avz --delete \
             -e "ssh -i ~/.ssh/deploy_key -p $PORT" \
             out/ \
-            "$USERNAME@$HOST:public_html/"
-          echo "✅ Deployment complete!"
+            "$USERNAME@$HOST:$HOME/public_html/"
 
-      # -----------------------------------------------------------------------
-      # 9. Verify deployment
-      # -----------------------------------------------------------------------
-      - name: 🔍 Post-deploy verification
-        continue-on-error: true
+      # Verify deployment
+      - name: ✅ Verify deployment
         env:
           HOST: ${{ secrets.HOST }}
           PORT: ${{ secrets.PORT }}
           USERNAME: ${{ secrets.USERNAME }}
         run: |
           ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" \
-            "ls ~/public_html/ | head -20"
-          echo "✅ Deployment verified!"
+            "find \$HOME/public_html | head -20"
 
-      # -----------------------------------------------------------------------
-      # 10. Cleanup SSH key
-      # -----------------------------------------------------------------------
-      - name: 🧹 Cleanup SSH key
+      # Cleanup
+      - name: 🧹 Cleanup
         if: always()
         run: rm -f ~/.ssh/deploy_key
