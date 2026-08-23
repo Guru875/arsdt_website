@@ -1,0 +1,66 @@
+# ==============================================================================
+# ARSDT - Apache / LiteSpeed Configuration for Next.js Static Export
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 2. Allow direct access to existing files and directories (like _next, images, mp4)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 3. Clean URLs for Static Export (e.g., /course/ac-pcb-30d -> /course/ac-pcb-30d.html)
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^([^/]+(?:/[^/]+)*)/?$ $1.html [L]
+
+  # 4. Fallback to 404.html for missing routes
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^.*$ /404.html [L]
+</IfModule>
+
+# ==============================================================================
+# Proper MIME Types
+# ==============================================================================
+<IfModule mod_mime.c>
+  AddType text/css .css
+  AddType application/javascript .js .mjs
+  AddType application/json .json
+  AddType image/svg+xml .svg
+  AddType image/webp .webp
+  AddType image/png .png
+  AddType image/jpeg .jpg .jpeg
+  AddType video/mp4 .mp4
+  AddType font/woff2 .woff2
+  AddType font/woff .woff
+</IfModule>
+
+# ==============================================================================
+# Cache Control
+# ==============================================================================
+<IfModule mod_headers.c>
+  # Never cache HTML so users always get latest chunk references after deploy
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+  </FilesMatch>
+
+  # Cache Next.js static hashed chunks forever (1 year)
+  <FilesMatch "\.(css|js|woff2|woff|ttf|svg|png|jpg|jpeg|webp|mp4)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# ==============================================================================
+# Compression (Gzip / Deflate)
+# ==============================================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>
