@@ -38,7 +38,12 @@ export default async function CourseDetailPage({ params }) {
               <Link href="/#courses" className={styles.backLink}>
                 ← Back to Courses
               </Link>
-              <span className={styles.bannerBadge}>{course.category === '10day' ? '10-Day Professional Course' : '2-Day Practical Course'}</span>
+              <span className={styles.bannerBadge}>
+                {course.category === '30day' ? '30-Day PCB Professional Course' :
+                 course.category === '15day' ? '15-Day Combo Course' :
+                 course.category === '10day' ? '10-Day Professional Course' :
+                 '5-Day Practical Course (Weekend Batch)'}
+              </span>
               <h1 className={styles.bannerTitle}>{course.title.en}</h1>
               <p className={styles.bannerDesc}>{course.description.en}</p>
               

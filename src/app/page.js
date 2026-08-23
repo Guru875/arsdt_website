@@ -247,10 +247,10 @@ export default function Home() {
               🛠️ 10-{t('courses.day')} Pro
             </button>
             <button
-              onClick={() => setActiveCategory('2day')}
-              className={`${styles.tabBtn} ${activeCategory === '2day' ? styles.tabActive : ''}`}
+              onClick={() => setActiveCategory('5day')}
+              className={`${styles.tabBtn} ${activeCategory === '5day' ? styles.tabActive : ''}`}
             >
-              ⚡ 2-{t('courses.day')} Practical
+              ⚡ 5-{t('courses.day')} Practical (Weekend)
             </button>
           </div>
 
