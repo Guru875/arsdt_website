@@ -105,6 +105,7 @@
 
 /* Mobile Drawer Menu Drawer */
 .mobileMenu {
+  display: none;
   position: fixed;
   top: var(--nav-height);
   left: 0;
@@ -303,6 +304,10 @@
   
   .hamburger {
     display: flex;
+  }
+
+  .mobileMenu {
+    display: block;
   }
   
   .footerGrid {
