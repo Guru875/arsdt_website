@@ -21,6 +21,9 @@ export default function CourseCard({ course }) {
         {course.popular && (
           <span className={styles.popularBadge}>{t('courses.popular')}</span>
         )}
+        {course.combo && (
+          <span className={styles.comboBadge}>{t('courses.combo')}</span>
+        )}
       </div>
       
       <div className={styles.cardHeader} style={{ '--accent-color': course.color }}>
