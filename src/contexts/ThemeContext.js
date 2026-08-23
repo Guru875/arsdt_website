@@ -17,11 +17,6 @@ export function ThemeProvider({ children }) {
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setThemeState('dark');
     }
-
-    const savedPalette = localStorage.getItem('arsdt-palette');
-    if (savedPalette && palettesData[savedPalette]) {
-      setPaletteState(savedPalette);
-    }
   }, []);
 
   useEffect(() => {
