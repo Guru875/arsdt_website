@@ -235,6 +235,12 @@ export default function Home() {
               🔧 30-{t('courses.day')} PCB Pro
             </button>
             <button
+              onClick={() => setActiveCategory('15day')}
+              className={`${styles.tabBtn} ${activeCategory === '15day' ? styles.tabActive : ''}`}
+            >
+              🌟 15-{t('courses.day')} Pro
+            </button>
+            <button
               onClick={() => setActiveCategory('10day')}
               className={`${styles.tabBtn} ${activeCategory === '10day' ? styles.tabActive : ''}`}
             >
