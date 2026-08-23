@@ -1400,22 +1400,22 @@
     ]
   },
   {
-    "id": "small-appliances-2d",
+    "id": "small-appliances-5d",
     "title": {
-      "en": "Small Appliances — Weekly Course",
-      "ta": "சிறிய சாதனங்கள் — வாராந்திர கோர்ஸ்",
-      "ml": "ചെറിയ ഉപകരണങ്ങൾ — വാരാന്ത്യ കോഴ്സ്"
+      "en": "Small Appliances — Weekend Batch",
+      "ta": "சிறிய சாதனங்கள் — வார இறுதி பேட்ச்",
+      "ml": "ചെറിയ ഉപകരണങ്ങൾ — വീക്കെൻഡ് ബാച്ച്"
     },
     "shortTitle": {
       "en": "Small Appliances",
       "ta": "சிறிய சாதனங்கள்",
       "ml": "ചെറിയ ഉപകരണങ്ങൾ"
     },
-    "category": "2day",
+    "category": "5day",
     "duration": {
-      "en": "2 Days",
-      "ta": "2 நாட்கள்",
-      "ml": "2 ദിവസങ്ങൾ"
+      "en": "5 Days (Weekend Batch)",
+      "ta": "5 நாட்கள் (வார இறுதி பேட்ச்)",
+      "ml": "5 ദിവസങ്ങൾ (വീക്കെൻഡ് ബാച്ച്)"
     },
     "price": 15000,
     "offerPrice": 7500,
@@ -1467,20 +1467,20 @@
       {
         "day": 1,
         "title": {
-          "en": "Micro Oven, Microwave Oven & Coolers",
-          "ta": "மைக்ரோ ஓவன், மைக்ரோவேவ் ஓவன் & கூலர்கள்",
-          "ml": "മൈക്രോ ഓവൻ, മൈക്രോവേവ് ഓവൻ & കൂളറുകൾ"
+          "en": "Micro Oven & Microwave Oven Diagnostics",
+          "ta": "மைக்ரோ ஓவன் & மைக்ரோவேவ் ஓவன் பழுதுநீக்குதல்",
+          "ml": "മൈക്രോ ഓവൻ & മൈക്രോവേവ് ഓവൻ ഡയഗ്നോസ്റ്റിക്സ്"
         },
         "topics": [
           {
-            "en": "Micro Oven & Microwave Oven working principle, magnetron, transformer, capacitor",
-            "ta": "மைக்ரோ ஓவன் & மைக்ரோவேவ் ஓவன் செயல்படும் கொள்கை, மேக்னட்ரான், ட்ரான்ஸ்ஃபார்மர், கெப்பாசிட்டர்",
-            "ml": "മൈക്രോ ഓവൻ & മൈക്രോവേവ് ഓവൻ പ്രവർത്തന തത്വം, മാഗ്നെട്രോൺ, ട്രാൻസ്ഫോർമർ, കപ്പാസിറ്റർ"
+            "en": "Working principle, magnetron, high-voltage transformer, capacitor & diode testing",
+            "ta": "செயல்படும் கொள்கை, மேக்னட்ரான், ஹை-வோல்டேஜ் டிரான்ஸ்பார்மர், கெப்பாசிட்டர் & டையோடு சோதனை",
+            "ml": "പ്രവർത്തന തത്വം, മാഗ്നെട്രോൺ, ഹൈ-വോൾട്ടേജ് ട്രാൻസ്ഫോർമർ, കപ്പാസിറ്റർ & ഡയോഡ് ടെസ്റ്റിംഗ്"
           },
           {
-            "en": "Air Cooler & Water Cooler pump, motor, honeycomb pad service",
-            "ta": "ஏர் கூலர் & வாட்டர் கூலர் பம்ப், மோட்டார், ஹனிகாம்ப் பேட் சர்வீஸ்",
-            "ml": "എയർ കൂളർ & വാട്ടർ കൂളർ പമ്പ്, മോട്ടോർ, ഹണികോംബ് പാഡ് സർവ്വീസ്"
+            "en": "Door interlock switch, turntable motor, thermal fuse & cavity troubleshooting",
+            "ta": "டோர் சுவிட்ச், டர்ன்டேபிள் மோட்டார், தெர்மல் ஃபியூஸ் சரிசெய்தல்",
+            "ml": "ഡോർ ഇന്റർലോക്ക് സ്വിച്ച്, ടേൺടേബിൾ മോട്ടോർ, തെർമൽ ഫ്യൂസ് ട്രബിൾഷൂട്ടിംഗ്"
           }
         ],
         "videos": []
@@ -1488,20 +1488,83 @@
       {
         "day": 2,
         "title": {
-          "en": "Chimney & Aqua/RO Water Purifier",
-          "ta": "சிம்னி & ஆக்வா/RO வாட்டர் ப்யூரிஃபையர்",
-          "ml": "ചിമ്നി & ആക്വ/RO വാട്ടർ പ്യൂരിഫയർ"
+          "en": "Air Cooler & Water Cooler Systems",
+          "ta": "ஏர் கூலர் & வாட்டர் கூலர் சிஸ்டம்கள்",
+          "ml": "എയർ കൂളർ & വാട്ടർ കൂളർ സിസ്റ്റംസ്"
         },
         "topics": [
           {
-            "en": "Kitchen Chimney motor, control panel, filter cleaning",
-            "ta": "கிச்சன் சிம்னி மோட்டார், கட்டுப்பாட்டு பேனல், ஃபில்ட்டர் கிளீனிங்",
-            "ml": "കിച്ചൺ ചിമ്നി മോട്ടോർ, കൺട്രോൾ പാനൽ, ഫിൽട്ടർ ക്ലീനിംഗ്"
+            "en": "Submersible water pump, heavy-duty fan motor, multi-speed selector switch",
+            "ta": "சப்மெர்சிபிள் வாட்டர் பம்ப், ஃபேன் மோட்டார், மல்டி-ஸ்பீட் சுவிட்ச்",
+            "ml": "സബ്മെർസിബിൾ വാട്ടർ പമ്പ്, ഹെവി-ഡ്യൂട്ടി ഫാൻ മോട്ടോർ, മൾട്ടി-സ്പീഡ് സ്വിച്ച്"
           },
           {
-            "en": "RO membrane, pump motor, UV lamp, filter replacement",
-            "ta": "RO மெம்பிரேன், பம்ப் மோட்டார், UV லேம்ப், ஃபில்ட்டர் மாற்றம்",
-            "ml": "RO മെമ്പ്രേൻ, പമ്പ് മോട്ടോർ, UV ലാമ്പ്, ഫിൽട്ടർ മാറ്റൽ"
+            "en": "Honeycomb cooling pad maintenance, thermostat & compressor cooling coil service",
+            "ta": "ஹனிகாம்ப் கூலிங் பேட் பராமரிப்பு, தெர்மோஸ்டாட் & கூலிங் காயில் சர்வீஸ்",
+            "ml": "ഹണികോംബ് കൂളിംഗ് പാഡ് മെയിന്റനൻസ്, തെർമോസ്റ്റാറ്റ് & കൂളിംഗ് കോയിൽ സർവ്വീസ്"
+          }
+        ],
+        "videos": []
+      },
+      {
+        "day": 3,
+        "title": {
+          "en": "Kitchen Chimney & Exhaust Systems",
+          "ta": "கிச்சன் சிம்னி & எக்ஸாஸ்ட் அமைப்புகள்",
+          "ml": "കിച്ചൺ ചിമ്നി & എക്‌സ്‌ഹോസ്റ്റ് സിസ്റ്റംസ്"
+        },
+        "topics": [
+          {
+            "en": "High-suction blower motor, capacitor replacement, baffle & mesh filter degreasing",
+            "ta": "உயர் உறிஞ்சும் ப்ளோவர் மோட்டார், கெப்பாசிட்டர் மாற்றம், பேஃபிள் & மெஷ் ஃபில்டர் கிளீனிங்",
+            "ml": "ഹൈ-സക്ഷൻ ബ്ലോവർ മോട്ടോർ, കപ്പാസിറ്റർ മാറ്റൽ, ബാഫിൾ & മെഷ് ഫിൽട്ടർ ക്ലീനിംഗ്"
+          },
+          {
+            "en": "Capacitive touch controls, motion sensor PCB, LED spotlight wiring",
+            "ta": "டச் கண்ட்ரோல் பேனல், மோஷன் சென்சார் PCB, LED ஸ்பாட்லைட் வயரிங்",
+            "ml": "ടച്ച് കൺട്രോളുകൾ, മോഷൻ സെൻസർ PCB, എൽഇഡി സ്പോട്ട്‌ലൈറ്റ് വയറിംഗ്"
+          }
+        ],
+        "videos": []
+      },
+      {
+        "day": 4,
+        "title": {
+          "en": "Aqua / RO Water Purifier Systems",
+          "ta": "ஆக்வா / RO வாட்டர் ப்யூரிஃபையர் அமைப்புகள்",
+          "ml": "ആക്വ / RO വാട്ടർ പ്യൂരിഫയർ സിസ്റ്റംസ്"
+        },
+        "topics": [
+          {
+            "en": "Booster pump, SMPS power supply, solenoid valve (SV), low/high pressure switches",
+            "ta": "பூஸ்டர் பம்ப், SMPS பவர் சப்ளை, சோலனாய்டு வால்வ் (SV), பிரஷர் சுவிட்சுகள்",
+            "ml": "ബൂസ്റ്റർ പമ്പ്, SMPS പവർ സപ്ലൈ, സോളിനോയിഡ് വാൽവ് (SV), പ്രഷർ സ്വിച്ചുകൾ"
+          },
+          {
+            "en": "RO membrane, sediment & pre-carbon filters, TDS controller, UV chamber & UF service",
+            "ta": "RO மெம்பிரேன், செடிமெண்ட் & கார்பன் ஃபில்டர்கள், TDS கன்ட்ரோலர், UV சேம்பர் பராமரிப்பு",
+            "ml": "RO മെമ്പ്രേൻ, സെഡിമെന്റ് & കാർബൺ ഫിൽട്ടറുകൾ, TDS കൺട്രോളർ, UV & UF സർവ്വീസ്"
+          }
+        ],
+        "videos": []
+      },
+      {
+        "day": 5,
+        "title": {
+          "en": "Multi-Appliance Practical Workshop & Certification",
+          "ta": "மல்டி-அப்ளையன்ஸ் நேரடி பயிற்சி & சான்றிதழ்",
+          "ml": "മൾട്ടി-അപ്ലയൻസ് പ്രാക്ടിക്കൽ വർക്ക്ഷോപ്പ് & സർട്ടിഫിക്കേഷൻ"
+        },
+        "topics": [
+          {
+            "en": "Live multi-appliance fault finding, customer servicing protocols & practical testing",
+            "ta": "நேரடி கோளாறு கண்டறிதல், வாடிக்கையாளர் சேவை நெறிமுறைகள் & நடைமுறை தேர்வு",
+            "ml": "ലൈവ് ഫോൾട്ട് ഫൈൻഡിംഗ്, കസ്റ്റമർ സർവ്വീസ് പ്രോട്ടോക്കോളുകൾ & പ്രായോഗിക പരീക്ഷ"
+          },
+          {
+            "en": "Business setup guide, spare parts sourcing roadmap & certificate awarding",
+            "ta": "தொழில் தொடங்கும் வழிகாட்டுதல், உதிரிபாகங்கள் வாங்கும் வழிகள் & சான்றிதழ் வழங்குதல்",
+            "ml": "ബിസിനസ്സ് മാർഗ്ഗനിർദ്ദേശം, സ്പെയർ പാർട്സ് സോഴ്സിംഗ് & സർട്ടിഫിക്കറ്റ് വിതരണം"
           }
         ],
         "videos": []
