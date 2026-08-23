@@ -7,7 +7,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
 import LanguageSelector from './LanguageSelector';
 import ThemeToggle from './ThemeToggle';
-import PalettePicker from './PalettePicker';
 import ScrollToTop from './ScrollToTop';
 import AnimatedBrand from './AnimatedBrand';
 import siteConfig from '@/data/site.json';
@@ -55,7 +54,6 @@ export default function AppLayout({ children }) {
 
           {/* Action Tools */}
           <div className={styles.actions}>
-            <PalettePicker />
             <LanguageSelector />
             <ThemeToggle />
             <a
@@ -91,10 +89,6 @@ export default function AppLayout({ children }) {
           <a href="/#certificate" className={styles.mobileNavLink} onClick={closeMobileMenu}>{t('nav.certification')}</a>
           <a href="/#contact" className={styles.mobileNavLink} onClick={closeMobileMenu}>{t('nav.contact')}</a>
           <div className={styles.mobileActions}>
-            <div className={styles.mobileSelectorRow}>
-              <span>Color:</span>
-              <PalettePicker />
-            </div>
             <div className={styles.mobileSelectorRow}>
               <span>Theme:</span>
               <ThemeToggle />
