@@ -23,10 +23,10 @@
     "studentsCount": 5000,
     "googleRating": 4.9,
     "placementRate": 95,
-    "coursesCount": 7
+    "coursesCount": 8
   },
   "nextBatch": {
-    "date": "2026-07-15",
+    "date": "2026-08-27",
     "seatsLeft": 8,
     "totalSeats": 15
   },
