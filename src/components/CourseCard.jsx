@@ -2,12 +2,23 @@
 
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { CourseIcon, ClockIcon, CheckIcon } from './Icons';
+import { useEnquiry } from '@/contexts/EnquiryContext';
+import siteConfig from '@/data/site.json';
+import { CourseIcon, CheckIcon } from './Icons';
 import styles from './CourseCard.module.css';
 
 export default function CourseCard({ course }) {
   const { t, language } = useLanguage();
+  const { openEnquiryModal } = useEnquiry();
   const discount = Math.round(((course.price - course.offerPrice) / course.price) * 100);
+
+  const titleStr = typeof course.title === 'object' ? (course.title[language] || course.title.en) : course.title;
+  const callUrl = `tel:${siteConfig.phone}`;
+
+  const handleWhatsAppClick = (e) => {
+    e.preventDefault();
+    openEnquiryModal(titleStr);
+  };
 
   return (
     <div className={`glass-card ${styles.card}`}>
@@ -60,16 +71,34 @@ export default function CourseCard({ course }) {
           <span className={styles.originalPrice}>₹{course.price}</span>
           <div className={styles.offerPriceRow}>
             <span className={styles.offerPrice}>₹{course.offerPrice}</span>
-            <span className={styles.discountBadge}>{discount}% {t('common.off')}</span>
+            <span className={styles.discountBadge}>{discount}% {t('common.off') || 'OFF'}</span>
           </div>
         </div>
 
-        <div className={styles.actionRow}>
-          <Link href={`/course/${course.id}`} className="btn btn-secondary btn-sm" style={{ flex: 1 }}>
-            {t('courses.viewDetails')}
-          </Link>
-          <Link href={`/course/${course.id}`} className="btn btn-primary btn-sm" style={{ flex: 1 }}>
-            {t('courses.enrollNow')}
+        <div className={styles.actionRow} style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
+          <a
+            href={callUrl}
+            className="btn btn-secondary btn-sm"
+            style={{ flex: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}
+          >
+            📞 Call Now
+          </a>
+          <button
+            type="button"
+            onClick={handleWhatsAppClick}
+            className="btn btn-accent btn-sm"
+            style={{ flex: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '4px', cursor: 'pointer' }}
+          >
+            💬 WhatsApp
+          </button>
+        </div>
+
+        <div style={{ textAlign: 'center' }}>
+          <Link
+            href={`/course/${course.id}`}
+            style={{ fontSize: '0.85rem', color: 'var(--primary, #3b82f6)', textDecoration: 'underline', fontWeight: '500' }}
+          >
+            View Full Course Syllabus & Details →
           </Link>
         </div>
       </div>

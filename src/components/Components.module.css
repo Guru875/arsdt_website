@@ -297,6 +297,13 @@
   gap: var(--space-md);
 }
 
+.stickyContentOnlyButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
 .stickyMeta {
   display: flex;
   flex-direction: column;

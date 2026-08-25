@@ -9,14 +9,13 @@ import LanguageSelector from './LanguageSelector';
 import ThemeToggle from './ThemeToggle';
 import ScrollToTop from './ScrollToTop';
 import AnimatedBrand from './AnimatedBrand';
+import { EnquiryProvider } from '@/contexts/EnquiryContext';
 import siteConfig from '@/data/site.json';
 import styles from './AppLayout.module.css';
 
 export default function AppLayout({ children }) {
   const { t } = useLanguage();
-  const { isDark } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
@@ -24,7 +23,8 @@ export default function AppLayout({ children }) {
   const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${whatsappMsg}`;
 
   return (
-    <div className={styles.appWrapper}>
+    <EnquiryProvider>
+      <div className={styles.appWrapper}>
       {/* Header Navigation */}
       <header className={styles.header}>
         <div className={`container ${styles.headerContainer}`}>
@@ -182,5 +182,6 @@ export default function AppLayout({ children }) {
       {/* Scroll to Top Button */}
       <ScrollToTop />
     </div>
+    </EnquiryProvider>
   );
 }
