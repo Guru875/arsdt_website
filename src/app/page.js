@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import siteConfig from '@/data/site.json';
 import coursesData from '@/data/courses.json';
 import CourseCard from '@/components/CourseCard';
-import InteractiveTransformation from '@/components/InteractiveTransformation';
 import CertificateCustomizer from '@/components/CertificateCustomizer';
 import { 
   ChevronDownIcon,
@@ -30,6 +30,14 @@ export default function Home() {
   // Slider state
   const sliderRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [totalPages, setTotalPages] = useState(1);
+
+  // Hero image slideshow
+  const heroImages = [
+    '/hero/1.jpg', '/hero/2.jpg', '/hero/3.jpg', '/hero/4.jpg', '/hero/5.jpg',
+    '/hero/6.jpg', '/hero/7.jpg', '/hero/8.jpg', '/hero/9.jpg', '/hero/10.jpg'
+  ];
+  const [heroImageIdx, setHeroImageIdx] = useState(0);
 
   // Contact form state
   const [contactName, setContactName] = useState('');
@@ -43,6 +51,15 @@ export default function Home() {
     const url = `https://wa.me/${siteConfig.whatsapp}?text=${formattedText}`;
     window.open(url, '_blank');
   };
+
+  // Hero image slideshow auto-cycle (6.5s per image for comfortable reading)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroImageIdx((prev) => (prev + 1) % heroImages.length);
+    }, 6500);
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
   // Why Choose Us Mobile Slider state
   const whyUsSliderRef = useRef(null);
   const [activeWhyUsIdx, setActiveWhyUsIdx] = useState(0);
@@ -52,45 +69,52 @@ export default function Home() {
     ? coursesData 
     : coursesData.filter(course => course.category === activeCategory);
 
-  // Auto-sliding and scroll listener
+  // Scroll listener for course slider (manual only, no auto-scroll)
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider) return;
 
-    // Update active dot on scroll
-    const handleScroll = () => {
-      const index = Math.round(slider.scrollLeft / slider.offsetWidth);
-      setActiveIndex(index);
+    const computePages = () => {
+      const maxScroll = slider.scrollWidth - slider.clientWidth;
+      if (maxScroll <= 0) {
+        setTotalPages(1);
+      } else {
+        setTotalPages(Math.ceil(maxScroll / slider.offsetWidth) + 1);
+      }
     };
 
-    slider.addEventListener('scroll', handleScroll);
-
-    // Auto-slide every 3 seconds
-    const interval = setInterval(() => {
-      if (slider) {
-        const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
-        const nextScrollLeft = slider.scrollLeft + slider.offsetWidth;
-        
-        if (slider.scrollLeft >= maxScrollLeft - 10) {
-          // Loop back to start
-          slider.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          slider.scrollTo({ left: nextScrollLeft, behavior: 'smooth' });
-        }
+    const handleScroll = () => {
+      const maxScroll = slider.scrollWidth - slider.clientWidth;
+      if (maxScroll <= 0) {
+        setActiveIndex(0);
+        return;
       }
-    }, 4000); // 4 seconds
+      const pages = Math.ceil(maxScroll / slider.offsetWidth) + 1;
+      const rawPage = (slider.scrollLeft / maxScroll) * (pages - 1);
+      setActiveIndex(Math.round(rawPage));
+    };
+
+    computePages();
+    slider.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', computePages);
 
     return () => {
       slider.removeEventListener('scroll', handleScroll);
-      clearInterval(interval);
+      window.removeEventListener('resize', computePages);
     };
-  }, [filteredCourses]); // Re-run if courses change
+  }, [filteredCourses]);
 
-  const scrollToCourse = (index) => {
+  // Prev/Next handlers for course slider
+  const handleCoursePrev = () => {
     const slider = sliderRef.current;
-    if (slider) {
-      slider.scrollTo({ left: index * slider.offsetWidth, behavior: 'smooth' });
-    }
+    if (!slider) return;
+    slider.scrollTo({ left: slider.scrollLeft - slider.offsetWidth, behavior: 'smooth' });
+  };
+
+  const handleCourseNext = () => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+    slider.scrollTo({ left: slider.scrollLeft + slider.offsetWidth, behavior: 'smooth' });
   };
 
 
@@ -164,8 +188,11 @@ export default function Home() {
     <div className={styles.homeWrapper}>
       {/* 1. HERO SECTION */}
       <section className={`${styles.hero} animate-fade-in`}>
+        {/* Background texture & soft gradient glow */}
         <div className={styles.heroBgPattern}></div>
+
         <div className={`container ${styles.heroContainer}`}>
+          {/* Left Side Content */}
           <div className={styles.heroContent}>
             <span className={styles.heroBadge}>{t('hero.badge')}</span>
             <h1 className={styles.heroTitle}>{t('hero.title')}</h1>
@@ -201,9 +228,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.heroVisual}>
-            <div className={styles.visualCard}>
-              <InteractiveTransformation />
+          {/* Right Side Image Showcase (100% visible, seamless left fade blend) */}
+          <div className={styles.heroImageContainer}>
+            <div className={styles.heroImageTrack}>
+              {heroImages.map((src, idx) => (
+                <div
+                  key={src}
+                  className={`${styles.heroSlide} ${idx === heroImageIdx ? styles.heroSlideActive : styles.heroSlideInactive}`}
+                >
+                  <img
+                    src={src}
+                    alt={`ARSDT Training Poster ${idx + 1}`}
+                    className={styles.heroSlideImg}
+                    loading={idx === 0 ? 'eager' : 'lazy'}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -260,15 +300,28 @@ export default function Home() {
             ))}
           </div>
           
-          <div className={styles.sliderDots}>
-            {filteredCourses.map((_, idx) => (
-              <button 
-                key={idx} 
-                className={`${styles.dot} ${activeIndex === idx ? styles.activeDot : ''}`}
-                onClick={() => scrollToCourse(idx)}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
+          <div className={styles.sliderArrows}>
+            <button
+              className={`${styles.sliderArrowBtn} ${activeIndex === 0 ? styles.sliderArrowDisabled : ''}`}
+              onClick={handleCoursePrev}
+              disabled={activeIndex === 0}
+              aria-label="Previous course"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <span className={styles.sliderCounter}>{activeIndex + 1} / {totalPages}</span>
+            <button
+              className={`${styles.sliderArrowBtn} ${activeIndex >= totalPages - 1 ? styles.sliderArrowDisabled : ''}`}
+              onClick={handleCourseNext}
+              disabled={activeIndex >= totalPages - 1}
+              aria-label="Next course"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
           </div>
         </div>
       </section>
