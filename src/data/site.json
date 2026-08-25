@@ -9,10 +9,11 @@
   "whatsapp": "+918111001108",
   "email": "arsdtcoimbatore@gmail.com",
   "address": {
-    "en": "81, Jeevanatham Main Road, 7th Cross Ext, Rathinapuri, Coimbatore, Tamil Nadu, India - 641027",
-    "ta": "81, ஜீவநாதம் மெயின் ரோடு, 7வது கிராஸ் எக்ஸ்டென்ஷன், ரத்தினபுரி, கோயம்புத்தூர், தமிழ்நாடு, இந்தியா - 641027",
-    "ml": "81, ജീവാനാഥം മെയിൻ റോഡ്, 7th ക്രോസ് എക്സ്റ്റൻഷൻ, രത്തിനപുരി, കോയമ്പത്തൂർ, തമിഴ്നാട്, ഇന്ത്യ - 641027"
+    "en": "No.81A Jeevanantham Main Road, 7th Street Ext, Rathinapuri, Coimbatore, Tamil Nadu - 641027",
+    "ta": "எண்.81A ஜீவானந்தம் மெயின் ரோடு, 7வது தெரு எக்ஸ்டென்ஷன், ரத்தினபுரி, கோயம்புத்தூர், தமிழ்நாடு - 641027",
+    "ml": "നം.81A ജീവാനന്ദം മെയിൻ റോഡ്, 7th സ്ട്രീറ്റ് എക്സ്റ്റൻഷൻ, രത്തിനാപുരി, കോയമ്പത്തൂർ, തമിഴ്നാട് - 641027"
   },
+  "mapUrl": "https://www.google.com/maps/place/11%C2%B001'43.6%22N+76%C2%B057'56.5%22E/@11.0287625,76.9631116,17z/data=!3m1!4b1!4m4!3m3!8m2!3d11.0287625!4d76.9656865",
   "social": {
     "youtube": "https://youtube.com/@arsdt",
     "instagram": "https://instagram.com/arsdt",
@@ -33,61 +34,157 @@
   "testimonials": [
     {
       "id": 1,
-      "name": { "en": "Rajesh Kumar", "ta": "ராஜேஷ் குமார்", "ml": "രാജേഷ് കുമാർ" },
-      "role": { "en": "AC Technician, Chennai", "ta": "ஏசி தொழில்நுட்ப வல்லுநர், சென்னை", "ml": "എസി ടെക്നീഷ്യൻ, ചെന്നൈ" },
-      "text": { "en": "After completing the AC repair course at ARSDT, I started my own service center. Now I earn ₹50,000+ monthly. Best investment of my life!", "ta": "ARSDT-ல் ஏசி ரிப்பேர் கோர்ஸ் முடித்த பிறகு, சொந்தமாக சர்வீஸ் சென்டர் தொடங்கினேன். இப்போது மாதம் ₹50,000+ சம்பாதிக்கிறேன்!", "ml": "ARSDT-ൽ AC റിപ്പയർ കോഴ്സ് പൂർത്തിയാക്കിയ ശേഷം, ഞാൻ സ്വന്തം സർവ്വീസ് സെന്റർ തുടങ്ങി. ഇപ്പോൾ മാസം ₹50,000+ സമ്പാദിക്കുന്നു!" },
+      "name": {
+        "en": "Rajesh Kumar",
+        "ta": "ராஜேஷ் குமார்",
+        "ml": "രാജേഷ് കുമാർ"
+      },
+      "role": {
+        "en": "AC Technician, Chennai",
+        "ta": "ஏசி தொழில்நுட்ப வல்லுநர், சென்னை",
+        "ml": "എസി ടെക്നീഷ്യൻ, ചെന്നൈ"
+      },
+      "text": {
+        "en": "After completing the AC repair course at ARSDT, I started my own service center. Now I earn ₹50,000+ monthly. Best investment of my life!",
+        "ta": "ARSDT-ல் ஏசி ரிப்பேர் கோர்ஸ் முடித்த பிறகு, சொந்தமாக சர்வீஸ் சென்டர் தொடங்கினேன். இப்போது மாதம் ₹50,000+ சம்பாதிக்கிறேன்!",
+        "ml": "ARSDT-ൽ AC റിപ്പയർ കോഴ്സ് പൂർത്തിയാക്കിയ ശേഷം, ഞാൻ സ്വന്തം സർവ്വീസ് സെന്റർ തുടങ്ങി. ഇപ്പോൾ മാസം ₹50,000+ സമ്പാദിക്കുന്നു!"
+      },
       "rating": 5,
       "avatar": "RK"
     },
     {
       "id": 2,
-      "name": { "en": "Priya Sundaram", "ta": "பிரியா சுந்தரம்", "ml": "പ്രിയ സുന്ദരം" },
-      "role": { "en": "Home Appliance Expert, Coimbatore", "ta": "ஹோம் அப்ளையன்ஸ் நிபுணர், கோயம்புத்தூர்", "ml": "ഹോം അപ്ലയൻസ് വിദഗ്ധ, കോയമ്പത്തൂർ" },
-      "text": { "en": "The practical approach at ARSDT is amazing. I learned to repair washing machines and refrigerators in just 10 days. Highly recommended!", "ta": "ARSDT-ன் நடைமுறை அணுகுமுறை அற்புதமானது. 10 நாட்களில் வாஷிங் மெஷின் மற்றும் ஃப்ரிட்ஜ் ரிப்பேர் கற்றுக்கொண்டேன்!", "ml": "ARSDT-ന്റെ പ്രായോഗിക സമീപനം അതിശയകരമാണ്. 10 ദിവസത്തിനുള്ളിൽ വാഷിംഗ് മെഷീനും ഫ്രിഡ്ജും റിപ്പയർ ചെയ്യാൻ പഠിച്ചു!" },
+      "name": {
+        "en": "Priya Sundaram",
+        "ta": "பிரியா சுந்தரம்",
+        "ml": "പ്രിയ സുന്ദരം"
+      },
+      "role": {
+        "en": "Home Appliance Expert, Coimbatore",
+        "ta": "ஹோம் அப்ளையன்ஸ் நிபுணர், கோயம்புத்தூர்",
+        "ml": "ഹോം അപ്ലയൻസ് വിദഗ്ധ, കോയമ്പത്തൂർ"
+      },
+      "text": {
+        "en": "The practical approach at ARSDT is amazing. I learned to repair washing machines and refrigerators with full confidence. Highly recommended!",
+        "ta": "ARSDT-ன் நடைமுறை அணுகுமுறை அற்புதமானது. வாஷிங் மெஷின் மற்றும் ஃப்ரிட்ஜ் ரிப்பேர் நம்பிக்கையுடன் கற்றுக்கொண்டேன்!",
+        "ml": "ARSDT-ന്റെ പ്രായോഗിക സമീപനം അതിശയകരമാണ്. വാഷിംഗ് മെഷീനും ഫ്രിഡ്ജും റിപ്പയർ ചെയ്യാൻ പഠിച്ചു!"
+      },
       "rating": 5,
       "avatar": "PS"
     },
     {
       "id": 3,
-      "name": { "en": "Mohammed Ashraf", "ta": "முகமது அஷ்ரஃப்", "ml": "മുഹമ്മദ് അഷ്റഫ്" },
-      "role": { "en": "TV Repair Specialist, Madurai", "ta": "டிவி ரிப்பேர் நிபுணர், மதுரை", "ml": "ടിവി റിപ്പയർ സ്പെഷ്യലിസ്റ്റ്, മധുര" },
-      "text": { "en": "I was a school dropout, but ARSDT gave me a skill that changed my life. The trainers are very patient and helpful. Now I have a successful repair shop.", "ta": "நான் பள்ளி இடைநிறுத்தம் செய்தவன், ஆனால் ARSDT எனக்கு வாழ்க்கையை மாற்றிய திறமையை கொடுத்தது. இப்போது வெற்றிகரமான ரிப்பேர் கடை உள்ளது.", "ml": "ഞാൻ സ്കൂൾ ഡ്രോപ്പ്ഔട്ട് ആയിരുന്നു, പക്ഷേ ARSDT എന്റെ ജീവിതം മാറ്റിമറിച്ച ഒരു കഴിവ് നൽകി. ഇപ്പോൾ എനിക്ക് വിജയകരമായ റിപ്പയർ ഷോപ്പ് ഉണ്ട്." },
+      "name": {
+        "en": "Mohammed Ashraf",
+        "ta": "முகமது அஷ்ரஃப்",
+        "ml": "മുഹമ്മദ് അഷ്റഫ്"
+      },
+      "role": {
+        "en": "PCB Board Technician, Madurai",
+        "ta": "பிசிபி போர்டு தொழில்நுட்ப வல்லுநர், மதுரை",
+        "ml": "പിസിബി ബോർഡ് ടെക്നീഷ്യൻ, മധുര"
+      },
+      "text": {
+        "en": "ARSDT gave me practical skills that changed my life. The trainers are very patient and helpful. Now I have a successful repair shop.",
+        "ta": "ARSDT எனக்கு வாழ்க்கையை மாற்றிய திறமையைக் கொடுத்தது. இப்போது வெற்றிகரமான ரிப்பேர் கடை உள்ளது.",
+        "ml": "ARSDT എന്റെ ജീവിതം മാറ്റിമറിച്ച ഒരു കഴിവ് നൽകി. ഇപ്പോൾ എനിക്ക് വിജയകരമായ റിപ്പയർ ഷോപ്പ് ഉണ്ട്."
+      },
       "rating": 5,
       "avatar": "MA"
     },
     {
       "id": 4,
-      "name": { "en": "Lakshmi Narayanan", "ta": "லட்சுமி நாராயணன்", "ml": "ലക്ഷ്മി നാരായണൻ" },
-      "role": { "en": "Multi-Appliance Technician, Trivandrum", "ta": "மல்டி-அப்ளையன்ஸ் தொழில்நுட்ப வல்லுநர், திருவனந்தபுரம்", "ml": "മൾട്ടി-അപ്ലയൻസ് ടെക്നീഷ്യൻ, തിരുവനന്തപുരം" },
-      "text": { "en": "I completed 3 courses at ARSDT. The quality of training is unmatched. Every student gets individual attention. Worth every rupee!", "ta": "ARSDT-ல் 3 கோர்ஸ்கள் முடித்தேன். பயிற்சியின் தரம் ஒப்பிடமுடியாதது. ஒவ்வொரு மாணவருக்கும் தனிப்பட்ட கவனம் கிடைக்கும்!", "ml": "ARSDT-ൽ 3 കോഴ്സുകൾ പൂർത്തിയാക്കി. പരിശീലനത്തിന്റെ ഗുണനിലവാരം അതുല്യമാണ്. ഓരോ വിദ്യാർത്ഥിക്കും വ്യക്തിഗത ശ്രദ്ധ ലഭിക്കുന്നു!" },
+      "name": {
+        "en": "Lakshmi Narayanan",
+        "ta": "லட்சுமி நாராயணன்",
+        "ml": "ലക്ഷ്മി നാരായണൻ"
+      },
+      "role": {
+        "en": "Multi-Appliance Technician, Trivandrum",
+        "ta": "மல்டி-அப்ளையன்ஸ் தொழில்நுட்ப வல்லுநர், திருவனந்தபுரம்",
+        "ml": "മൾട്ടി-അപ്ലയൻസ് ടെക്നീഷ്യൻ, തിരുവനന്തപുരം"
+      },
+      "text": {
+        "en": "I completed practical courses at ARSDT. The quality of training is unmatched. Every student gets individual attention. Worth every rupee!",
+        "ta": "ARSDT-ல் பயிற்சிகள் முடித்தேன். பயிற்சியின் தரம் ஒப்பிடமுடியாதது. ஒவ்வொரு மாணவருக்கும் தனிப்பட்ட கவனம் கிடைக்கும்!",
+        "ml": "ARSDT-ൽ കോഴ്സുകൾ പൂർത്തിയാക്കി. പരിശീലനത്തിന്റെ ഗുണനിലവാരം അതുല്യമാണ്."
+      },
       "rating": 5,
       "avatar": "LN"
     }
   ],
   "faq": [
     {
-      "question": { "en": "Do I need any prior experience?", "ta": "எனக்கு ஏற்கனவே அனுபவம் தேவையா?", "ml": "എനിക്ക് മുൻ അനുഭവം ആവശ്യമുണ്ടോ?" },
-      "answer": { "en": "No prior experience is needed. Our courses are designed for complete beginners. We start from the basics of electrical safety and gradually progress to advanced repair techniques.", "ta": "முன் அனுபவம் தேவையில்லை. எங்கள் பாடநெறிகள் முழுமையான தொடக்கநிலையாளர்களுக்காக வடிவமைக்கப்பட்டுள்ளன. மின் பாதுகாப்பின் அடிப்படைகளிலிருந்து தொடங்கி மேம்பட்ட ரிப்பேர் நுட்பங்களுக்கு படிப்படியாக முன்னேறுகிறோம்.", "ml": "മുൻ അനുഭവം ആവശ്യമില്ല. ഞങ്ങളുടെ കോഴ്സുകൾ പൂർണ്ണ തുടക്കക്കാർക്ക് വേണ്ടി രൂപകൽപ്പന ചെയ്തവയാണ്." }
+      "question": {
+        "en": "Do I need any prior experience?",
+        "ta": "எனக்கு ஏற்கனவே அனுபவம் தேவையா?",
+        "ml": "എനിക്ക് മുൻ അനുഭവം ആവശ്യമുണ്ടോ?"
+      },
+      "answer": {
+        "en": "No prior experience is needed. Our courses are designed for complete beginners. We start from basic electrical safety and progress to advanced repair techniques.",
+        "ta": "முன் அனுபவம் தேவையில்லை. எங்கள் பாடநெறிகள் முழுமையான தொடக்கநிலையாளர்களுக்காக வடிவமைக்கப்பட்டுள்ளன.",
+        "ml": "മുൻ അനുഭവം ആവശ്യമില്ല. ഞങ്ങളുടെ കോഴ്സുകൾ പൂർണ്ണ തുടക്കക്കാർക്ക് വേണ്ടി രൂപകൽപ്പന ചെയ്തവയാണ്."
+      }
     },
     {
-      "question": { "en": "What is the batch size?", "ta": "ஒரு தொகுதியில் எத்தனை மாணவர்கள்?", "ml": "ബാച്ച് സൈസ് എത്ര?" },
-      "answer": { "en": "We keep our batches small, limited to 15 students maximum. This ensures every student gets personalized attention and ample hands-on practice time.", "ta": "எங்கள் தொகுதிகளை சிறியதாக வைத்திருக்கிறோம், அதிகபட்சம் 15 மாணவர்கள். இது ஒவ்வொரு மாணவருக்கும் தனிப்பயனாக்கப்பட்ட கவனம் மற்றும் போதுமான நடைமுறை பயிற்சி நேரத்தை உறுதி செய்கிறது.", "ml": "ഞങ്ങളുടെ ബാച്ചുകൾ ചെറുതായി നിലനിർത്തുന്നു, പരമാവധി 15 വിദ്യാർത്ഥികൾ. ഓരോ വിദ്യാർത്ഥിക്കും വ്യക്തിഗത ശ്രദ്ധയും പ്രായോഗിക സമയവും ഉറപ്പാക്കുന്നു." }
+      "question": {
+        "en": "What is the batch size?",
+        "ta": "ஒரு தொகுதியில் எத்தனை மாணவர்கள்?",
+        "ml": "ബാച്ച് സൈസ് എത്ര?"
+      },
+      "answer": {
+        "en": "We keep our batches small, limited to 15 students maximum for personalized attention.",
+        "ta": "எங்கள் தொகுதிகளை சிறியதாக வைத்திருக்கிறோம், அதிகபட்சம் 15 மாணவர்கள்.",
+        "ml": "ഞങ്ങളുടെ ബാച്ചുകൾ ചെറുതായി നിലനിർത്തുന്നു, പരമാവധി 15 വിദ്യാർത്ഥികൾ."
+      }
     },
     {
-      "question": { "en": "Will I get a certificate?", "ta": "சான்றிதழ் கிடைக்குமா?", "ml": "സർട്ടിഫിക്കറ്റ് ലഭിക്കുമോ?" },
-      "answer": { "en": "Yes! Upon successful completion of the course, you will receive a professional certificate from ARSDT that is recognized by service centers and employers across India.", "ta": "ஆம்! பாடநெறியை வெற்றிகரமாக முடிந்ததும், ARSDT-யிலிருந்து தொழில்முறை சான்றிதழ் பெறுவீர்கள், இது இந்தியா முழுவதும் சர்வீஸ் சென்டர்கள் மற்றும் முதலாளிகளால் அங்கீகரிக்கப்பட்டது.", "ml": "അതെ! കോഴ്സ് വിജയകരമായി പൂർത്തിയാക്കിയ ശേഷം, ഇന്ത്യയിലെ സർവ്വീസ് സെന്ററുകളും തൊഴിലുടമകളും അംഗീകരിച്ച ARSDT-യിൽ നിന്ന് പ്രൊഫഷണൽ സർട്ടിഫിക്കറ്റ് ലഭിക്കും." }
+      "question": {
+        "en": "Will I get a certificate?",
+        "ta": "சான்றிதழ் கிடைக்குமா?",
+        "ml": "സർട്ടിഫിക്കറ്റ് ലഭിക്കുമോ?"
+      },
+      "answer": {
+        "en": "Yes! Upon successful completion, you will receive a professional certificate from ARSDT.",
+        "ta": "ஆம்! பாடநெறியை வெற்றிகரமாக முடிந்ததும் ARSDT சான்றிதழ் பெறுவீர்கள்.",
+        "ml": "അതെ! വിജയകരമായി പൂർത്തിയാക്കിയ ശേഷം ARSDT-യിൽ നിന്ന് സർട്ടിഫിക്കറ്റ് ലഭിക്കും."
+      }
     },
     {
-      "question": { "en": "Is placement assistance provided?", "ta": "வேலைவாய்ப்பு உதவி உள்ளதா?", "ml": "പ്ലേസ്മെന്റ് സഹായം നൽകുന്നുണ്ടോ?" },
-      "answer": { "en": "Yes, we provide complete placement support. We have partnerships with major service centers and companies. We also help students who want to start their own business with guidance and support.", "ta": "ஆம், முழுமையான வேலைவாய்ப்பு ஆதரவை வழங்குகிறோம். பெரிய சர்வீஸ் சென்டர்கள் மற்றும் நிறுவனங்களுடன் கூட்டாண்மை உள்ளது. சொந்த தொழில் தொடங்க விரும்பும் மாணவர்களுக்கும் வழிகாட்டுதல் மற்றும் ஆதரவு வழங்குகிறோம்.", "ml": "അതെ, ഞങ്ങൾ പൂർണ്ണ പ്ലേസ്മെന്റ് സപ്പോർട്ട് നൽകുന്നു. പ്രമുഖ സർവ്വീസ് സെന്ററുകളുമായും കമ്പനികളുമായും പങ്കാളിത്തമുണ്ട്. സ്വന്തം ബിസിനസ് തുടങ്ങാൻ ആഗ്രഹിക്കുന്ന വിദ്യാർത്ഥികൾക്കും മാർഗ്ഗനിർദ്ദേശവും സഹായവും നൽകുന്നു." }
+      "question": {
+        "en": "Is placement assistance provided?",
+        "ta": "வேலைவாய்ப்பு உதவி உள்ளதா?",
+        "ml": "പ്ലേസ്മെന്റ് സഹായം നൽകുന്നുണ്ടോ?"
+      },
+      "answer": {
+        "en": "Yes, we provide complete placement support and guidance for starting your own business.",
+        "ta": "ஆம், முழுமையான வேலைவாய்ப்பு ஆதரவு மற்றும் சொந்த தொழில் வழிகாட்டுதல் வழங்குகிறோம்.",
+        "ml": "അതെ, ഞങ്ങൾ പൂർണ്ണ പ്ലേസ്മെന്റ് സപ്പോർട്ടും സ്വന്തം ബിസിനസ്സ് മാർഗ്ഗനിർദ്ദേശവും നൽകുന്നു."
+      }
     },
     {
-      "question": { "en": "Can I pay in installments?", "ta": "தவணையில் செலுத்தலாமா?", "ml": "ഗഡുക്കളായി അടയ്ക്കാമോ?" },
-      "answer": { "en": "Yes, we offer flexible payment options. You can pay in 2-3 installments. Contact us for more details about our payment plans.", "ta": "ஆம், நெகிழ்வான கட்டண விருப்பங்களை வழங்குகிறோம். 2-3 தவணைகளில் செலுத்தலாம். எங்கள் கட்டண திட்டங்கள் பற்றிய மேலும் விவரங்களுக்கு எங்களை தொடர்பு கொள்ளுங்கள்.", "ml": "അതെ, ഞങ്ങൾ ഫ്ലെക്സിബിൾ പേയ്‌മെന്റ് ഓപ്ഷനുകൾ നൽകുന്നു. 2-3 ഗഡുക്കളായി അടയ്ക്കാം. ഞങ്ങളുടെ പേയ്‌മെന്റ് പ്ലാനുകളെ കുറിച്ച് കൂടുതൽ വിവരങ്ങൾക്ക് ബന്ധപ്പെടുക." }
+      "question": {
+        "en": "Are fee concessions & support available for physically challenged / handicapped candidates?",
+        "ta": "மாற்றுத்திறனாளி மாணவர்களுக்கு சிறப்பு கட்டண சலுகை மற்றும் உதவி உண்டா?",
+        "ml": "ഭിന്നശേഷിക്കാർക്ക് പ്രത്യേക ഫീസ് ഇളവുകളും പിന്തുണയും ലഭ്യമാണോ?"
+      },
+      "answer": {
+        "en": "Yes! ARSDT provides special fee concessions, supportive lab seating, and personalized 1-on-1 practical training support for physically challenged / handicapped candidates.",
+        "ta": "ஆம்! ARSDT மாற்றுத்திறனாளி மாணவர்களுக்கு சிறப்பு கட்டண சலுகை, வசதியான ஆய்வுக்கூட அமர்வு மற்றும் பிரத்யேக தனிப்பட்ட நடைமுறை பயிற்சி உதவி வழங்குகிறது.",
+        "ml": "അതെ! ARSDT ഭിന്നശേഷിക്കാർക്ക് പ്രത്യേക ഫീസ് ഇളവുകളും അനുയോജ്യമായ ലാബ് ഇരിപ്പിടങ്ങളും വ്യക്തിഗത പരിശീലന പിന്തുണയും നൽകുന്നു."
+      }
     },
     {
-      "question": { "en": "What tools are provided during training?", "ta": "பயிற்சியின் போது என்ன கருவிகள் வழங்கப்படுகின்றன?", "ml": "പരിശീലന സമയത്ത് എന്ത് ഉപകരണങ്ങൾ നൽകുന്നു?" },
-      "answer": { "en": "All tools, equipment, and practice appliances are provided by us. You don't need to bring anything. We use real, industry-standard tools and actual appliances for hands-on training.", "ta": "அனைத்து கருவிகள், உபகரணங்கள் மற்றும் பயிற்சி சாதனங்களும் எங்களால் வழங்கப்படுகின்றன. நீங்கள் எதையும் கொண்டு வர வேண்டியதில்லை.", "ml": "എല്ലാ ഉപകരണങ്ങളും, ടൂളുകളും, പ്രാക്ടീസ് അപ്ലയൻസുകളും ഞങ്ങൾ നൽകുന്നു. നിങ്ങൾ ഒന്നും കൊണ്ടുവരേണ്ടതില്ല." }
+      "question": {
+        "en": "What advanced tools and equipment are provided during practical training?",
+        "ta": "நடைமுறை பயிற்சியின் போது என்ன நவீன கருவிகள் மற்றும் உபகரணங்கள் வழங்கப்படுகின்றன?",
+        "ml": "പ്രായോഗിക പരിശീലന സമയത്ത് ഏതൊക്കെ ആധുനിക ഉപകരണങ്ങളാണ് നൽകുന്നത്?"
+      },
+      "answer": {
+        "en": "We provide industry-standard advanced diagnostic tools, SMD rework stations, digital oscilloscopes, inverter PCB testing kits, vacuum pumps, manifold gauges, and real working appliances for 100% practical training.",
+        "ta": "தொழில்துறை தரத்திலான நவீன கண்டறிதல் கருவிகள், SMD ரீவொர்க் ஸ்டேஷன்கள், டிஜிட்டல் ஆஸிலோஸ்கோப்புகள், இன்வெர்ட்டர் PCB டெஸ்டிங் கிட்கள், வேக்யூம் பம்புகள் மற்றும் நேரடி சாதனங்கள் 100% நடைமுறை பயிற்சிக்கு வழங்கப்படுகின்றன.",
+        "ml": "വ്യവസായ നിലവാരമുള്ള ആധുനിക ഡയഗ്നോസ്റ്റിക് ടൂളുകൾ, SMD റീവർക്ക് സ്റ്റേഷനുകൾ, ഡിജിറ്റൽ ഓസിലോഗ്രാഫുകൾ, ഇൻവെർട്ടർ PCB ടെസ്റ്റിംഗ് കിറ്റുകൾ, വാക്വം പമ്പുകൾ എന്നിവ പരിശീലനത്തിന് നൽകുന്നു."
+      }
     }
   ]
 }
