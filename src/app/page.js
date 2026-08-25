@@ -60,9 +60,22 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [heroImages.length]);
 
-  // Why Choose Us Mobile Slider state
+  // Why Choose Us Mobile Slider & Video Audio state
   const whyUsSliderRef = useRef(null);
   const [activeWhyUsIdx, setActiveWhyUsIdx] = useState(0);
+  const videoRef = useRef(null);
+  const [isVideoMuted, setIsVideoMuted] = useState(true);
+
+  const toggleVideoAudio = () => {
+    if (videoRef.current) {
+      const nextMuted = !videoRef.current.muted;
+      videoRef.current.muted = nextMuted;
+      setIsVideoMuted(nextMuted);
+      if (!nextMuted) {
+        videoRef.current.play().catch(() => {});
+      }
+    }
+  };
 
   // Filter courses based on category
   const filteredCourses = activeCategory === 'all' 
@@ -328,12 +341,39 @@ export default function Home() {
 
       {/* 4. WHY CHOOSE US */}
       <section id="why-us" className={`${styles.whyUsSection} section`}>
+        {/* Audio Control in the Corner */}
+        <button
+          onClick={toggleVideoAudio}
+          className={`${styles.videoAudioToggle} ${!isVideoMuted ? styles.videoAudioToggleActive : ''}`}
+          aria-label={isVideoMuted ? t('whyUs.unmuteVideo') : t('whyUs.muteVideo')}
+          title={isVideoMuted ? t('whyUs.unmuteVideo') : t('whyUs.muteVideo')}
+        >
+          {isVideoMuted ? (
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" />
+              <line x1="23" y1="9" x2="17" y2="15" />
+              <line x1="17" y1="9" x2="23" y2="15" />
+            </svg>
+          ) : (
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" />
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+            </svg>
+          )}
+          <span className={styles.videoAudioText}>
+            {isVideoMuted ? t('whyUs.unmuteVideo') : t('whyUs.muteVideo')}
+          </span>
+          {!isVideoMuted && <span className={styles.audioWavePulse}></span>}
+        </button>
+
         {/* Cinematic Video Background */}
         <div className={styles.videoBgContainer}>
           <video 
+            ref={videoRef}
             autoPlay 
             loop 
-            muted 
+            muted={isVideoMuted}
             playsInline 
             className={styles.videoBg}
           >

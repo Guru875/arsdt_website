@@ -58,6 +58,8 @@
     "whyUs": {
       "sectionTitle": "Why Choose ARSDT?",
       "sectionSubtitle": "Watch our real training lab in the background — we deliver 100% practical, hands-on learning with actual appliances and PCB diagnostics.",
+      "unmuteVideo": "Unmute Video",
+      "muteVideo": "Mute Video",
       "feature1Title": "Real Lab Environment",
       "feature1Desc": "Practice in our fully-equipped, modern workshop (seen in the background) where you work on real ACs, washing machines, and refrigerator boards.",
       "feature2Title": "Master Technicians",
@@ -212,6 +214,8 @@
     "whyUs": {
       "sectionTitle": "ஏன் ARSDT-ஐ தேர்வு செய்ய வேண்டும்?",
       "sectionSubtitle": "பின்னணியில் உள்ள எங்களின் நேரடிப் பயிற்சி லேப்பைப் பாருங்கள் — உண்மையான சாதனங்கள் மற்றும் PCB பழுதுபார்ப்புடன் 100% நேரடிப் பயிற்சி அளிக்கிறோம்.",
+      "unmuteVideo": "ஆடியோ ஆன்",
+      "muteVideo": "ஆடியோ ஆஃப்",
       "feature1Title": "உண்மையான லேப் அனுபவம்",
       "feature1Desc": "உண்மையான ஏசி, வாஷிங் மெஷின் மற்றும் பிரிட்ஜ் போர்டுகளில் நேரடியாகப் பயிற்சி செய்ய பின்னணியில் நீங்கள் காணும் நவீன லேப் வசதி.",
       "feature2Title": "ரிப்பேர் செய்யும் வல்லுநர்கள்",
@@ -366,6 +370,8 @@
     "whyUs": {
       "sectionTitle": "എന്തുകൊണ്ട് ARSDT തിരഞ്ഞെടുക്കണം?",
       "sectionSubtitle": "ഞങ്ങളുടെ യഥാർത്ഥ പരിശീലന ലാബ് പശ്ചാത്തലത്തിൽ കാണുക — റിയൽ അപ്ലയൻസുകളും PCB ഡയഗ്നോസ്റ്റിക്സും ഉപയോഗിച്ച് 100% പ്രായോഗിക പഠനം ഞങ്ങൾ നൽകുന്നു.",
+      "unmuteVideo": "ഓഡിയോ ഓൺ",
+      "muteVideo": "ഓഡിയോ ഓഫ്",
       "feature1Title": "റിയൽ ലാബ് അന്തരീക്ഷം",
       "feature1Desc": "പശ്ചാത്തലത്തിൽ നിങ്ങൾ കാണുന്നതുപോലെ, യഥാർത്ഥ എസി, വാഷിംഗ് മെഷീൻ, റഫ്രിജറേറ്റർ ബോർഡുകൾ എന്നിവയിൽ നേരിട്ട് പരിശീലിക്കാനുള്ള അത്യാധുനിക ലാബ് സൗകര്യം.",
       "feature2Title": "മാസ്റ്റർ ടെക്നീഷ്യന്മാർ",
