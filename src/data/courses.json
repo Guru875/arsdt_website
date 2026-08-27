@@ -1,15 +1,15 @@
 [
   {
-    "id": "wm-fridge-pcb-30d",
+    "id": "master-pcb-common-30d",
     "title": {
-      "en": "Washing Machine & Fridge — PCB Training",
-      "ta": "வாஷிங் மெஷின் & ஃப்ரிட்ஜ் — PCB பயிற்சி",
-      "ml": "വാഷിംഗ് മെഷീൻ & ഫ്രിഡ്ജ് — PCB ട്രെയിനിംഗ്"
+      "en": "Master  PCB Repair Course",
+      "ta": "மாஸ்டர்  PCB ரிப்பேர் பயிற்சி",
+      "ml": "മാസ്റ്റർ  PCB റിപ്പയർ കോഴ്സ്"
     },
     "shortTitle": {
-      "en": "WM & Fridge PCB",
-      "ta": "WM & ஃப்ரிட்ஜ் PCB",
-      "ml": "WM & ഫ്രിഡ്ജ് PCB"
+      "en": "  PCB Course",
+      "ta": "  PCB பயிற்சி",
+      "ml": "  PCB കോഴ്സ്"
     },
     "category": "30day",
     "duration": {
@@ -232,7 +232,7 @@
       "ta": "AC PCB பயிற்சி",
       "ml": "AC PCB ട്രെയിനിംഗ്"
     },
-    "category": "30day",
+    "category": "archive",
     "duration": {
       "en": "30 Days",
       "ta": "30 நாட்கள்",
@@ -443,8 +443,8 @@
       "ta": "30 நாட்கள்",
       "ml": "30 ദിവസങ്ങൾ"
     },
-    "price": 60000,
-    "offerPrice": 30000,
+    "price": 70000,
+    "offerPrice": 35000,
     "icon": "tv",
     "color": "#DC2626",
     "popular": false,
