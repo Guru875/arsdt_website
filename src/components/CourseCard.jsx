@@ -10,7 +10,6 @@ import styles from './CourseCard.module.css';
 export default function CourseCard({ course }) {
   const { t, language } = useLanguage();
   const { openEnquiryModal } = useEnquiry();
-  const discount = Math.round(((course.price - course.offerPrice) / course.price) * 100);
 
   const titleStr = typeof course.title === 'object' ? (course.title[language] || course.title.en) : course.title;
   const callUrl = `tel:${siteConfig.phone}`;
@@ -67,13 +66,6 @@ export default function CourseCard({ course }) {
       </div>
 
       <div className={styles.cardFooter}>
-        <div className={styles.priceContainer}>
-          <span className={styles.originalPrice}>₹{course.price}</span>
-          <div className={styles.offerPriceRow}>
-            <span className={styles.offerPrice}>₹{course.offerPrice}</span>
-            <span className={styles.discountBadge}>{discount}% {t('common.off') || 'OFF'}</span>
-          </div>
-        </div>
 
         <div className={styles.actionRow} style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
           <a

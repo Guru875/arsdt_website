@@ -90,7 +90,7 @@ export default function EnquiryModal({ isOpen, onClose, initialCourse = '' }) {
             <option value="">-----Select Course-----</option>
             {coursesData.map((course) => (
               <option key={course.id} value={typeof course.title === 'string' ? course.title : course.title.en}>
-                {typeof course.title === 'string' ? course.title : course.title.en} (₹{course.offerPrice})
+                {typeof course.title === 'string' ? course.title : course.title.en}
               </option>
             ))}
             <option value="General Enquiry">Other / General Enquiry</option>

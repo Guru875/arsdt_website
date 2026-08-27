@@ -460,6 +460,11 @@
   margin-bottom: var(--space-2xl);
 }
 
+.coursesCarouselContainer {
+  position: relative;
+  width: 100%;
+}
+
 .coursesSlider {
   display: flex;
   align-items: stretch;
@@ -469,7 +474,7 @@
   padding-bottom: var(--space-lg);
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Hide scrollbar for dots */
+  scrollbar-width: none; /* Hide scrollbar */
 }
 
 .coursesSlider::-webkit-scrollbar {
@@ -477,8 +482,8 @@
 }
 
 .coursesSlider > div {
-  min-width: min(350px, 80vw);
-  max-width: 400px;
+  min-width: min(330px, 85vw);
+  max-width: 370px;
   width: 100%;
   flex: 0 0 auto;
   align-self: stretch;
@@ -486,54 +491,83 @@
   scroll-snap-align: start;
 }
 
-/* Arrow Navigation */
-.sliderArrows {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  margin-top: 18px;
-}
-
-.sliderArrowBtn {
-  width: 42px;
-  height: 42px;
+/* Side Arrow Navigation (Floating in section side margins) */
+.navArrowBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 25;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: var(--surface);
-  border: 1.5px solid var(--border);
-  color: var(--text);
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   padding: 0;
 }
 
-.sliderArrowBtn:hover:not(:disabled) {
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
-  transform: scale(1.08);
+.navArrowLeft {
+  left: -52px;
 }
 
-.sliderArrowBtn:active:not(:disabled) {
-  transform: scale(0.95);
+.navArrowRight {
+  right: -52px;
+}
+
+.navArrowBtn:hover:not(:disabled) {
+  background: #10b981;
+  border-color: #10b981;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 10px 28px rgba(16, 185, 129, 0.45);
+}
+
+.navArrowBtn:active:not(:disabled) {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .sliderArrowDisabled {
-  opacity: 0.35;
+  opacity: 0.25;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
-.sliderCounter {
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--textSecondary);
-  min-width: 48px;
-  text-align: center;
-  user-select: none;
+@media (max-width: 1280px) {
+  .navArrowLeft {
+    left: -32px;
+  }
+  .navArrowRight {
+    right: -32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navArrowLeft {
+    left: -15px;
+  }
+  .navArrowRight {
+    right: -15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navArrowBtn {
+    width: 38px;
+    height: 38px;
+  }
+  .navArrowLeft {
+    left: 2px;
+  }
+  .navArrowRight {
+    right: 2px;
+  }
 }
 
 .tabBtn {

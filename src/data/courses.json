@@ -938,7 +938,7 @@
   {
     "id": "appliance-repair-15d",
     "title": {
-      "en": "Washing Machine, AC, Refrigerator & Dishwasher Repair",
+      "en": "Washing Machine & Refrigerator Repair",
       "ta": "வாஷிங் மெஷின், AC, ஃப்ரிட்ஜ் & டிஷ்வாஷர் ரிப்பேர்",
       "ml": "വാഷിംഗ് മെഷീൻ, AC, ഫ്രിഡ്ജ് & ഡിഷ്വാഷർ റിപ്പയർ"
     },
@@ -966,7 +966,7 @@
       "ml": "സീനിയർ അപ്ലയൻസ് വിദഗ്ധൻ"
     },
     "description": {
-      "en": "Complete hands-on training covering Washing Machine, AC, Refrigerator, and Dishwasher repair & servicing. Learn mechanical engineering troubleshooting, gas charging, motor repair — without PCB-level training.",
+      "en": "Complete hands-on training covering Washing Machine and Refrigerator repair & servicing. Learn mechanical troubleshooting, gas charging, motor repair — without PCB-level training.",
       "ta": "வாஷிங் மெஷின், AC, ஃப்ரிட்ஜ், டிஷ்வாஷர் ரிப்பேர் & சர்வீஸிங் உள்ளடக்கிய முழுமையான நடைமுறை பயிற்சி. PCB-நிலை பயிற்சி இல்லாமல் மெக்கானிக்கல் இன்ஜினியரிங் சரிசெய்தல், கேஸ் சார்ஜிங், மோட்டார் ரிப்பேர் கற்றுக்கொள்ளுங்கள்.",
       "ml": "വാഷിംഗ് മെഷീൻ, AC, ഫ്രിഡ്ജ്, ഡിഷ്വാഷർ റിപ്പയർ & സർവ്വീസിംഗ് ഉൾക്കൊള്ളുന്ന പൂർണ്ണ പ്രായോഗിക പരിശീലനം. PCB-ലെവൽ ട്രെയിനിംഗ് ഇല്ലാതെ മെക്കാനിക്കൽ എഞ്ചിനീയറിംഗ് ട്രബിൾഷൂട്ടിംഗ്, ഗ്യാസ് ചാർജിംഗ്, മോട്ടോർ റിപ്പയർ പഠിക്കൂ."
     },
@@ -977,9 +977,9 @@
         "ml": "സെമി-ഓട്ടോ, ഫുള്ളി-ഓട്ടോ & ഫ്രണ്ട് ലോഡ് വാഷിംഗ് മെഷീനുകൾ റിപ്പയർ ചെയ്യുക"
       },
       {
-        "en": "Install, service & repair Split & Window ACs",
-        "ta": "ஸ்பிளிட் & வின்டோ AC-களை நிறுவி, சர்வீஸ் & ரிப்பேர் செய்யுங்கள்",
-        "ml": "സ്പ്ലിറ്റ് & വിൻഡോ AC ഇൻസ്റ്റാൾ, സർവ്വീസ് & റിപ്പയർ ചെയ്യുക"
+        "en": "Motor winding, water inlet valve & sensor replacement",
+        "ta": "மோட்டார் வைண்டிங், வாட்டர் இன்லெட் வால்வு & சென்சார் மாற்றம்",
+        "ml": "മോട്ടോർ വൈൻഡിംഗ്, വാട്ടർ ഇൻലെറ്റ് വാൽവ് & സെൻസർ മാറ്റിസ്ഥാപിക്കൽ"
       },
       {
         "en": "Gas charging & leak detection for refrigerators",
@@ -987,7 +987,7 @@
         "ml": "ഫ്രിഡ്ജുകൾക്കുള്ള ഗ്യാസ് ചാർജിംഗ്, ലീക്ക് കണ്ടെത്തൽ"
       },
       {
-        "en": "Dishwasher motor, pump & drainage system repair",
+        "en": "Compressor testing, relay & thermostat troubleshooting",
         "ta": "டிஷ்வாஷர் மோட்டார், பம்ப் & டிரைனேஜ் சிஸ்டம் ரிப்பேர்",
         "ml": "ഡിഷ്വാഷർ മോട്ടോർ, പമ്പ് & ഡ്രെയിനേജ് സിസ്റ്റം റിപ്പയർ"
       },
@@ -1413,7 +1413,7 @@
     },
     "category": "5day",
     "duration": {
-      "en": "5 Days (Weekend Batch)",
+      "en": "Weekend Batch",
       "ta": "5 நாட்கள் (வார இறுதி பேட்ச்)",
       "ml": "5 ദിവസങ്ങൾ (വീക്കെൻഡ് ബാച്ച്)"
     },
