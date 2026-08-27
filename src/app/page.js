@@ -386,7 +386,7 @@ export default function Home() {
             playsInline 
             className={styles.videoBg}
           >
-            <source src="/arsdt.mp4" type="video/mp4" />
+            <source src="/arsdt.mp4?v=2" type="video/mp4" />
           </video>
           <div className={styles.videoOverlay}></div>
         </div>
