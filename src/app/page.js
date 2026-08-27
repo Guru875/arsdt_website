@@ -312,36 +312,36 @@ export default function Home() {
               onClick={() => setActiveCategory('5day')}
               className={`${styles.tabBtn} ${activeCategory === '5day' ? styles.tabActive : ''}`}
             >
-              ⚡ 5-{t('courses.day')} Practical (Weekend)
+              ⚡ Weekend Course
             </button>
           </div>
 
-          <div className={styles.coursesSlider} ref={sliderRef}>
-            {filteredCourses.map((course) => (
-              <CourseCard key={course.id} course={course} />
-            ))}
-          </div>
-          
-          <div className={styles.sliderArrows}>
+          <div className={styles.coursesCarouselContainer}>
             <button
-              className={`${styles.sliderArrowBtn} ${activeIndex === 0 ? styles.sliderArrowDisabled : ''}`}
+              className={`${styles.navArrowBtn} ${styles.navArrowLeft} ${activeIndex === 0 ? styles.sliderArrowDisabled : ''}`}
               onClick={handleCoursePrev}
               disabled={activeIndex === 0}
               aria-label="Previous course"
             >
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            <span className={styles.sliderCounter}>{activeIndex + 1} / {totalPages}</span>
+
+            <div className={styles.coursesSlider} ref={sliderRef}>
+              {filteredCourses.map((course) => (
+                <CourseCard key={course.id} course={course} />
+              ))}
+            </div>
+
             <button
-              className={`${styles.sliderArrowBtn} ${activeIndex >= totalPages - 1 ? styles.sliderArrowDisabled : ''}`}
+              className={`${styles.navArrowBtn} ${styles.navArrowRight} ${activeIndex >= totalPages - 1 ? styles.sliderArrowDisabled : ''}`}
               onClick={handleCourseNext}
               disabled={activeIndex >= totalPages - 1}
               aria-label="Next course"
             >
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
           </div>
@@ -662,9 +662,9 @@ export default function Home() {
                     style={{ background: '#ffffff', color: '#0f172a', fontWeight: '500' }}
                   >
                     <option value="">-----Select Course-----</option>
-                    <option value="AC Repair Mechanic Course (₹10,000)">AC Repair Mechanic Course (10 Days)</option>
-                    <option value="Washing Machine & Refrigerator Course (₹10,000)">Washing Machine & Refrigerator Course (15 Days)</option>
-                    <option value="Gas Charging Course (₹7,500)">Gas Charging Course (7 Days)</option>
+                    <option value="AC Repair Mechanic Course">AC Repair Mechanic Course (10 Days)</option>
+                    <option value="Washing Machine & Refrigerator Course">Washing Machine & Refrigerator Course (15 Days)</option>
+                    <option value="Gas Charging Course">Gas Charging Course (7 Days)</option>
                     <option value="PCB Board Repair Master Course (30 Days)">PCB Board Repair Master Course (30 Days)</option>
                     <option value="General Enquiry">Other / General Enquiry</option>
                   </select>

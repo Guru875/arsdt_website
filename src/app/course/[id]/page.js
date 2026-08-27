@@ -42,7 +42,7 @@ export default async function CourseDetailPage({ params }) {
                 {course.category === '30day' ? '30-Day PCB Professional Course' :
                  course.category === '15day' ? '15-Day Combo Course' :
                  course.category === '10day' ? '10-Day Professional Course' :
-                 '5-Day Practical Course (Weekend Batch)'}
+                 'Weekend Practical Course'}
               </span>
               <h1 className={styles.bannerTitle}>{course.title.en}</h1>
               <p className={styles.bannerDesc}>{course.description.en}</p>
@@ -58,18 +58,8 @@ export default async function CourseDetailPage({ params }) {
               </div>
             </div>
 
-            {/* Sidebar Pricing Card */}
+            {/* Sidebar Card */}
             <div className={`glass-card ${styles.sidebarCard}`}>
-              <div className={styles.priceSection}>
-                <span className={styles.discountBadge}>
-                  {Math.round(((course.price - course.offerPrice) / course.price) * 100)}% OFF
-                </span>
-                <div className={styles.priceRow}>
-                  <span className={styles.offerPrice}>₹{course.offerPrice}</span>
-                  <span className={styles.originalPrice}>₹{course.price}</span>
-                </div>
-                <p className={styles.priceNote}>Limited Seats! Lock this price today.</p>
-              </div>
 
               <div className={styles.actionSection}>
                 <a href={enrollWhatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-accent w-full text-center">
