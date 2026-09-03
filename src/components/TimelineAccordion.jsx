@@ -7,7 +7,7 @@ import styles from './TimelineAccordion.module.css';
 
 export default function TimelineAccordion({ modules, classroomMode = false, onSelectLesson, activeDay }) {
   const { t } = useLanguage();
-  const [expandedDays, setExpandedDays] = useState({ 1: true }); // Day 1 expanded by default
+  const [expandedDays, setExpandedDays] = useState({ 1: true }); // First entry expanded by default
 
   const toggleDay = (day) => {
     setExpandedDays((prev) => ({
@@ -19,31 +19,35 @@ export default function TimelineAccordion({ modules, classroomMode = false, onSe
   return (
     <div className={styles.timeline}>
       {modules.map((mod) => {
-        const isExpanded = expandedDays[mod.day] || (classroomMode && activeDay === mod.day);
-        const isActive = classroomMode && activeDay === mod.day;
+        // Poster-based syllabuses are numbered by serial number (`sno`);
+        // the PCB courses are still scheduled by training day (`day`).
+        const no = mod.sno ?? mod.day;
+        const numberLabel = mod.sno ? t('courses.module') : t('courses.day');
+        const isExpanded = expandedDays[no] || (classroomMode && activeDay === no);
+        const isActive = classroomMode && activeDay === no;
 
         return (
           <div
-            key={mod.day}
+            key={no}
             className={`${styles.dayNode} ${isExpanded ? styles.expanded : ''} ${isActive ? styles.active : ''}`}
           >
             {/* Timeline Line element */}
             <div className={styles.timelineBar}>
               <div className={`${styles.timelineDot} ${isExpanded ? styles.dotActive : ''}`}>
-                {mod.day}
+                {no}
               </div>
             </div>
 
             {/* Accordion Content box */}
             <div className={`glass-card ${styles.dayCard}`}>
               <button
-                onClick={() => toggleDay(mod.day)}
+                onClick={() => toggleDay(no)}
                 className={styles.headerButton}
                 aria-expanded={isExpanded}
               >
                 <div className={styles.titleArea}>
                   <span className={styles.dayLabel}>
-                    {t('courses.day')} {mod.day}
+                    {numberLabel} {no}
                   </span>
                   <h4 className={styles.dayTitle}>{t(mod.title)}</h4>
                 </div>
@@ -70,7 +74,7 @@ export default function TimelineAccordion({ modules, classroomMode = false, onSe
                     <div className={styles.classroomActions}>
                       {mod.videos && mod.videos.length > 0 && (
                         <button
-                          onClick={() => onSelectLesson({ type: 'video', data: mod.videos[0], day: mod.day })}
+                          onClick={() => onSelectLesson({ type: 'video', data: mod.videos[0], day: no })}
                           className={`btn btn-primary btn-sm ${styles.actionBtn}`}
                         >
                           <PlayIcon size={14} /> Watch Lesson
@@ -78,7 +82,7 @@ export default function TimelineAccordion({ modules, classroomMode = false, onSe
                       )}
                       {mod.notes && (
                         <button
-                          onClick={() => onSelectLesson({ type: 'notes', data: mod.notes, day: mod.day, pdf: mod.pdfUrl })}
+                          onClick={() => onSelectLesson({ type: 'notes', data: mod.notes, day: no, pdf: mod.pdfUrl })}
                           className={`btn btn-secondary btn-sm ${styles.actionBtn}`}
                         >
                           <BookIcon size={14} /> Study Notes

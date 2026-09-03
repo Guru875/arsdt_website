@@ -53,7 +53,8 @@
       "new": "New",
       "limitedSeats": "Limited Seats!",
       "pcbIncluded": "PCB Training",
-      "combo": "Combo"
+      "combo": "Combo",
+      "module": "Module"
     },
     "whyUs": {
       "sectionTitle": "Why Choose ARSDT?",
@@ -209,7 +210,8 @@
       "new": "புதியது",
       "limitedSeats": "குறைந்த இடங்கள்!",
       "pcbIncluded": "PCB பயிற்சி",
-      "combo": "காம்போ"
+      "combo": "காம்போ",
+      "module": "பாடம்"
     },
     "whyUs": {
       "sectionTitle": "ஏன் ARSDT-ஐ தேர்வு செய்ய வேண்டும்?",
@@ -365,7 +367,8 @@
       "new": "പുതിയത്",
       "limitedSeats": "കുറഞ്ഞ സീറ്റുകൾ!",
       "pcbIncluded": "PCB പരിശീലനം",
-      "combo": "കോംബോ"
+      "combo": "കോംബോ",
+      "module": "മൊഡ്യൂൾ"
     },
     "whyUs": {
       "sectionTitle": "എന്തുകൊണ്ട് ARSDT തിരഞ്ഞെടുക്കണം?",

@@ -21,7 +21,7 @@ export default function ClassroomClient({ course }) {
     const savedDay = localStorage.getItem(`arsdt-watched-${course.id}`);
     if (savedDay) {
       const parsedDay = parseInt(savedDay);
-      const mod = course.modules.find(m => m.day === parsedDay);
+      const mod = course.modules.find(m => (m.sno ?? m.day) === parsedDay);
       if (mod) {
         setActiveDay(parsedDay);
         if (mod.videos && mod.videos.length > 0) {
@@ -47,6 +47,9 @@ export default function ClassroomClient({ course }) {
 
   // Check if a day is locked (Free preview allows Day 1 & Day 2)
   const isDayLocked = activeDay > 2;
+
+  // Poster-based syllabuses are numbered by module; PCB courses by training day.
+  const numberLabel = course.modules[0]?.sno ? 'Module' : 'Day';
 
   const titleEn = course.title.en;
   const whatsappMsg = encodeURIComponent(`Hi! I am in the demo classroom for "${titleEn}" and I want to enroll to unlock all lessons.`);
@@ -83,7 +86,7 @@ export default function ClassroomClient({ course }) {
           {/* Lesson Metadata */}
           <div className={`glass-card ${styles.metaCard}`}>
             <div className={styles.metaHeader}>
-              <span className={styles.dayBadge}>Day {activeDay} Lesson</span>
+              <span className={styles.dayBadge}>{numberLabel} {activeDay} Lesson</span>
               <h3 className={styles.lessonTitle}>
                 {activeContent.type === 'video'
                   ? (activeContent.data?.title?.en || 'Module Video')
@@ -119,13 +122,13 @@ export default function ClassroomClient({ course }) {
                 ) : (
                   <div className={styles.videoIntro}>
                     <p>
-                      Welcome to the Day {activeDay} practical session. Make sure to have your multimeter ready and follow along with the instructor. Use the study notes tab below to review wiring schematics.
+                      Welcome to the {numberLabel.toLowerCase()} {activeDay} practical session. Make sure to have your multimeter ready and follow along with the instructor. Use the study notes tab below to review wiring schematics.
                     </p>
                     {/* Render quick toggle for notes if available */}
-                    {course.modules.find(m => m.day === activeDay)?.notes && (
+                    {course.modules.find(m => (m.sno ?? m.day) === activeDay)?.notes && (
                       <button
                         onClick={() => {
-                          const m = course.modules.find(m => m.day === activeDay);
+                          const m = course.modules.find(m => (m.sno ?? m.day) === activeDay);
                           handleSelectLesson({ type: 'notes', data: m.notes, day: activeDay, pdf: m.pdfUrl });
                         }}
                         className={`btn btn-secondary btn-sm ${styles.switchNotesBtn}`}
