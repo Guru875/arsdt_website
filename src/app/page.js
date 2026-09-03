@@ -309,6 +309,12 @@ export default function Home() {
               🛠️ 10-{t('courses.day')} Pro
             </button>
             <button
+              onClick={() => setActiveCategory('7day')}
+              className={`${styles.tabBtn} ${activeCategory === '7day' ? styles.tabActive : ''}`}
+            >
+              ❄️ 7-{t('courses.day')} Pro
+            </button>
+            <button
               onClick={() => setActiveCategory('5day')}
               className={`${styles.tabBtn} ${activeCategory === '5day' ? styles.tabActive : ''}`}
             >
@@ -563,6 +569,7 @@ export default function Home() {
                   <div>
                     <h4>{t('contact.email')}</h4>
                     <p>{siteConfig.email}</p>
+                    <p>{siteConfig.emailAlt}</p>
                   </div>
                 </div>
                 <div className={styles.infoNode}>

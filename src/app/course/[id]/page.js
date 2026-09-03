@@ -22,6 +22,9 @@ export default async function CourseDetailPage({ params }) {
     notFound();
   }
 
+  // Poster-based syllabuses are numbered by module rather than by training day.
+  const isModuleSyllabus = course.modules[0]?.sno != null;
+
   // Pre-fill WhatsApp message
   const titleEn = course.title.en;
   const whatsappMsg = encodeURIComponent(`Hi! I would like to enroll in the "${titleEn}" course at ARSDT.`);
@@ -42,6 +45,7 @@ export default async function CourseDetailPage({ params }) {
                 {course.category === '30day' ? '30-Day PCB Professional Course' :
                  course.category === '15day' ? '15-Day Combo Course' :
                  course.category === '10day' ? '10-Day Professional Course' :
+                 course.category === '7day' ? '7-Day Gas Charging Course' :
                  'Weekend Practical Course'}
               </span>
               <h1 className={styles.bannerTitle}>{course.title.en}</h1>
@@ -105,8 +109,8 @@ export default async function CourseDetailPage({ params }) {
 
               {/* Day-by-Day Accordion Schedule */}
               <div className={styles.sectionCard}>
-                <h3 className={styles.sectionTitle}>Day-by-Day Course Syllabus</h3>
-                <p className={styles.sectionDesc}>Our training program is designed to cover fundamental electronics first, then step-by-step diagnostic and practical operations.</p>
+                <h3 className={styles.sectionTitle}>{isModuleSyllabus ? 'Complete Course Syllabus' : 'Day-by-Day Course Syllabus'}</h3>
+                <p className={styles.sectionDesc}>{isModuleSyllabus ? 'Every subject below is covered with hands-on practice on real appliances, in the order listed.' : 'Our training program is designed to cover fundamental electronics first, then step-by-step diagnostic and practical operations.'}</p>
                 <div className={styles.accordionContainer}>
                   <TimelineAccordion modules={course.modules} />
                 </div>

@@ -164,6 +164,7 @@ export default function AppLayout({ children }) {
               <div className={styles.footerInfo}>
                 <p>📞 {siteConfig.phone}</p>
                 <p>✉️ {siteConfig.email}</p>
+                <p>✉️ {siteConfig.emailAlt}</p>
                 <p>📍 {t(siteConfig.address)}</p>
               </div>
             </div>
