@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local source media (large originals, not needed for the build)
+/docs/media/images/arsdt_images/

@@ -29,8 +29,8 @@
 .heroImageContainer {
   position: relative;
   width: 100%;
-  height: 560px;
-  max-height: 80vh;
+  height: 440px;
+  max-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,8 +78,7 @@
 .heroSlideImg {
   width: 100%;
   height: 100%;
-  max-height: 560px;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
   display: block;
   border-radius: var(--radius-lg);
@@ -1050,9 +1049,19 @@
   gap: var(--space-md);
 }
 
+.demoSingle {
+  display: flex;
+  justify-content: center;
+}
+
+.demoSingle .demoVideoWrapper {
+  width: 100%;
+  max-width: 380px;
+}
+
 .demoIframe {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 9/16;
   border-radius: var(--radius-lg);
   border: 2px solid var(--border);
   box-shadow: var(--cardShadow);
@@ -1437,8 +1446,8 @@
   }
 
   .heroImageContainer {
-    height: 480px;
-    max-width: 500px;
+    height: 380px;
+    max-width: 620px;
     margin: 0 auto;
     mask-image: none;
     -webkit-mask-image: none;
@@ -1469,7 +1478,7 @@
   }
 
   .heroImageContainer {
-    height: 400px;
+    height: 300px;
     max-width: 100%;
   }
 
@@ -1515,7 +1524,7 @@
   }
 
   .heroImageContainer {
-    height: 330px;
+    height: 240px;
   }
 
   .heroActions {
