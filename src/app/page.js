@@ -35,8 +35,8 @@ export default function Home() {
 
   // Hero image slideshow
   const heroImages = [
-    '/hero/1.jpg', '/hero/2.jpg', '/hero/3.jpg', '/hero/4.jpg', '/hero/5.jpg',
-    '/hero/6.jpg', '/hero/7.jpg', '/hero/8.jpg', '/hero/9.jpg', '/hero/10.jpg'
+    '/gallery/1.jpg', '/gallery/2.jpg', '/gallery/3.jpg', '/gallery/4.jpg',
+    '/gallery/5.jpg', '/gallery/6.jpg', '/gallery/7.jpg', '/gallery/8.jpg'
   ];
   const [heroImageIdx, setHeroImageIdx] = useState(0);
 
@@ -260,7 +260,7 @@ export default function Home() {
                 >
                   <img
                     src={src}
-                    alt={`ARSDT Training Poster ${idx + 1}`}
+                    alt={`ARSDT practical training session ${idx + 1}`}
                     className={styles.heroSlideImg}
                     loading={idx === 0 ? 'eager' : 'lazy'}
                   />
@@ -445,10 +445,10 @@ export default function Home() {
             <p className="section-subtitle">{t('demo.sectionSubtitle')}</p>
           </div>
 
-          <div className="grid grid-2">
+          <div className={styles.demoSingle}>
             <div className={styles.demoVideoWrapper}>
               <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                src="https://www.youtube.com/embed/6NnRzBVsF3o"
                 title="Lab Practice Demo Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -456,17 +456,6 @@ export default function Home() {
                 className={styles.demoIframe}
               ></iframe>
               <h4 className={styles.demoVideoTitle}>{t('demo.vid1Title')}</h4>
-            </div>
-            <div className={styles.demoVideoWrapper}>
-              <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Student Feedback"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className={styles.demoIframe}
-              ></iframe>
-              <h4 className={styles.demoVideoTitle}>{t('demo.vid2Title')}</h4>
             </div>
           </div>
         </div>

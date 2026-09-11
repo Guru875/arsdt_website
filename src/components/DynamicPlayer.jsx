@@ -25,8 +25,8 @@ export default function DynamicPlayer({ videoId, isLocked = false, onUnlock }) {
     );
   }
 
-  // Use a fallback public educational youtube ID if none provided
-  const activeVideoId = videoId || 'dQw4w9WgXcQ'; 
+  // Fall back to the ARSDT demo video when a lesson has no video ID yet
+  const activeVideoId = videoId || '6NnRzBVsF3o';
 
   return (
     <div className={styles.playerContainer}>
