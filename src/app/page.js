@@ -35,8 +35,8 @@ export default function Home() {
 
   // Hero image slideshow
   const heroImages = [
-    '/gallery/1.jpg', '/gallery/2.jpg', '/gallery/3.jpg', '/gallery/4.jpg',
-    '/gallery/5.jpg', '/gallery/6.jpg', '/gallery/7.jpg', '/gallery/8.jpg'
+    '/hero/1.jpg', '/hero/2.jpg', '/hero/3.jpg', '/hero/4.jpg',
+    '/hero/5.jpg', '/hero/6.jpg', '/hero/7.jpg', '/hero/8.jpg'
   ];
   const [heroImageIdx, setHeroImageIdx] = useState(0);
 
@@ -260,7 +260,7 @@ export default function Home() {
                 >
                   <img
                     src={src}
-                    alt={`ARSDT practical training session ${idx + 1}`}
+                    alt={`ARSDT Training Poster ${idx + 1}`}
                     className={styles.heroSlideImg}
                     loading={idx === 0 ? 'eager' : 'lazy'}
                   />
